@@ -1,9 +1,60 @@
 # yaml-language-server: $schema=https://codemagic.io/codemagic-schema.json
-# 首次接入可运行 ios-unsigned 检查编译；其产物不能直接安装到 iPhone。
+# 浏览器模拟器预览使用 ios-simulator；ios-unsigned 仅用于真机目标的无签名编译检查。
 # ios-adhoc 需要在 Codemagic 配置匹配 Bundle ID、包含目标设备的 Ad Hoc 签名资料。
-# 两个工作流均手动启动，不自动上传 App Store Connect 或发布应用。
+# 三个工作流均手动启动，不自动上传 App Store Connect 或发布应用。
 
 workflows:
+  ios-simulator:
+    name: iOS 模拟器预览（App Preview）
+    instance_type: mac_mini_m2
+    max_build_duration: 60
+    environment:
+      flutter: "3.47.9"
+      xcode: latest
+      vars:
+        FLUTTER_SUPPRESS_ANALYTICS: "true"
+    scripts:
+      - name: 检查工具链并启用 Swift Package Manager
+        script: |
+          #!/usr/bin/env bash
+          set -euo pipefail
+          flutter --version
+          xcodebuild -version
+          flutter config --enable-swift-package-manager
+      - name: 获取 Flutter 依赖
+        script: |
+          #!/usr/bin/env bash
+          set -euo pipefail
+          flutter pub get
+      - name: 静态分析
+        script: |
+          #!/usr/bin/env bash
+          set -euo pipefail
+          flutter analyze --no-pub
+      - name: 运行自动化测试
+        script: |
+          #!/usr/bin/env bash
+          set -euo pipefail
+          flutter test --no-pub
+      - name: 构建并验证模拟器 App
+        script: |
+          #!/usr/bin/env bash
+          set -euo pipefail
+          flutter build ios --simulator --debug --no-codesign --no-pub \
+            --build-number="$PROJECT_BUILD_NUMBER"
+          app_path=build/ios/iphonesimulator/Runner.app
+          test -d "$app_path"
+          test -f "$app_path/Runner"
+          platform=$(/usr/libexec/PlistBuddy -c 'Print :DTPlatformName' "$app_path/Info.plist")
+          if [ "$platform" != "iphonesimulator" ]; then
+            printf '%s\n' '产物不是 iOS 模拟器应用，不能用于 App Preview。' >&2
+            exit 1
+          fi
+    artifacts:
+      # 按 Codemagic App Preview 要求直接登记 .app，让构建页面识别 Quick Launch。
+      - build/ios/iphonesimulator/Runner.app
+      - /tmp/xcodebuild_logs/*.log
+
   ios-unsigned:
     name: iOS 编译验证（无签名，不能安装）
     instance_type: mac_mini_m2

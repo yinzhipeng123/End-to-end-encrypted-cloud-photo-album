@@ -112,16 +112,24 @@ flutter run -d windows
 
 ## iOS 云端构建：Codemagic
 
-根目录的 [codemagic.yaml](codemagic.yaml) 为本 Flutter 项目配置了两条手动运行的 macOS 工作流，Flutter 固定为与当前工程一致的 `3.47.9`，Xcode 使用 Codemagic 的 `latest`。两条流程都会获取依赖、执行静态分析与 Flutter 测试，然后构建 iOS。当前 iOS 工程使用 Swift Package Manager，流程不执行针对 CocoaPods 工程的 `pod install`。
+根目录的 [codemagic.yaml](codemagic.yaml) 为本 Flutter 项目配置了三条手动运行的 macOS 工作流，Flutter 固定为与当前工程一致的 `3.47.9`，Xcode 使用 Codemagic 的 `latest`。三条流程都会获取依赖、执行静态分析与 Flutter 测试，然后构建 iOS。当前 iOS 工程使用 Swift Package Manager，流程不执行针对 CocoaPods 工程的 `pod install`。
 
 | 工作流 ID | 用途 | 产物与条件 |
 | --- | --- | --- |
-| `ios-unsigned` | 先验证云端 iOS 编译 | 无签名的 `.app.zip`，不能直接安装到 iPhone；不需要苹果签名资料 |
+| `ios-simulator` | **在浏览器中预览 App，当前优先使用** | 面向模拟器的 `Runner.app`，不需要苹果分发签名；浏览器预览需启用 Codemagic App Preview |
+| `ios-unsigned` | 验证真机目标的 iOS 编译 | 真机目标的无签名 `.app.zip`，不能直接安装到 iPhone，也不能替代模拟器产物 |
 | `ios-adhoc` | 构建真机安装包 | 签名 `.ipa`，需要付费 Apple Developer Program 账号、有效的分发证书及包含目标 iPhone 的 Ad Hoc 描述文件 |
 
-用户于 2026-11-06 确认目前没有付费苹果开发者账号。因此当前可先运行 `ios-unsigned`；`ios-adhoc` 的配置已经准备好，但签名条件尚未满足。仅有这个 YAML 文件不代表已经可以安装到 iPhone。
+用户于 2026-11-06 确认目前没有付费苹果开发者账号，并选择先创建模拟器应用进行预览。因此当前使用 `ios-simulator`；`ios-adhoc` 的配置已经准备好，但签名条件尚未满足。模拟器产物不能直接安装到真实 iPhone。
 
 在 Codemagic 中打开本 GitHub 项目，使用 YAML 配置，选择 `main` 分支及所需工作流，再点击 **Start new build**。本文件未设置自动触发，也未设置向 App Store Connect 上传或发布应用。
+
+本次模拟器预览操作：
+
+1. 选择 `main` 分支和 `ios-simulator` 工作流，启动构建。
+2. 流程执行 `flutter build ios --simulator --debug --no-codesign`，生成 `build/ios/iphonesimulator/Runner.app`，并检查其平台确实为 `iphonesimulator`。
+3. YAML 直接把上述 `.app` 目录声明为构建产物。构建成功后，在构建概览中点击该产物旁的 **Quick Launch**，即可在浏览器里的 iOS 模拟器中预览。
+4. Codemagic 的 App Preview 仅供团队使用，需要在团队的 App Preview 页面启用，并有独立的试用额度和计费。生成模拟器产物不等于已经开通此服务；这里不会替用户开启计费或启动预览会话。
 
 以后启用 `ios-adhoc` 前，需要准备：
 
@@ -132,9 +140,9 @@ flutter run -d windows
 
 签名资料和密码只配置在 Codemagic 的安全设置中；`.gitignore` 已排除 `.p12`、`.p8` 和 `.mobileprovision` 文件。首次云端成功构建和真机安装验证仍待执行，Windows 上的检查不能替代这两项验收。
 
-2026-11-06 本机验证：Codemagic 官方 JSON Schema 校验通过，11 段 Bash 脚本语法检查通过，`flutter analyze --no-pub` 无问题，`flutter test --no-pub` 的 29 项测试全部通过。
+2026-11-06 本机验证：Codemagic 官方 JSON Schema 校验通过，16 段 Bash 脚本语法检查通过，`flutter analyze --no-pub` 无问题，`flutter test --no-pub` 的 29 项测试全部通过。云端模拟器编译和浏览器 App Preview 尚未实际运行。
 
-官方参考：[Flutter YAML 指南](https://docs.codemagic.io/yaml-quick-start/building-a-flutter-app/)、[iOS 签名配置](https://docs.codemagic.io/yaml-code-signing/signing-ios/)、[Apple 账号能力对比](https://developer.apple.com/support/compare-memberships/)。
+官方参考：[App Preview 指南](https://docs.codemagic.io/yaml-distributing/app-preview/)、[Flutter YAML 指南](https://docs.codemagic.io/yaml-quick-start/building-a-flutter-app/)、[iOS 签名配置](https://docs.codemagic.io/yaml-code-signing/signing-ios/)、[Apple 账号能力对比](https://developer.apple.com/support/compare-memberships/)。
 
 ## 工程结构
 
@@ -146,7 +154,7 @@ flutter run -d windows
 - `test/`：行为、访问控制、对话框与宽窄布局测试。
 - `windows/`、`ios/`：平台工程；iOS 仅有骨架，未构建、未签名、未进行真机验收。
 - `scripts/build-windows.ps1`：发布构建入口。
-- `codemagic.yaml`：iOS 无签名编译验证与 Ad Hoc 真机安装包两条云端构建流程；首次云端运行待验证。
+- `codemagic.yaml`：iOS 模拟器预览、真机目标无签名编译验证与 Ad Hoc 真机安装包三条云端构建流程；首次云端运行待验证。
 
 ## OpenSpec
 
