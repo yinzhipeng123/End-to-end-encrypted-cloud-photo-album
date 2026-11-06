@@ -1,0 +1,20 @@
+schema: spec-driven
+
+context: |
+  Language: zh-CN
+  All artifacts must be written in zh-CN.
+  Keep OpenSpec structural headings and SHALL/MUST keywords in English.
+  Product: encrypted-photo-app，供用户个人在 Windows 和 iPhone 之间管理、整理、导入、导出和同步照片。
+  Confirmed client stack: Flutter + Dart；Windows 桌面客户端和 iOS 客户端均为正式目标。
+  Current phase: 用户已授权实现并运行 Windows Flutter 交互原型；真实加密、授权、同步和原图删除仍未实现，原型只能使用明确标识的模拟数据。
+  Storage: 支持 GitHub、Gitee 授权登录及私有仓库选择，上传前必须在客户端加密。
+  Local photos: Windows 原照片目录保留普通图片；不要求把源目录转换为本地密文库。
+  Capacity: 应用不人为设置照片库总容量配额；密文需要分块，目标尽量控制在每块 50 MB 以内。外部平台限制仍需识别和处理。
+  Password: 用户设置并记住照片解密密码，App 需要提醒；不要求用户手动设置或保管解密密钥。内部密钥机制和密码派生方案尚未选择。
+  App lock: Windows、iOS 两端均提供四位数字应用锁，上锁后只显示密码输入界面。
+  Reverification: 从上次成功输入照片解密密码开始，每 3 天强制再次验证；到期后锁定照片访问并暂停同步，四位数字密码不能替代验证。
+  Resume: 照片解密密码验证正确后重新开始 3 天周期，恢复受此次到期阻断的访问和同步；失败时继续阻断。
+  Deletion: 提供删除本地保留仓库、同步删除、删除仓库保留本地三种选择；本地指 Windows 原照片目录或 iPhone 系统相册中的原照片。
+  Excluded: 产品按不使用 iCloud 的前提设计，不提供 iCloud 接入，不在界面加入 iCloud 相关说明。
+  Decision discipline: 未确认的算法、内部密钥保存、普通应用锁是否暂停同步、删除前仓库校验和历史清理等，不得写成既定方案。
+  Prototype honesty: 原型若使用模拟流程，应明确区分模拟与真实加密、上传、恢复和删除能力。

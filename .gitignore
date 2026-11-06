@@ -1,0 +1,17 @@
+# Local AI workflows generated for this machine; project decisions live in openspec/.
+/.agents/
+
+# Flutter build output, caches, and local editor settings.
+.dart_tool/
+.flutter-plugins-dependencies
+.packages
+build/
+.idea/
+*.iml
+coverage/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
