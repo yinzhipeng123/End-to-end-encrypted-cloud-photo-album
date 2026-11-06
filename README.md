@@ -13,6 +13,7 @@ Flutter + Dart 的中文照片管理交互原型，当前交付 Windows 桌面�
 | 必需的演示资源与测试 | `assets/`、`test/` |
 | 依赖与工程配置 | `pubspec.yaml`、`pubspec.lock`、`.metadata`、`analysis_options.yaml` |
 | 构建与启动脚本 | `scripts/`、`run-windows.cmd` |
+| iOS 云端构建配置 | `codemagic.yaml` |
 | 产品规格、变更与历史记录 | `openspec/` |
 | AI 接手入口与项目说明 | `AGENTS.md`、`README.md` |
 
@@ -109,6 +110,32 @@ flutter run -d windows
 
 该路径不修改 Flutter SDK、系统注册表或安装器状态。用户方便时自行重启完成安装，之后可使用标准 Flutter 构建和热重载；已生成的发布包可直接运行。SDK 位于其他位置时可传入 `-FlutterRoot`。
 
+## iOS 云端构建：Codemagic
+
+根目录的 [codemagic.yaml](codemagic.yaml) 为本 Flutter 项目配置了两条手动运行的 macOS 工作流，Flutter 固定为与当前工程一致的 `3.47.9`，Xcode 使用 Codemagic 的 `latest`。两条流程都会获取依赖、执行静态分析与 Flutter 测试，然后构建 iOS。当前 iOS 工程使用 Swift Package Manager，流程不执行针对 CocoaPods 工程的 `pod install`。
+
+| 工作流 ID | 用途 | 产物与条件 |
+| --- | --- | --- |
+| `ios-unsigned` | 先验证云端 iOS 编译 | 无签名的 `.app.zip`，不能直接安装到 iPhone；不需要苹果签名资料 |
+| `ios-adhoc` | 构建真机安装包 | 签名 `.ipa`，需要付费 Apple Developer Program 账号、有效的分发证书及包含目标 iPhone 的 Ad Hoc 描述文件 |
+
+用户于 2026-11-06 确认目前没有付费苹果开发者账号。因此当前可先运行 `ios-unsigned`；`ios-adhoc` 的配置已经准备好，但签名条件尚未满足。仅有这个 YAML 文件不代表已经可以安装到 iPhone。
+
+在 Codemagic 中打开本 GitHub 项目，使用 YAML 配置，选择 `main` 分支及所需工作流，再点击 **Start new build**。本文件未设置自动触发，也未设置向 App Store Connect 上传或发布应用。
+
+以后启用 `ios-adhoc` 前，需要准备：
+
+1. 开通付费 Apple Developer Program，在开发者后台登记目标 iPhone 的 UDID，并注册与应用匹配的 App ID。
+2. 当前工程和 YAML 的 Bundle ID 均为 `dev.miyu.encryptedPhotoApp`。它目前只是代码中的标识，并不表示已在苹果后台注册；若使用其他标识，需要同时更新 `ios/Runner.xcodeproj/project.pbxproj` 和 YAML。
+3. 在 Codemagic 的团队设置中进入 **Code signing identities → iOS certificates / iOS provisioning profiles**，导入含私钥的分发证书（`.p12`）和匹配的 Ad Hoc 描述文件，或通过其支持的 Apple 开发者集成获取这些资料。描述文件须包含目标设备，且与证书、App ID 相匹配。
+4. 选择 `ios-adhoc` 运行。Codemagic 会根据 `ios_signing` 安装签名资料，`xcode-project use-profiles` 配置工程和导出选项，随后生成 IPA。只有描述文件包含的设备可以使用这条 Ad Hoc 安装路线。
+
+签名资料和密码只配置在 Codemagic 的安全设置中；`.gitignore` 已排除 `.p12`、`.p8` 和 `.mobileprovision` 文件。首次云端成功构建和真机安装验证仍待执行，Windows 上的检查不能替代这两项验收。
+
+2026-11-06 本机验证：Codemagic 官方 JSON Schema 校验通过，11 段 Bash 脚本语法检查通过，`flutter analyze --no-pub` 无问题，`flutter test --no-pub` 的 29 项测试全部通过。
+
+官方参考：[Flutter YAML 指南](https://docs.codemagic.io/yaml-quick-start/building-a-flutter-app/)、[iOS 签名配置](https://docs.codemagic.io/yaml-code-signing/signing-ios/)、[Apple 账号能力对比](https://developer.apple.com/support/compare-memberships/)。
+
 ## 工程结构
 
 验证记录（2026-11-06）：格式检查通过，`flutter analyze` 无问题，`flutter test` 的 29 项测试全部通过；Windows Release 已经由上述 CMake/MSBuild 路径构建并实际启动。原生窗口检查确认照片库、样片和设置页面可显示；锁屏、到期、恢复、仓库选择及删除结果等由行为和界面测试验证。OpenSpec 严格校验通过。iOS 尚未验收。
@@ -119,6 +146,7 @@ flutter run -d windows
 - `test/`：行为、访问控制、对话框与宽窄布局测试。
 - `windows/`、`ios/`：平台工程；iOS 仅有骨架，未构建、未签名、未进行真机验收。
 - `scripts/build-windows.ps1`：发布构建入口。
+- `codemagic.yaml`：iOS 无签名编译验证与 Ad Hoc 真机安装包两条云端构建流程；首次云端运行待验证。
 
 ## OpenSpec
 

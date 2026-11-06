@@ -1,0 +1,110 @@
+# yaml-language-server: $schema=https://codemagic.io/codemagic-schema.json
+# 首次接入可运行 ios-unsigned 检查编译；其产物不能直接安装到 iPhone。
+# ios-adhoc 需要在 Codemagic 配置匹配 Bundle ID、包含目标设备的 Ad Hoc 签名资料。
+# 两个工作流均手动启动，不自动上传 App Store Connect 或发布应用。
+
+workflows:
+  ios-unsigned:
+    name: iOS 编译验证（无签名，不能安装）
+    instance_type: mac_mini_m2
+    max_build_duration: 60
+    environment:
+      flutter: "3.47.9"
+      xcode: latest
+      vars:
+        FLUTTER_SUPPRESS_ANALYTICS: "true"
+    scripts:
+      - name: 检查工具链并启用 Swift Package Manager
+        script: |
+          #!/usr/bin/env bash
+          set -euo pipefail
+          flutter --version
+          xcodebuild -version
+          flutter config --enable-swift-package-manager
+      - name: 获取 Flutter 依赖
+        script: |
+          #!/usr/bin/env bash
+          set -euo pipefail
+          flutter pub get
+      - name: 静态分析
+        script: |
+          #!/usr/bin/env bash
+          set -euo pipefail
+          flutter analyze --no-pub
+      - name: 运行自动化测试
+        script: |
+          #!/usr/bin/env bash
+          set -euo pipefail
+          flutter test --no-pub
+      - name: 构建无签名 iOS 应用
+        script: |
+          #!/usr/bin/env bash
+          set -euo pipefail
+          flutter build ios --release --no-codesign --no-pub \
+            --build-number="$PROJECT_BUILD_NUMBER"
+          mkdir -p build/ios/unsigned
+          ditto -c -k --sequesterRsrc --keepParent \
+            build/ios/iphoneos/Runner.app \
+            build/ios/unsigned/miyu-ios-unsigned.app.zip
+    artifacts:
+      - build/ios/unsigned/*.app.zip
+      - /tmp/xcodebuild_logs/*.log
+
+  ios-adhoc:
+    name: iPhone 安装包（Ad Hoc，需要苹果签名）
+    instance_type: mac_mini_m2
+    max_build_duration: 60
+    environment:
+      flutter: "3.47.9"
+      xcode: latest
+      ios_signing:
+        distribution_type: ad_hoc
+        bundle_identifier: dev.miyu.encryptedPhotoApp
+      vars:
+        FLUTTER_SUPPRESS_ANALYTICS: "true"
+    scripts:
+      - name: 检查工具链并启用 Swift Package Manager
+        script: |
+          #!/usr/bin/env bash
+          set -euo pipefail
+          flutter --version
+          xcodebuild -version
+          flutter config --enable-swift-package-manager
+      - name: 获取 Flutter 依赖
+        script: |
+          #!/usr/bin/env bash
+          set -euo pipefail
+          flutter pub get
+      - name: 静态分析
+        script: |
+          #!/usr/bin/env bash
+          set -euo pipefail
+          flutter analyze --no-pub
+      - name: 运行自动化测试
+        script: |
+          #!/usr/bin/env bash
+          set -euo pipefail
+          flutter test --no-pub
+      - name: 应用 Codemagic 签名资料
+        script: |
+          #!/usr/bin/env bash
+          set -euo pipefail
+          xcode-project use-profiles
+      - name: 构建并确认生成签名 IPA
+        script: |
+          #!/usr/bin/env bash
+          set -euo pipefail
+          flutter build ipa --release --no-pub \
+            --build-number="$PROJECT_BUILD_NUMBER" \
+            --export-options-plist="$HOME/export_options.plist"
+          # Flutter 在归档成功但导出失败时可能不以非零状态退出，必须检查 IPA。
+          shopt -s nullglob
+          ipa_files=(build/ios/ipa/*.ipa)
+          if [ "${#ipa_files[@]}" -eq 0 ]; then
+            printf '%s\n' '没有生成 IPA，请检查签名资料和 Xcode 导出日志。' >&2
+            exit 1
+          fi
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - build/ios/archive/*.xcarchive/dSYMs/*.dSYM
+      - /tmp/xcodebuild_logs/*.log
