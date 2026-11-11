@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-10",
+  "kind": "isolated-capability-experiment",
+  "review": "WIR-1; TD11-W and TD13-W remain unapproved",
+  "productionTasksCompleted": [],
+  "productionCodeChanged": false,
+  "appBuildPerformed": false,
+  "script": "scripts/windows-import-preflight.ps1",
+  "scriptSha256": "881695E96C95F08D2B04B9787F2537485D8D7053F6546A11076F9456CA196953",
+  "rawResult": "build/import-preflight/48f3a5268e6b418b8e42d0c8e31160b1/result.json",
+  "rawResultSha256": "204A450AC64CE98209905495D20B0FC6EB360B3874BEA0264B082097126C7B77",
+  "fileSystem": "NTFS",
+  "input": "4 MiB artificial bytes in an isolated build directory; no user media",
+  "checks": [
+    {"name": "native identity survives same-volume rename", "passed": true},
+    {"name": "independent byte-identical copy has a different native identity", "passed": true},
+    {"name": "read-only shared snapshot refuses an existing writer", "passed": true},
+    {"name": "snapshot handle refuses a new writer", "passed": true},
+    {"name": "snapshot handle refuses a concurrent move", "passed": true},
+    {"name": "full read matches the artificial source bytes", "passed": true},
+    {"name": "closing the snapshot releases move protection", "passed": true},
+    {"name": "source bytes are unchanged after all checks", "passed": true}
+  ],
+  "passed": 8,
+  "limits": [
+    "Only the current D: NTFS volume was tested",
+    "No FAT/exFAT/ReFS, file ID reuse, cancellation or permission matrix validation",
+    "No media format or decoder completeness validation",
+    "No Flutter importer, watcher, encrypted catalog or production UI integration",
+    "SHA-256 in the experiment is for evidence and artificial-data comparison only, not an approved media version algorithm"
+  ]
+}

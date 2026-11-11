@@ -5,7 +5,11 @@
 .dart_tool/
 .flutter-plugins-dependencies
 .packages
-build/
+/build/
+/src/windows/build/
+/src/ios/build/
+/src/shared/build/
+/src/windows/tool/probes/sqlcipher/build/
 .idea/
 *.iml
 coverage/
@@ -20,3 +24,7 @@ Thumbs.db
 *.p12
 *.p8
 *.mobileprovision
+
+# Local migration history and isolated acceptance state.
+/src/.local/
+/src/.agents/

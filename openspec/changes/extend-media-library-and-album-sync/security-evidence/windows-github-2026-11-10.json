@@ -1,0 +1,107 @@
+{
+  "date": "2026-11-10",
+  "platform": "Windows x64",
+  "version": "0.3.0+3",
+  "scope": "GitHub authorization and read-only repository discovery, partial platform acceptance",
+  "baseCommit": "0a4ddadd8707c49fe704afd7aded1a23c71d7d3f",
+  "workingTreeDirty": true,
+  "taskProgress": "17/70",
+  "newlyCompletedTasks": [],
+  "tests": {
+    "protocolHttpSubstitute": 14,
+    "realDpapiSqlcipherWithHttpSubstitute": 16,
+    "existingControllerAndWidget": 11,
+    "uniquePassingChecks": 41,
+    "initialCombinedRun": "40 passed; 1 test file scan failed on exclusive instance.lock",
+    "finalStoreRun": "16 passed after closing test vault before scanning",
+    "initialLog": "build/github-tests-2026-11-10.log",
+    "finalStoreLog": "build/github-store-tests-final-2026-11-10.log"
+  },
+  "realDeviceEndpoint": {
+    "validated": true,
+    "clientId": "Iv23li0GQwH80cVzX6yX",
+    "appId": 5690653,
+    "expiresIn": 899,
+    "interval": 5,
+    "codesRecorded": false,
+    "userAuthorizationPerformed": false,
+    "repositoryWrites": 0
+  },
+  "analysis": "No issues found",
+  "build": {
+    "target": "lib/main.dart",
+    "configuration": "release",
+    "success": true,
+    "log": "build/github-build-2026-11-10.log",
+    "exeSha256": "b57eafd55eb5c259df76e175e9192f86ff19611e906d7a382f9d444d6ee83662",
+    "appSoSha256": "e8616cd734590f2cc55b8fa2cb5bf5533cc9e81b2891031c1437c5a2d1030428",
+    "startupObserved": "Existing vault PIN lock screen",
+    "launchMethod": "Computer Use sky.launch_app"
+  },
+  "unverified": [
+    "Real installation and repository selection",
+    "Actual refresh and old-token invalidation",
+    "Platform denial/revocation/permission and visibility changes",
+    "Other uninstalled private repository refusal",
+    "Gitee",
+    "iOS",
+    "Real denial, cancellation and expiration platform matrix"
+  ],
+  "sources": [
+    {
+      "path": "lib/repositories/github_api.dart",
+      "sha256": "42b6b562447455a5171585455d3394c20f5616a9cc393ecbd7a195461abeb84a"
+    },
+    {
+      "path": "lib/repositories/github_connection.dart",
+      "sha256": "eeec4c5112333d06d7a72499e9ed561efb38056698c1aa7fc76dfa0a9f8b239d"
+    },
+    {
+      "path": "lib/ui/github_connection_panel.dart",
+      "sha256": "a4ab8c6c751e6cea238cfa59a7104264270a726257ee16eb58a21cadec4aede6"
+    },
+    {
+      "path": "lib/app/vault_controller.dart",
+      "sha256": "0fa923102c405867007172e8d2444bc2b355a34793c5e2c43e31647af4f96e4f"
+    },
+    {
+      "path": "lib/ui/production_screens.dart",
+      "sha256": "1bfb58fe00eaee1325aecf9964ecd2b7fb85242bcd3ff2b94b2cdffe82d44971"
+    },
+    {
+      "path": "windows/runner/flutter_window.cpp",
+      "sha256": "b587d6d6c4c184d188f94ef3cf0fc3cc8a3f56d177a4997755d20674b13c8bfe"
+    },
+    {
+      "path": "windows/runner/CMakeLists.txt",
+      "sha256": "68be3ecd0fdec8be2a9c80849b627e93d4e9e36637fd6781f2f37c0b2b58217b"
+    },
+    {
+      "path": "test/repositories/github_api_test.dart",
+      "sha256": "56c1ecd4c922420bb2ec8c795a224ff724f6c5395c45af675831c5164bfa8915"
+    },
+    {
+      "path": "test/repositories/github_connection_test.dart",
+      "sha256": "f883ed7a4cfb59244efa45fc3f8a16f67ebba166b6b617e563d6a44fcaf2fe39"
+    },
+    {
+      "path": "test/production_app_test.dart",
+      "sha256": "bd99399ea5c1fdae7a9f1ac7b56c7fc1cd96906974ef7a7c67feaab6d857ff81"
+    },
+    {
+      "path": "scripts/probe-github-device.dart",
+      "sha256": "c1439670edcec2621c92bbe2abb4f524f6bc0d9f8416f22982545ff4ba81bdd4"
+    },
+    {
+      "path": "pubspec.yaml",
+      "sha256": "4b7770c278606be5d4c50c117adf5fcb5eb913eb413b77edab20739adac1e67f"
+    }
+  ],
+  "manualUserAuthorization": {
+    "date": "2026-11-10",
+    "version": "0.3.0+3",
+    "result": "success and not-installed message",
+    "source": "explicit user confirmation after personally completing browser flow",
+    "secretsReadOrRecorded": false
+  }
+}

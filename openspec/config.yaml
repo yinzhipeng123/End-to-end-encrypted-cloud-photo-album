@@ -1,20 +1,27 @@
 schema: spec-driven
 
 context: |
-  Language: zh-CN
-  All artifacts must be written in zh-CN.
-  Keep OpenSpec structural headings and SHALL/MUST keywords in English.
-  Product: encrypted-photo-app，供用户个人在 Windows 和 iPhone 之间管理、整理、导入、导出和同步照片。
-  Confirmed client stack: Flutter + Dart；Windows 桌面客户端和 iOS 客户端均为正式目标。
-  Current phase: 用户已授权实现并运行 Windows Flutter 交互原型；真实加密、授权、同步和原图删除仍未实现，原型只能使用明确标识的模拟数据。
-  Storage: 支持 GitHub、Gitee 授权登录及私有仓库选择，上传前必须在客户端加密。
-  Local photos: Windows 原照片目录保留普通图片；不要求把源目录转换为本地密文库。
-  Capacity: 应用不人为设置照片库总容量配额；密文需要分块，目标尽量控制在每块 50 MB 以内。外部平台限制仍需识别和处理。
-  Password: 用户设置并记住照片解密密码，App 需要提醒；不要求用户手动设置或保管解密密钥。内部密钥机制和密码派生方案尚未选择。
-  App lock: Windows、iOS 两端均提供四位数字应用锁，上锁后只显示密码输入界面。
-  Reverification: 从上次成功输入照片解密密码开始，每 3 天强制再次验证；到期后锁定照片访问并暂停同步，四位数字密码不能替代验证。
-  Resume: 照片解密密码验证正确后重新开始 3 天周期，恢复受此次到期阻断的访问和同步；失败时继续阻断。
-  Deletion: 提供删除本地保留仓库、同步删除、删除仓库保留本地三种选择；本地指 Windows 原照片目录或 iPhone 系统相册中的原照片。
-  Excluded: 产品按不使用 iCloud 的前提设计，不提供 iCloud 接入，不在界面加入 iCloud 相关说明。
-  Decision discipline: 未确认的算法、内部密钥保存、普通应用锁是否暂停同步、删除前仓库校验和历史清理等，不得写成既定方案。
-  Prototype honesty: 原型若使用模拟流程，应明确区分模拟与真实加密、上传、恢复和删除能力。
+  Language: zh-CN. All artifacts must be written in zh-CN; keep OpenSpec structural headings and SHALL/MUST keywords in English.
+  Project: encrypted-photo-app，个人在Windows和iPhone之间管理照片、视频与Live Photo；Flutter+Dart。根规则见AGENTS.md，当前状态见openspec/project/current-status.md，目录见openspec/project/structure.md。
+  Structure: 用户已批准reorganize-project-structure实际迁移。Windows Flutter根为src/windows，iOS根为src/ios，共享Dart包src/shared。根目录不运行Flutter；正常入口src/windows/lib/main.dart，Windows构建产物src/windows/build。codemagic.yaml留根并指向src/ios。
+  Scope: 当前实现Windows；iOS需求保留且暂缓。Gitee无自建服务／客户端无Secret的真实授权能力尚未落实，不用PAT、内置Secret或模拟登录替代。共享代码不代表iOS原生接入完成。
+  Authorization: 用户默认批准已确认Windows产品范围内的后续编码技术选择，不再逐项重复审批；不扩大产品范围，不更改密码学承诺，不因此授权删除用户数据或重写远端历史。不提交、推送或归档。
+  Verification: 用户统一执行测试。当前允许源码阅读、格式化、静态分析、OpenSpec严格校验和编译，不运行测试套件、App、真实仓库／授权／锁屏／睡眠／破坏性验收。结构任务只证明各自明示的结构条件；媒体变更extend-media-library-and-album-sync仍26/73已验收，新增代码待用户测试。
+  Production requirements:
+  1. 所有功能必须有真实业务逻辑，界面或接口存在不等于完成。
+  2. 禁止模拟数据代替真实业务；首次空库准确显示空状态，测试样本不进入用户库。
+  3. 禁止假按钮、假操作和模拟成功；成功来源于实际执行与核对，入队不等于完成。
+  4. 文件读写、导出、删除和恢复必须真实执行并准确反馈，不能只修改状态位。
+  5. 加解密调用已批准的真实密码学实现，不用字符串比较、编码或改扩展名替代。
+  6. 业务数据按设计持久化，本机路径／文件名／相册／整理与跟踪元数据加密保存，凭据不明文落盘。
+  7. 未实现能力准确标记并禁用，不用演示代替，不把部分可用包称为完整产品。
+  8. 每项功能有可验证的验收标准与平台／版本／结果证据，编译、界面或替身测试、规格语法通过不等于真实业务验收。
+  Security: 已批准SFR-1 TD01-TD06：XChaCha20-Poly1305；Argon2id 64MiB/3次/1lane；随机主密钥及用途隔离；Windows用户范围DPAPI／iOS本设备Keychain。照片密码12-128个Unicode标量，遗忘不可绕过恢复；正确照片密码可重设四位PIN，改密须旧密码并重新包装。参数、绑定和失败语义不因目录重整改变。
+  Local storage: TD07 Windows SQLCipher已批准正式接入，sqlite3 3.9.1、独立目录密钥、加密事务、内存临时表，错误／损坏不覆盖旧库。用户首次可选数据目录，默认LocalAppData/EncryptedPhotoApp；DPAPI定位，目标不可用不新建替代库，不自动迁移已有用户库。
+  Access: Windows最小化／手动锁按WBL-1撤销界面和音画、保留已解锁进程的后台导入同步；系统锁屏／睡眠／退出、72小时到期或时间异常撤销后台。PIN、辅助解锁和重启不能延期；到期需正确照片密码。手动暂停不被解锁取消，iOS保留SFR-1规则。
+  Repository: GAR-2私有GitHub App、指定仓库、Device Flow与DPAPI令牌；RAR-1 HTTPS API专用分支非强制发布。WSR-1采用4MiB认证块、加密清单与恢复材料、读回验证后完成、断点和冲突保护、明确空库初始化；密文暂存和按需下载按批准稿。平台授权与解密权限分开，不上传明文或本机凭据。
+  Media: Windows原文件保持普通媒体，递归导入、运行期发现、重启补扫按WIR-1；iPhone默认纳入权限允许的本机媒体，不等于远端全量下载。保留首版ProRes、H.264/HEVC、Live Photo音画、全屏及控制需求；media_kit接入不等于全部格式实测通过。
+  Organization: 多选、当前完整结果全选、批量上传／导出／删除保留；属于任一隐藏相册就从所有照片和收藏隐藏；文件名仅详情。iPhone系统改名新导入且保留旧相册，系统删相册保留App相册；App删相册停止跟踪、手动导入可恢复；保留App成员调整，仅合并系统变化，不反写系统。
+  Operations: Windows后续决策已记录真实导出与三范围删除；本地同卷可恢复移动到.epa-recycle，仓库不重写Git历史，部分失败准确记录。仅删仓库抑制自动上传，允许显式重传。WRP-1 B回环读取随机认证、逐块验证解密，不写内部明文缓存，查看锁定即关闭。
+  Preservation: 相册元数据跨设备仓库同步不自动新增；不新增iCloud接入或相关界面说明、分享、编辑、下载器、自动多仓库或手工恢复码。用户原图／秘密／缓存／编译物不提交。历史OpenSpec证据路径及哈希不机械改写；旧build中账号、人工来源和报告保全到src/.local/pre-structure，不能整目录删除或自动重用账号。
+  References: 有效技术依据见AGENTS.md的SFR-1、TD07、GAR-2、RAR-1、WIR-1、WSR-1、WBL-1、WRP-1和windows-completion-decisions.md索引；当前任务见对应changes/tasks.md。历史快照只供追溯，不覆盖最新明确授权。

@@ -1,0 +1,11 @@
+name: miyu_sqlcipher_probe
+description: 隔离验证 SQLCipher；不接入应用，不处理用户照片或正式密码。
+publish_to: none
+environment:
+  sdk: '>=3.10.0 <4.0.0'
+dependencies:
+  sqlite3: 3.9.1
+hooks:
+  user_defines:
+    sqlite3:
+      source: sqlcipher

@@ -1,0 +1,61 @@
+schema: spec-driven
+
+context: |
+  Latest Windows follow-up: 2026-11-11 Windows增量编码（0.7.1+10）：固定开发标签改为真实版本及具体能力说明；补同步队列分类／分页／安全重试、仅仓库媒体真实封面、完整查看优先和远端版本更新。见 windows-followup-implementation.md；已编码待用户测试，26／73验收状态不变。Gitee未实现、iOS暂缓；不运行App或测试，不提交推送归档。
+  Latest Windows coding: 2026-11-11版本0.7.0+9，媒体播放／WRP-1回环资源、实况配对及多资源、导出／三范围删除／回收恢复代码接入；见windows-coding-delivery.md与windows-completion-decisions.md。新增实现待用户统一测试，26/73验收勾选不变；Gitee未实现、iOS暂缓，不运行测试或App、不提交推送归档。旧未实现／待逐项批准历史由最新授权和实施记录接续。
+  Latest delegated decisions: 2026-11-11 用户明确默认批准剩余编码技术决策，不再逐项提问；在已确认Windows产品范围内按安全、稳定及可维护性落实并记录，测试统一交用户。WRP-1候选B及约束已明确批准。iOS暂缓，不扩大产品范围，不执行用户数据删除／远端历史重写，不提交推送归档。下文旧的逐项审批流程按本条接续；实现不等于验收。
+  Latest execution direction: 2026-11-11 用户调整执行方式：测试与运行验收交由用户统一执行，当前优先完成已批准范围的Windows编码；不再用逐项人工验收阻断独立编码，不发起新的授权／锁屏／睡眠测试。任务勾选仍表示已验收，新增实现只标代码已实现／待用户测试。本轮可做代码阅读、格式化与静态编译检查，不能把这些当功能测试通过；不执行测试套件或平台测试。iOS暂缓、关键方案先确认、不提交推送归档等边界不变。
+  Latest real authorization result: 2026-11-11 14:11 GitHub授权验收接续：网页拒绝、拒绝后重新授权、真实账号／仓库查询及设备码申请在途取消均已留证。用户明确确认取消前点过“断开本机连接”；账号消失与主动断开一致，不是取消误删连接。两次设备申请cancelled，停止等待且没有后续令牌请求。已显示设备码后的取消、保留原连接及其他GAR-2平台场景仍待验收；3.2不勾选，26／73不变。本轮无业务代码修改，见github-authorization-followup.md及github-auth-cancel-2026-11-11.json。
+  Latest authorization follow-up: 2026-11-11 授权验收准备：用户手动清理的29个路径已核对，随后按本轮需要重建依赖及双入口0.6.2+8。新增独立GitHub授权验收入口和仅允许授权／只读查询的真实传输观察器；22项测试、analyze及严格规格校验通过。隔离窗口位于build/github-auth-acceptance/runner，已运行并观察到PIN页，等待用户本人完成拒绝／重新授权。正常Release已按lib/main.dart重建，AOT不同且不含测试密码标记，正常包未启动。本轮没有新增应用业务改动、没有用户授权或仓库写入结果；3.2保持未完成，26／73不变。详见github-authorization-followup.md及security-evidence/github-auth-acceptance-2026-11-11.json；旧“当前没有可运行包”描述仅指清理后的历史时点。
+  Latest completed lock validation: 2026-11-11 WBL-1 最终验收：0.6.2+8已完成任务2.9，当前26／73。121项关联回归及最后原生遮挡代次修订后的表单复核、analyze、双入口构建通过。用户解锁后重启隔离窗口，真实最小化报告passed：PIN页、遮挡生效、后台实例不变、锁中新增嵌套PNG已导入、旧界面访问撤销、期限不变。恢复后两次截图均为PIN页，首次可访问性树短暂滞后，后次刷新一致；该观察不扩大为逐帧录像证明。隔离窗口已关闭，正常Release（lib/main.dart）已运行并观察到PIN页，由用户自行解锁。4.9真实GitHub锁中上传未执行，保持未完成。详见windows-background-lock-implementation.md及同日证据；不提交、不推送、不归档。
+  Latest lock implementation: 2026-11-11 WBL-1，0.6.2+8已完成界面锁与后台会话分离；121项关联回归通过，最后原生遮挡代次修订后的生产表单复核、analyze、隔离及正常入口构建通过。旧包真实最小化锁中导入通过；发现恢复首帧问题后增加原生遮挡，新版真实窗口验收因桌面锁定等待用户解锁，2.9不勾选，4.9实际GitHub锁中上传未执行；当前25/73。正常Release入口为lib/main.dart，新版正常客户端尚未启动。见windows-background-lock-implementation.md及security-evidence/windows-background-lock-2026-11-11.json。
+  Latest lock approval: 2026-11-11 用户明确批准 WBL-1：Windows 最小化／手动应用锁仅撤销界面访问，已解锁进程保留后台所需密钥、加密目录和仓库会话，继续来源发现、导入、加密、上传及校验；72 小时到期、时间异常、系统锁屏／睡眠、退出／重启仍停止后台并撤销会话。手动暂停不因解锁解除。详见 windows-background-lock.md，旧 SFR-1／WSR-1 的普通锁暂停条款仅在此 Windows 范围被替换；iOS 不变。批准不等于验收。
+  Latest proxy delivery: 2026-11-11任务3.7完成，25/71；39项相关测试、4次真实GitHub公共端点请求、静态检查和严格规格校验通过。0.6.1+7正常／隔离包构建通过，正常程序已启动并观察到PIN锁屏；没有通过用户认证或宣称仓库初始化／上传已通过。见windows-proxy-implementation.md和security-evidence/windows-proxy-2026-11-11.json。
+  Latest proxy requirement: 2026-11-11用户要求自动检测并使用本机代理；环境变量优先，当前用户Windows系统手动HTTP代理次之，变化于下一请求重读，异常不直连回退。用户本机127.0.0.1:10808经真实生产传输访问GitHub API／设备端点通过，任务3.7新增，详见windows-proxy-implementation.md；不是仓库同步验收通过。后续截图已选中test-album但初始化网络错误，以下未安装记录为历史。
+  Latest installation follow-up: 2026-11-10 用户已手动运行隔离客户端并完成真实授权；实际查询无匹配安装，未选择／初始化／上传。用户截图仅列Codex Connector与Codemagic，没有相册应用，旧“已安装”口头记录不能代替实际证据。补固定官方安装管理入口与始终可见的仓库区域，等待用户安装后刷新核验；24/70不变。以下等待打开／授权的文字为历史，不绕过产品授权或PIN。
+  Latest implementation: 2026-11-10 WSR-1实施，4.1设计及4.2本机真实加密资源准备验收完成，24/70；GitHub传输、队列、密文缓存、按需图片、认证清单、新目录恢复和改密发布代码已接入，真实平台授权／传输验收未完成，4.3-4.8/6.2/6.8不勾选。详见windows-sync-implementation.md。隔离测试入口等待用户本人授权，自动审批拒绝进程启动；不借连接器令牌、不跳过PIN。下文历史状态按最新记录接续，正式入口保持lib/main.dart。
+  Latest sync approval: 2026-11-10 用户要求优先真实同步，授权在 yinzhipeng123/test-album（repository ID 1452541678）测试，已确认App安装并自行改私有；写前实际核验。用户分别批准WSR-1的TD10-S/TD11-S、TD13-S/TD12-S、TD09-I，见windows-sync-review.md。旧只读阶段由此接续，允许隔离人工媒体同步；不提交推送源码。Gitee、TD14删除、TD12导出其余范围及TD16仍未决，iOS保留；批准不等于任务完成。
+  Latest local organization: 2026-11-10 用户确认 GitHub App 尚未安装，先继续本机功能。Windows 6.1/6.3 已通过真实 SQLCipher、生产表单及独立进程恢复验证，当前 22/70、0.5.0+5。6.2 本机多选全选与批量整理已接入，但已同步/仅仓库筛选依赖真实传输而禁用，整项及 6.8 仍未完成。见 windows-organization-implementation.md；后文 20/70 和 0.4.0+4 为上一轮导入基线，不降低其他需求。
+  Import approval: 2026-11-10 后续明确批准：用户分别答复“批准 WIR-1 的 TD11-W”和“批准 WIR-1 的 TD13-W”，本机来源身份／版本与稳定读取／调度按 windows-import-review.md 生效。后文此前待确认记录按此接续，不重复审批；远端／跨设备身份、传输格式及删除策略不随之批准。设计批准不等于任务完成。
+  Latest work priority: 2026-11-10 用户要求先开发 Windows 导入，后续明确批准 WIR-1 的 TD11-W 与 TD13-W，不再重复审批。真实读取、递归导入、监听／补扫已接入正常入口及 SQLCipher schema v3；实际验收、构建和局限见 windows-import-implementation.md，精确进度以 tasks.md 为准。旧 17/70 仅指本轮前基线；剩余 GitHub/Gitee、传输、完整媒体播放及 iOS 任务保留。
+  Latest GitHub approval: 2026-11-10 用户批准 RAR-1 TD09-A 并同意先完成阶段三 GitHub 部分，Gitee 需求保留且未完成。公开 Client ID/App ID 已提供，见 github-app-registration.md；用户说明尚未安装到照片仓库，稍后自行选择。实施真实设备授权、DPAPI 刷新与私有仓库查询选择，不写远端媒体，不将局部验收当作阶段三全部完成。以下旧注册／TD09 未决记录按本项接续；TD10–TD14 仍待确认。
+  Language: zh-CN
+  All artifacts must be written in zh-CN.
+  Keep OpenSpec structural headings and SHALL/MUST keywords in English.
+  Product: encrypted-photo-app，供用户个人在 Windows 和 iPhone 之间管理、整理、导入、导出和同步照片。
+  Confirmed client stack: Flutter + Dart；Windows 桌面客户端和 iOS 客户端均为正式目标。
+  Latest scope override: 2026-11-09 用户明确当前只编码、验收、编译并运行 Windows，保留全部 iOS 需求；iOS 原生／真机／跨端验收延后，不阻塞 Windows。TD01–TD06 和 TD07 Windows 正式接入已批准，未决授权／协议／删除方案仍须确认。
+  Current phase: 2026-11-10 导入 5.1–5.3 已验收，当前 20/70，正常 Windows 0.4.0+4 已构建并运行；54 项定向回归及独立导入证据见 windows-import-implementation.md。此前任务 2.5/2.6 Windows 验收完成时为 17/70。正常入口使用真实安全服务和 SQLCipher；实际系统锁屏／S3 睡眠及恢复、12 个完整 App 接线进程中断恢复、4 个真实 NTFS 虚拟卷容量耗尽场景通过。PIN 材料缺失时错误进入 PIN 页的问题已修复，43 项定向回归通过。见 windows-recovery-implementation.md；原 143 项与目录五场景为历史证据，不能折算全部产品验收。阶段三 GitHub 注册、TD08-A／TD09-A 及独立推进已批准；Gitee 缺口保留。
+  Local metadata: 本机路径、文件名、相册和整理／跟踪元数据必须加密。用户已批准 windows-delivery.md 的 TD07 Windows SQLCipher 方案；sqlite3 3.9.1、随机目录密钥、加密事务和内存临时表按批准方案实现。iOS 后端接入仍延后，不允许明文索引回退。
+  Restart unlock: 三天周期内允许系统安全存储辅助解锁，重启仍须四位应用锁；辅助解锁不重置期限，到期须正确照片密码。Windows 用户范围 DPAPI／iOS 本设备且设备解锁可访问 Keychain 已按 SFR-1 批准，真实平台能力待验证。
+  Playback: 用户已同意接入并验证 media_kit 候选；不能把依赖接入、合成样本或封面显示当作 iPhone ProRes／实况与双端播放完整验收。
+  Storage: 支持 GitHub、Gitee 授权登录及私有仓库选择，上传前必须在客户端加密。
+  Local photos: Windows 原照片目录保留普通图片；不要求把源目录转换为本地密文库。
+  Data location: Windows 首次设置可选择数据保存目的地，在所选父目录下创建专用 EncryptedPhotoApp 子目录并显示实际路径；默认 LocalAppData。DPAPI 保护启动定位记录；重启沿用所选目录，目标不可用或记录损坏时拒绝打开，不自动新建替代库，不自动迁移已有库。解锁后的设置页显示当前实际目录的完整路径，锁定后隐藏，任务 2.8 局部界面验证见 windows-settings-data-location-2026-11-09.json。
+  Latest incremental validation: 最新 2.5/2.6 证据 windows-recovery-2026-11-10.json 与 windows-recovery-implementation.md；保留 2.7 的 31 项选址回归、2.8 的设置路径测试及此前 143 项历史基线，不将其改写为本次重跑。2.5/2.6 完成不代表尚未接入的媒体或远端服务完成，iOS 全部验收继续保留。
+  Capacity: 应用不人为设置照片库总容量配额；密文需要分块，目标尽量控制在每块 50 MB 以内。外部平台限制仍需识别和处理。
+  Password: 用户记忆 12–128 个 Unicode 标量的照片密码，按 SFR-1 严格编码与强度规则处理；不手工管理密钥。已批准 Argon2id 64 MiB／3 次／1 lane 及随机主密钥包装，遗忘不提供绕过密码的恢复；PIN 可用正确照片密码重设，改密按 SFR-1 重新包装及明确旧材料风险。
+  App lock: 两端分别设置四位 ASCII 数字 PIN，上锁后只显示密码输入界面。Windows 最小化／手动锁按 WBL-1 保留后台导入与同步；系统锁屏／睡眠／退出、到期及异常仍撤销后台。iOS 及其余重试规则按 SFR-1 TD06。
+  Reverification: 从上次成功输入照片解密密码开始，每 3 天强制再次验证；到期后锁定照片访问并暂停同步，四位数字密码不能替代验证。
+  Resume: 照片解密密码验证正确后重新开始 3 天周期，恢复受此次到期阻断的访问和同步；失败时继续阻断。
+  Deletion: 提供删除本地保留仓库、同步删除、删除仓库保留本地三种选择；本地指 Windows 原照片目录或 iPhone 系统相册中的原照片。
+  Excluded: 产品按不使用 iCloud 的前提设计，不提供 iCloud 接入，不在界面加入 iCloud 相关说明。
+  Decision discipline: TD01–TD06 已明确批准；TD07 Windows 正式数据库接入已批准；TD08–TD14 中未决授权／仓库协议／删除校验及历史清理等仍不得默选。原有 SQLCipher、media_kit 验证授权保留。
+  Delivery: 旧原型说明只解释历史，不是正式交付契约。production-readiness 规定真实运行、未实现标记和验收证据；界面、模拟、局部真实实现与正式验收分别记录。
+
+  Production requirements:
+  1. 所有产品功能必须具有真实业务逻辑，界面或接口存在不等于功能完成。
+  2. 禁止使用模拟数据代替真实业务数据；首次空库显示真实空状态，测试样本不得自动进入用户媒体库。
+  3. 禁止假按钮、假操作和模拟成功提示；成功必须来自实际执行及结果核对，入队不等于完成。
+  4. 文件读取、写出、恢复和删除必须真实执行并反馈实际结果，不能只修改内存副本标志。
+  5. 加密和解密必须调用经确认方案中的真实密码学实现，不能用密码字符串比较、状态位或改扩展名代替。
+  6. 业务数据必须按照设计要求持久化；本机管理元数据加密保存，临时界面选择状态无需因此持久化，凭据不得明文落盘。
+  7. 未实现能力必须明确标记未实现并禁用执行入口，不能用演示代替；开发阶段的部分可用包不得宣称正式交付完成。
+  8. 每项功能必须有可验证的验收标准和实现／平台／版本／结果证据；构建、界面测试、模拟测试及 OpenSpec 语法通过不代表真实业务验收通过。
+  Work order: 原八阶段保留；2026-11-10 用户明确优先 Windows 导入，在已完成安全与存储基础上先接 5.1–5.3 及必要展示／验证，再接续剩余授权／传输和其他任务。关键未决设计仍须确认，不跳过真实验收；iOS 暂缓。
+  Planning references: 当前变更 technical-decisions.md 列出待批准选项；acceptance.md 定义验收；tasks.md 为重排后的正式任务；旧 17/53 仅见 previous-task-baseline.md，映射及分类见 implementation-status.md。
+  Active review: 1.1 的具体参数、威胁边界、生命周期、失败语义及 2026-11-09 三组批准记录见 security-foundation-review.md。设计批准与真实业务完成分开；每项实现通过相应验收才勾选，不把文档检查计作业务完成。
+  Scope discipline: 保留多选全选、任一隐藏相册规则、文件名仅详情、首版 ProRes、iPhone 相册改名新导入／删除保留／停止跟踪／手动恢复和 App 调整优先；相册元数据跨设备仓库同步尚未确认，不由阶段名称自动纳入。
+
+  Authorization prerequisites: GitHub App 已注册并取得公开标识，设备码端点已实际验证；用户尚未安装到照片仓库。GAR-2 TD08-A、RAR-1 TD09-A 和阶段三 GitHub 独立推进均已批准。当前仅授权与只读查询，未授权远端媒体写入；用户已手动确认真实授权成功、提示尚未安装；完整权限矩阵待验收。Gitee 尚未注册且必须无需自建服务，公开客户端能力证据仍不足；不以中介、PAT 或内置 secret 替代。
+  GitHub implementation: 正常入口接入真实 HTTPS、DPAPI 令牌保护与 SQLCipher 连接记录，详见 windows-github-implementation.md；14 项协议替身、16 项真实本机存储／HTTP 替身及 11 项现有入口回归通过。实际设备端点通过，用户另确认账号授权成功并提示未安装；仓库访问和完整平台矩阵仍待验收，任务 3.2/3.4–3.6 保持未完成，当时为 17/70；本轮导入后进度由 Current phase 接续。

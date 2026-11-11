@@ -1,0 +1,30 @@
+name: encrypted_photo_app
+description: Private encrypted photo library for Windows and iOS.
+publish_to: none
+version: 0.7.1+10
+environment:
+  sdk: '>=3.13.0 <4.0.0'
+dependencies:
+  encrypted_photo_shared:
+    path: ../shared
+  file_selector: 1.1.0
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  media_kit: 1.2.6
+  media_kit_libs_video: 1.0.7
+  media_kit_video: 2.0.1
+  sodium: 4.1.2+1
+  sqlite3: 3.9.1
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+hooks:
+  user_defines:
+    sqlite3:
+      source: sqlcipher
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/licenses/

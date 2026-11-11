@@ -1,0 +1,80 @@
+{
+  "date": "2026-11-11T10:51:28.1974887+08:00",
+  "platform": "Windows x64",
+  "version": "0.6.1+7",
+  "task": "3.7",
+  "regression": {
+    "passed": 39,
+    "log": "build/proxy-regression-final-2026-11-11.log"
+  },
+  "previousFailures": [
+    "Missing locked dependency cache; restored using pub get --enforce-lockfile",
+    "Flutter local WebSocket passed through process proxy; NO_PROXY added for local test communication"
+  ],
+  "publicNetworkChecks": [
+    {
+      "case": "system-without-shell-environment",
+      "host": "api.github.com",
+      "route": "Windows 系统设置 · HTTP 代理 127.0.0.1:10808",
+      "status": 200,
+      "validResponse": true
+    },
+    {
+      "case": "system-without-shell-environment",
+      "host": "github.com",
+      "route": "Windows 系统设置 · HTTP 代理 127.0.0.1:10808",
+      "status": 200,
+      "validResponse": true
+    },
+    {
+      "case": "provided-environment",
+      "host": "api.github.com",
+      "route": "环境变量 · HTTP 代理 127.0.0.1:10808",
+      "status": 200,
+      "validResponse": true
+    },
+    {
+      "case": "provided-environment",
+      "host": "github.com",
+      "route": "环境变量 · HTTP 代理 127.0.0.1:10808",
+      "status": 200,
+      "validResponse": true
+    }
+  ],
+  "analysis": "pass",
+  "strictOpenSpecValidation": "pass",
+  "builds": {
+    "isolatedHasTestPassword": true,
+    "productionHasTestPassword": false,
+    "production": "lib/main.dart",
+    "isolated": "scripts/windows-sync-platform-probe.dart",
+    "result": "pass"
+  },
+  "nativeLaunch": {
+    "unlocked": false,
+    "production": "observed real PIN lock screen",
+    "window": 70122
+  },
+  "privateRepositoryInitializationVerified": false,
+  "realSyncAcceptanceCompleted": false,
+  "unsupported": [
+    "SOCKS-only",
+    "PAC/WPAD-only",
+    "HTTPS proxy server",
+    "proxy URL credentials"
+  ],
+  "sha256": {
+    "lib/repositories/network_proxy.dart": "aebbf54004edaa173382550a53e5794928da219d4ed3d66a18d4518977e0765e",
+    "lib/repositories/github_api.dart": "b2846c53c1e417bd27c2ec46eb6789b3b17d6fbf0269d91e36dd7cd17999bd6c",
+    "lib/repositories/github_connection.dart": "0452f57fa062e98687b7f0ae6e7a45b363c8a0f4538eca308e6639ccbc876545",
+    "lib/ui/github_connection_panel.dart": "8bb4112e22d7200c103063029c3c5f47a80a9ca3bb2e78ff216ffdbd36ca5249",
+    "test/repositories/network_proxy_test.dart": "8b0f934d07b730fdb631fdd9f1f1b5da7952319712a7f5a629d81dd780c65868",
+    "scripts/probe-github-network.dart": "6049d5481ed07a6720c1a6a211bc39e0b82c138d455fd047d62b2ef2b2126d94",
+    "pubspec.yaml": "18a234d00ad0a1a7eda51e29b693d4ad26efba00e4a72c2eaeeafb8524b490f2",
+    "pubspec.lock": "326ce4c5ebf762295dabcbf4c370d92102af4af4ddfa90dd433f618cd6a6ac91",
+    "build/windows/x64/runner/Release/encrypted_photo_app.exe": "5b1319e37e08e73d4e57e7a46ef3563753ed4fa30a90939958285bea18fd63ee",
+    "build/windows/x64/runner/Release/data/app.so": "ddbedb2847fbab42f9e4d776a8dca37707b52b4dcbb3c01827e2717c74710917",
+    "build/sync-platform/runner/encrypted_photo_app.exe": "5b1319e37e08e73d4e57e7a46ef3563753ed4fa30a90939958285bea18fd63ee",
+    "build/sync-platform/runner/data/app.so": "9f793ba21e76ff51724364f0276c9441d26a1f46033cba8d159199f8dd575570"
+  }
+}

@@ -1,0 +1,298 @@
+{
+  "date": "2026-11-10T15:48:09.798275+08:00",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "version": "0.5.0+5",
+  "schema": 3,
+  "entry": "lib/main.dart",
+  "gitBase": "0a4ddadd8707c49fe704afd7aded1a23c71d7d3f",
+  "workspaceUncommitted": true,
+  "productionUsesMockData": false,
+  "tasksCompleted": [
+    "6.1 Windows",
+    "6.3 Windows"
+  ],
+  "progress": {
+    "complete": 22,
+    "total": 70
+  },
+  "task6_2": "Local selection/batch organization verified; verified remote-state filters unavailable, complete task unchecked.",
+  "verification": {
+    "regression": {
+      "passed": 57,
+      "distinctTests": 57,
+      "includesLegacyRules": true
+    },
+    "finalAffectedRetest": {
+      "passed": 9,
+      "overlapsRegression": true
+    },
+    "processModes": {
+      "initial": {
+        "pid": 2644,
+        "mode": "initial",
+        "imported": 3,
+        "photoCount": 2,
+        "videoCount": 1,
+        "integrity": "passed",
+        "originalBytesUnchanged": true,
+        "reopenedCommittedOrganization": false,
+        "crashRollback": false,
+        "artificialOnly": true
+      },
+      "crash": {
+        "pid": 2956,
+        "beforeOuterCommit": true,
+        "artificialOnly": true
+      },
+      "reopen": {
+        "pid": 27124,
+        "mode": "reopen",
+        "imported": 3,
+        "photoCount": 2,
+        "videoCount": 1,
+        "integrity": "passed",
+        "originalBytesUnchanged": true,
+        "reopenedCommittedOrganization": true,
+        "crashRollback": true,
+        "artificialOnly": true
+      }
+    },
+    "crashMode": "Intentional exit(91), flutter command exited 79; only recovery assertions count as passed.",
+    "nativeIsolatedReady": {
+      "pid": 34512,
+      "mediaCount": 3,
+      "visible": 2,
+      "artificialOnly": true
+    },
+    "nativeVisualInspection": {
+      "status": "not verified",
+      "errors": [
+        "window is minimized",
+        "failed to activate captured window"
+      ]
+    },
+    "normalLaunch": {
+      "processId": 25896,
+      "path": "D:\\encrypted-photo-app\\build\\windows\\x64\\runner\\Release\\encrypted_photo_app.exe",
+      "fileVersion": "0.5.0+5",
+      "productVersion": "0.5.0+5",
+      "entry": "lib/main.dart",
+      "userCredentialsEntered": false
+    },
+    "normalUIReadOnly": "Observed application-locked PIN screen via accessibility tree; user credentials not entered.",
+    "analyze": "No issues found",
+    "openspecStrict": {
+      "passed": 9,
+      "failed": 0
+    }
+  },
+  "testBoundaries": [
+    "Widget platform event/picker responses are test doubles; credentials, SQLCipher and file import are real.",
+    "Bulk 257-item tests use artificial catalog records, not user media; process test uses actual generated PNG and H264 files.",
+    "Native UI probe is isolated and not shipping; final lib/main.dart rebuild restored before normal launch.",
+    "No actual repository writes, iOS acceptance, full playback or physical lock/suspend rerun in this task."
+  ],
+  "sources": [
+    {
+      "path": "lib/storage/library_catalog.dart",
+      "bytes": 25678,
+      "sha256": "c6597d036786dfc4160f3ccd02f5da44f9e1d983027d4eb37e9f7b293af63bf0"
+    },
+    {
+      "path": "lib/model/selection_state.dart",
+      "bytes": 927,
+      "sha256": "faf2808b94adcbeefe38e3246706afcfbb4e99b501b25745be5a2fe22a961a4b"
+    },
+    {
+      "path": "lib/services/library_organization_service.dart",
+      "bytes": 4081,
+      "sha256": "c7321e39e1463b9b7987ba46a6d2f435e18a985e98a2cd8998835916363acec1"
+    },
+    {
+      "path": "lib/app/vault_controller.dart",
+      "bytes": 17853,
+      "sha256": "b9ff8f45eb3a5bb1bb0dabf354e91689e885fc8a5ea7c9c55655eb3ffc8ce8ce"
+    },
+    {
+      "path": "lib/ui/production_library_panel.dart",
+      "bytes": 21282,
+      "sha256": "6bda70e66044709ff923e927c8d71f2ffb76c3d0e462c511f4bf33dc260a7ad5"
+    },
+    {
+      "path": "lib/ui/production_album_panel.dart",
+      "bytes": 6477,
+      "sha256": "38420dd1a303d4931e3a830a7ed1c2ed2d6065647c714f25e5d0681532d91a2a"
+    },
+    {
+      "path": "lib/ui/production_screens.dart",
+      "bytes": 22205,
+      "sha256": "b91baca38ece9d6218050efda62dc5f2d9294a3a3838c6a2141e258d94507a9d"
+    },
+    {
+      "path": "lib/main.dart",
+      "bytes": 4407,
+      "sha256": "06f4c348e502bdb8a5d98e591888072a1158a045e8ac260bd5b068f4a1be806a"
+    },
+    {
+      "path": "pubspec.yaml",
+      "bytes": 563,
+      "sha256": "671628cd8a1645ef129ab1fca5071400553af0bcaa34f4927bf84cbf634c6d4d"
+    },
+    {
+      "path": "pubspec.lock",
+      "bytes": 20231,
+      "sha256": "326ce4c5ebf762295dabcbf4c370d92102af4af4ddfa90dd433f618cd6a6ac91"
+    },
+    {
+      "path": "test/library_organization_test.dart",
+      "bytes": 10346,
+      "sha256": "9d931d85241c5a7bcade6f38ab96c054f1c1d6135916d99973c50012105fb5c5"
+    },
+    {
+      "path": "test/production_app_test.dart",
+      "bytes": 15181,
+      "sha256": "956b2a5e0c0d6fd3a15fc2577eadd929b677421d441915d0d1fa122ae5df096b"
+    },
+    {
+      "path": "scripts/windows-organization-process-probe.dart",
+      "bytes": 7006,
+      "sha256": "bf4b861ed27964674f45c76a46b1b8b6aefe3228eca4be24615f1c1370eea5ea"
+    },
+    {
+      "path": "scripts/windows-organization-ui-probe.dart",
+      "bytes": 2808,
+      "sha256": "7ee6d6028988a5f6d1dd5c9ea96b2f923353381af08ba612569a31e5a77e6d02"
+    }
+  ],
+  "logs": [
+    {
+      "path": "build/organization-regression.log",
+      "bytes": 9017,
+      "sha256": "3e5a725211869acf73cab995f8270363ae32ebecb28da0ca885b7ac1449da0a8"
+    },
+    {
+      "path": "build/organization-final-tests.log",
+      "bytes": 1591,
+      "sha256": "e69d74395368d0926713e217b0d9399298ab023f1e1b4ecc7c64f3f2c2f0473c"
+    },
+    {
+      "path": "build/organization-process-initial.log",
+      "bytes": 202,
+      "sha256": "9cdbaecb797d6d9f5cee773093588b3c34babbe40ac86de54fdf5881115b1a22"
+    },
+    {
+      "path": "build/organization-process-crash.log",
+      "bytes": 515,
+      "sha256": "87a1daf440b7add32cd1e29613188f47ba72ec3886b8b67e83e180e19ceb5e33"
+    },
+    {
+      "path": "build/organization-process-reopen.log",
+      "bytes": 202,
+      "sha256": "e54cb4bfb4c59098007e1b5d73416b772ad29ff6338b2bfacaff49296b403d42"
+    },
+    {
+      "path": "build/organization-ui-build.log",
+      "bytes": 142,
+      "sha256": "a7aecf8e08ffb889bfd38e4faea7a0d0d59e2bf1bf2f595bbc56f2b29f3e3547"
+    },
+    {
+      "path": "build/organization-release-build.log",
+      "bytes": 142,
+      "sha256": "56070766b43fbc0a113ede7f7ed06959244d4d2282433ccc13edf103753b5250"
+    },
+    {
+      "path": "build/organization-analyze-final.log",
+      "bytes": 99,
+      "sha256": "2104ee927073ddfba08af979d0e84164add8409aca35e8048c049a364d4510f2"
+    },
+    {
+      "path": "build/organization-openspec-final.log",
+      "bytes": 326,
+      "sha256": "88aab78edc2b10d9d7caaa3052580ef2be70644b8820237c5cdabaf7f980e780"
+    },
+    {
+      "path": "build/organization-normal-launch.json",
+      "bytes": 255,
+      "sha256": "be500371f6f2580e4ec9b883e8e259443465c2efc9dd1569f0049a9a546c84f3"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "build/windows/x64/runner/Release/encrypted_photo_app.exe",
+      "bytes": 135680,
+      "sha256": "2f4491ef1306c2480e5f893d56d0d484397c3d211d80a474a708745667d7f9c9"
+    },
+    {
+      "path": "build/windows/x64/runner/Release/data/app.so",
+      "bytes": 7324552,
+      "sha256": "2ad117779a071aad23daca2aea47d1a88bd303577e8810d1bd5fd99aa2716ff4"
+    },
+    {
+      "path": "build/windows/x64/runner/Release/sqlcipher.dll",
+      "bytes": 4998144,
+      "sha256": "f13740c540bc2fd35c52372bf6effcaaf488b09e81c11d1896ac61b6cab06dce"
+    },
+    {
+      "path": "build/windows/x64/runner/Release/libsodium.dll",
+      "bytes": 484864,
+      "sha256": "b25af177a6a2b32102b7d480dce7c8bfbf88b0919e857a8adc218b229af8ad99"
+    },
+    {
+      "path": "build/windows/x64/runner/Release/epa_source_reader.dll",
+      "bytes": 9728,
+      "sha256": "89307f547324b8f50b84e37f91e8e6f367f9e785483f43c410da19b64cb0805e"
+    }
+  ],
+  "documents": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 15123,
+      "sha256": "6b320080ffb02b9db8d5235df218b0c29d500d789cec035476d3bd8e770de9ea"
+    },
+    {
+      "path": "README.md",
+      "bytes": 20579,
+      "sha256": "bb5de1005bee4dc8f9630c0a8361d87c5936c3b9074032acd310ca1c26fd6ca0"
+    },
+    {
+      "path": "openspec/config.yaml",
+      "bytes": 10166,
+      "sha256": "2afc351605b8dfa43ff96b87c4cbe1d9722dd1622e06f275c8facaae1eb7a419"
+    },
+    {
+      "path": "openspec/changes/extend-media-library-and-album-sync/tasks.md",
+      "bytes": 31649,
+      "sha256": "d4dcfb569270914d45ea70fbd6b7a56f278863e0f795c4c89383ae4fd9047133"
+    },
+    {
+      "path": "openspec/changes/extend-media-library-and-album-sync/proposal.md",
+      "bytes": 10590,
+      "sha256": "b5a979838828c5c9a872a8747a8ce7ee6d55bda4a39bc2f4f0abbb7288aa696c"
+    },
+    {
+      "path": "openspec/changes/extend-media-library-and-album-sync/design.md",
+      "bytes": 36718,
+      "sha256": "ee00a00f7047cbbfd16248f4f369ddc3c4b8b59aaeb6653c1eb0c70c93ed1c8f"
+    },
+    {
+      "path": "openspec/changes/extend-media-library-and-album-sync/implementation-status.md",
+      "bytes": 10748,
+      "sha256": "6d7bffd7335765a2d4678e70fc80ca266ac5c26643e7541f841215d793d3326b"
+    },
+    {
+      "path": "openspec/changes/extend-media-library-and-album-sync/windows-organization-implementation.md",
+      "bytes": 8751,
+      "sha256": "96db47ffbad8a2ba69b8df7faf091406c4aed5be5e8cd531d165472cbd21cec1"
+    },
+    {
+      "path": "openspec/changes/extend-media-library-and-album-sync/specs/photo-library/spec.md",
+      "bytes": 7067,
+      "sha256": "9a9a9d8915da9b5c583c4b98ecf4cecc85a62d43c89b1761db6b9495e5941737"
+    },
+    {
+      "path": "openspec/changes/extend-media-library-and-album-sync/specs/album-visibility/spec.md",
+      "bytes": 3656,
+      "sha256": "f79fd967d6da7045c9e063d25dc6df1b2b38a6aad30cb00f02e7aefb059b072b"
+    }
+  ]
+}

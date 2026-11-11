@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.14)
+project(epa_source_reader LANGUAGES CXX)
+add_library(epa_source_reader SHARED source_reader.cpp)
+target_compile_features(epa_source_reader PRIVATE cxx_std_17)
+target_compile_options(epa_source_reader PRIVATE /W4 /WX)

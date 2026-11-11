@@ -1,0 +1,342 @@
+{
+  "recordedAt": "2026-11-10T14:52:43.634499+08:00",
+  "scope": "Windows tasks 5.1-5.3 only",
+  "approval": "2026-11-10 user approved WIR-1 TD11-W and TD13-W",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "fileSystemsTested": [
+    "C: NTFS",
+    "D: NTFS"
+  ],
+  "gitBase": "0a4ddadd8707c49fe704afd7aded1a23c71d7d3f",
+  "workingTree": "uncommitted; source hashes below identify this implementation; no push or archive",
+  "version": "0.4.0+4",
+  "catalogSchema": 3,
+  "tasks": {
+    "complete": 20,
+    "total": 70
+  },
+  "regression": {
+    "total": 54,
+    "passed": 54,
+    "reader": 15,
+    "importService": 13,
+    "catalog": 15,
+    "controller": 10,
+    "productionForms": 1
+  },
+  "testDoubleBoundary": "Widget picker return and native event delivery are substituted; actual native picker separately observed. Files, DPAPI, KDF, SQLCipher and import watcher use real implementations.",
+  "processRecovery": {
+    "initial": {
+      "mode": "initial",
+      "pid": 18468,
+      "beforeScan": 0,
+      "mediaCount": 2,
+      "sources": 1,
+      "mediaIds": [
+        "52a212acf04ecaacbdc12a6c5298f63b",
+        "f6e1768851b69ffb87550a0bad5e6260"
+      ],
+      "screenAfterStartup": "pin",
+      "catalogIntegrity": "passed",
+      "artificialOnly": true
+    },
+    "crash": {
+      "pid": 19312,
+      "insideUncommittedCount": 3,
+      "candidateSavedBeforeTransaction": true,
+      "phase": "after-import-update-before-outer-commit",
+      "artificialOnly": true
+    },
+    "reopen": {
+      "mode": "reopen",
+      "pid": 9420,
+      "beforeScan": 2,
+      "mediaCount": 3,
+      "sources": 1,
+      "mediaIds": [
+        "0efbc01987e898e5e7d73c5493c97625",
+        "52a212acf04ecaacbdc12a6c5298f63b",
+        "f6e1768851b69ffb87550a0bad5e6260"
+      ],
+      "screenAfterStartup": "pin",
+      "catalogIntegrity": "passed",
+      "artificialOnly": true
+    }
+  },
+  "crashNote": "crash mode exits before outer SQLCipher commit; nonzero tester exit is intentional, recovery judged by reopen, not marked as a passing normal test",
+  "mediaImport": {
+    "mediaCount": 3,
+    "catalogIntegrity": "passed",
+    "sourceBytesUnchanged": true,
+    "formats": [
+      {
+        "name": "prores.mov",
+        "size": 9377991,
+        "kind": "video"
+      },
+      {
+        "name": "hevc.mp4",
+        "size": 372093,
+        "kind": "video"
+      },
+      {
+        "name": "h264.mp4",
+        "size": 514095,
+        "kind": "video"
+      }
+    ],
+    "playbackTested": false,
+    "artificialOnly": true
+  },
+  "nativeUi": {
+    "artificialOnly": true,
+    "mediaCount": 2,
+    "sources": 1,
+    "pending": 0,
+    "observed": "Real Windows folder picker; recursive PNG grid and correct details; no filenames on cards",
+    "bundle": "build/import-ui-runner/4430b14d94254512bf43b33d9d45abef",
+    "boundary": "Isolated UI probe built before final buffer cleanup and regression changes; never delivered as normal entry"
+  },
+  "release": {
+    "target": "lib/main.dart",
+    "buildPassed": true,
+    "buildSeconds": 102.6,
+    "nativeReadDllIncluded": true,
+    "started": true,
+    "processIdAtObservation": 6372,
+    "startupUi": "Actual four-digit PIN gate; no user authentication automated"
+  },
+  "checks": {
+    "analyze": "No issues found",
+    "openspecStrict": {
+      "passed": 9,
+      "failed": 0
+    }
+  },
+  "limits": [
+    "iOS deferred",
+    "video/Live Photo playback and complete image format verification unfinished",
+    "image preview <=16 MiB; larger files still imported",
+    "no remote upload/download/delete performed",
+    "no new physical session-lock or sleep test this round",
+    "FAT/exFAT/ReFS, case-sensitive directories and cross-volume moves not physically tested",
+    "long-running large-library stress not completed"
+  ],
+  "sources": [
+    {
+      "path": "lib/services/windows_source_reader.dart",
+      "bytes": 17285,
+      "sha256": "9c6b3aa6c9e2a7d741ba6a47d00914633a71bbf77ac802c8c55be0eea19d7dfd"
+    },
+    {
+      "path": "lib/services/windows_import_service.dart",
+      "bytes": 15285,
+      "sha256": "b538b1d0f90bf9cac453c8208787750117711ec0e8bff01e489245938a3ecef9"
+    },
+    {
+      "path": "lib/storage/library_catalog.dart",
+      "bytes": 20358,
+      "sha256": "7252d9b8a175f7424183b60a12758b3a43164c1ecd5cb2a565d09325f6a29b0b"
+    },
+    {
+      "path": "lib/security/vault_crypto.dart",
+      "bytes": 6808,
+      "sha256": "079703b1e0efa14cc5f9824117ec0adfce9f8fa87dbbe67eb469f318deba62c2"
+    },
+    {
+      "path": "lib/app/vault_controller.dart",
+      "bytes": 17640,
+      "sha256": "c579e2a67f619b782cf5c884efc9223c6b14aebf79cd99c33fd532315f5539c8"
+    },
+    {
+      "path": "lib/main.dart",
+      "bytes": 4407,
+      "sha256": "06f4c348e502bdb8a5d98e591888072a1158a045e8ac260bd5b068f4a1be806a"
+    },
+    {
+      "path": "lib/ui/production_library_panel.dart",
+      "bytes": 12342,
+      "sha256": "93fcfbdb71835b96cdbf48e566d86fd0e880f5a0abbbdfa9d608940dd3666e00"
+    },
+    {
+      "path": "lib/ui/production_screens.dart",
+      "bytes": 21193,
+      "sha256": "2837c602cf0fcb40142b18aa3177b56bd44f5193a5065bf41ea82640d94bdce1"
+    },
+    {
+      "path": "windows/source_reader/source_reader.cpp",
+      "bytes": 962,
+      "sha256": "749bcfb38697f6cdaabe0cdcf77e1e3c2f0d357f214bed452cede7c7dbf7e7ee"
+    },
+    {
+      "path": "windows/source_reader/CMakeLists.txt",
+      "bytes": 254,
+      "sha256": "80e4e180fbcd9a316e6cc1c1e37660481c7c6e3562b1dee17ab42d120365b7a9"
+    },
+    {
+      "path": "windows/CMakeLists.txt",
+      "bytes": 4420,
+      "sha256": "53a547645d31ccd91e6aa8b8ab5c75215c10dbc60e7f6a61036d29c95c50dd45"
+    },
+    {
+      "path": "pubspec.yaml",
+      "bytes": 563,
+      "sha256": "1f3ad3f73e25ae6ecea6b9d3bd6da96e14f216b897c0cfd437c8254265007ff7"
+    },
+    {
+      "path": "pubspec.lock",
+      "bytes": 20231,
+      "sha256": "326ce4c5ebf762295dabcbf4c370d92102af4af4ddfa90dd433f618cd6a6ac91"
+    },
+    {
+      "path": "test/windows_source_reader_test.dart",
+      "bytes": 10108,
+      "sha256": "fa72910d4b856031e816e6b17f5a64cd229722ad3fabbe420f38dc76b4a2bbce"
+    },
+    {
+      "path": "test/windows_import_service_test.dart",
+      "bytes": 11883,
+      "sha256": "74a5890354d5c2742a815832169cc7a0890e6a4010c4f8d18914e572da5c9281"
+    },
+    {
+      "path": "test/library_catalog_test.dart",
+      "bytes": 15664,
+      "sha256": "eddba8865ea6409941deac86ce6db5384adb25444318bd574da68bf6b100870a"
+    },
+    {
+      "path": "test/vault_controller_test.dart",
+      "bytes": 8421,
+      "sha256": "13d763df89704e343e64fbbf6ca249223ef83e1add6d513557416a027fbf0c7e"
+    },
+    {
+      "path": "test/production_app_test.dart",
+      "bytes": 11942,
+      "sha256": "a8ef44ee8a909cbe18ad6b05fe5b7e0b5b4dfd12441c978df2d962a1467809f1"
+    },
+    {
+      "path": "scripts/windows-import-process-probe.dart",
+      "bytes": 6320,
+      "sha256": "f95d02380d1bb070d422993ec0dab6929727e21dcc0c49b04622c3f616835498"
+    },
+    {
+      "path": "scripts/windows-import-media-probe.dart",
+      "bytes": 3456,
+      "sha256": "6baff9aad4b6b6d7854766c070cd4887edcb89eafe81c54c35aab2a9ff402e78"
+    },
+    {
+      "path": "scripts/windows-import-ui-probe.dart",
+      "bytes": 1595,
+      "sha256": "3edf70aa230f6344a5c101f63e66de615ffc1bab67bd37efbe419ed914399e01"
+    },
+    {
+      "path": "scripts/build-source-reader.ps1",
+      "bytes": 830,
+      "sha256": "3fe5527edf65ba4b50dcf35587d0e58be6f92f31239a99414d62561071ae975d"
+    }
+  ],
+  "logs": [
+    {
+      "path": "build/import-final-regression.log",
+      "bytes": 8741,
+      "sha256": "a4a2263247890443b0f216996610af1a67cc0e3315a8e1e3be5e08e89be7665f"
+    },
+    {
+      "path": "build/import-ui-regression.log",
+      "bytes": 215,
+      "sha256": "ce664cff580794fe5293f8ffe4d1aaff1cd0b98ecc42664fedb227bda8ae66d9"
+    },
+    {
+      "path": "build/import-media-probe.log",
+      "bytes": 274,
+      "sha256": "cc06a8d1e392acf4660161e89cb2a5cc57932264d4c25d47b65e7539510e38ca"
+    },
+    {
+      "path": "build/import-process-initial-final.log",
+      "bytes": 159,
+      "sha256": "7021be33442574c836be4a8e3bbe76457623345fe9da445489ef749773b7b057"
+    },
+    {
+      "path": "build/import-process-crash.log",
+      "bytes": 392,
+      "sha256": "da109773983c240c24dea8a555aaca380166d41834dbce88d30dd0ae18c51174"
+    },
+    {
+      "path": "build/import-process-reopen-final.log",
+      "bytes": 159,
+      "sha256": "7021be33442574c836be4a8e3bbe76457623345fe9da445489ef749773b7b057"
+    },
+    {
+      "path": "build/import-analyze-final.log",
+      "bytes": 99,
+      "sha256": "95559da46ac2559a9ccfb294b9c29663f2ce972f074eedc14652ac4c1b580453"
+    },
+    {
+      "path": "build/import-openspec.log",
+      "bytes": 326,
+      "sha256": "88aab78edc2b10d9d7caaa3052580ef2be70644b8820237c5cdabaf7f980e780"
+    },
+    {
+      "path": "build/import-release-build.log",
+      "bytes": 142,
+      "sha256": "ae969f6612713c77ab86e237918691ca189009cbcc06b32b948852db614dc3e0"
+    },
+    {
+      "path": "build/import-openspec-final.log",
+      "bytes": 326,
+      "sha256": "88aab78edc2b10d9d7caaa3052580ef2be70644b8820237c5cdabaf7f980e780"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "build/windows/x64/runner/Release/encrypted_photo_app.exe",
+      "bytes": 135680,
+      "sha256": "8d08bfc4f30ec3b08e1114404cfb761847d32c352bd3edff1ede94b2e638bb6d"
+    },
+    {
+      "path": "build/windows/x64/runner/Release/epa_source_reader.dll",
+      "bytes": 9728,
+      "sha256": "89307f547324b8f50b84e37f91e8e6f367f9e785483f43c410da19b64cb0805e"
+    },
+    {
+      "path": "build/windows/x64/runner/Release/data/app.so",
+      "bytes": 7127944,
+      "sha256": "0d307c0219c1f1ac88f0600b46e88d2c51c9fe2fd06f840c9efd63b154d0a7de"
+    },
+    {
+      "path": "build/windows/x64/runner/Release/libsodium.dll",
+      "bytes": 484864,
+      "sha256": "b25af177a6a2b32102b7d480dce7c8bfbf88b0919e857a8adc218b229af8ad99"
+    },
+    {
+      "path": "build/windows/x64/runner/Release/sqlcipher.dll",
+      "bytes": 4998144,
+      "sha256": "f13740c540bc2fd35c52372bf6effcaaf488b09e81c11d1896ac61b6cab06dce"
+    }
+  ],
+  "documentSnapshots": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "27b6797de1c5065661ca0781ec323cd95ae5427db41686f5f0cbf35afe141cfa"
+    },
+    {
+      "path": "README.md",
+      "sha256": "70dc580d600fc99e1835fbaaa523cf750637386eb939a9c03ed01ac289b765c0"
+    },
+    {
+      "path": "openspec/config.yaml",
+      "sha256": "0a3c9d8544d57381c2ca87d02b508cd3f717f26c381ffbaf3a173a1b18b079e2"
+    },
+    {
+      "path": "openspec/changes/extend-media-library-and-album-sync/tasks.md",
+      "sha256": "2b91783a8e98e8244840b5b204c900220d33e7aa069d733be057855061b03e4a"
+    },
+    {
+      "path": "openspec/changes/extend-media-library-and-album-sync/windows-import-implementation.md",
+      "sha256": "2afd6d74e66bcaa465527895e8e0785d787fcc52c20d5a951a35c457afe9b8fd"
+    },
+    {
+      "path": "openspec/changes/extend-media-library-and-album-sync/specs/windows-media-import/spec.md",
+      "sha256": "39712265c4de00ee586f2e3c48e845bccfb4082e9b5cb28ec216c5e47a3a8d99"
+    }
+  ]
+}

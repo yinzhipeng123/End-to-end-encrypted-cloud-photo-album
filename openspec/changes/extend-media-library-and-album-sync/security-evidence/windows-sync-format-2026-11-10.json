@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-10",
+  "platform": "Windows x64",
+  "scope": "WSR-1 local resource preparation; real native source reading, libsodium, SQLCipher and ciphertext files",
+  "standaloneCommand": "flutter test --no-pub test/sync/sync_resource_budget_test.dart --concurrency=1 --reporter expanded",
+  "standaloneTimeUtc": "2026-11-10T12:00:29.429483Z",
+  "clearBytes": 51905272,
+  "fixture": "Generated 1024x768 RGB24 AVI, 22 frames, transport-only acceptance",
+  "ciphertextSizes": [4194352,4194352,4194352,4194352,4194352,4194352,4194352,4194352,4194352,4194352,4194352,4194352,1573672],
+  "originalUnchanged": true,
+  "bytewiseRecoveryEqual": true,
+  "baselineRss": 140636160,
+  "encryptionPeakRss": 226656256,
+  "incrementalRss": 86020096,
+  "incrementalBudgetBytes": 134217728,
+  "passed": true,
+  "boundaryEvidence": "build/sync-format-tests.log: prior 32 format, crypto and native-read tests including 4 MiB boundaries and 50,000,001 bytes",
+  "notClaimed": ["real GitHub upload or restore", "network transfer RSS budget", "ProRes or Live Photo playback", "iOS", "whole product acceptance"]
+}

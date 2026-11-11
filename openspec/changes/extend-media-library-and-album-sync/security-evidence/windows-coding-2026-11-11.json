@@ -1,0 +1,532 @@
+{
+  "recordedAt": "2026-11-11T15:55:17.033650+08:00",
+  "version": "0.7.0+9",
+  "entry": "lib/main.dart",
+  "classification": "编码交接与静态构建证据；不是业务、安全或真实平台测试结果",
+  "authorization": "用户默认批准剩余Windows编码技术选择；测试由用户统一执行；iOS暂缓；不提交推送归档",
+  "checks": {
+    "format": "passed",
+    "analyze": "No issues found; final run 7.1s",
+    "build": "flutter build windows --release --no-pub --target lib/main.dart; exit 0; 72.4s",
+    "openspec": "strict validation passed",
+    "package": "required native dependencies present; pinned libmpv and ExifTool match extracted archives; sample photos absent"
+  },
+  "notPerformed": [
+    "test suites",
+    "application launch",
+    "real repository sync",
+    "media playback acceptance",
+    "destructive or recovery acceptance"
+  ],
+  "progress": {
+    "total": 73,
+    "complete": 26,
+    "remaining": 47
+  },
+  "openItems": [
+    "Gitee public-client OAuth capability unresolved; not implemented",
+    "iOS deferred by user",
+    "Windows runtime and security acceptance pending user testing"
+  ],
+  "logs": [
+    {
+      "path": "build/windows-media-coding-analyze.log",
+      "bytes": 98,
+      "sha256": "5472205e30fe2e28e23d09769089caf7aa1e25403738f790e7642e99c290c7cd"
+    },
+    {
+      "path": "build/windows-coding-build.log",
+      "bytes": 142,
+      "sha256": "e91d8ec2a357b92abef3d4169c4d3b4e74dae7411a61549e10cf5aed1e5685be"
+    },
+    {
+      "path": "build/windows-coding-openspec.log",
+      "bytes": 55,
+      "sha256": "3ba7d3a399be588f6471cab88ab95b0757e950e4da287250a0e07f5ecd64cba7"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "build/windows/x64/runner/Release/encrypted_photo_app.exe",
+      "bytes": 138752,
+      "sha256": "4bcc277352217ab31740597b7e909cea1af9201fef99d62ef26ec6483297a12c"
+    },
+    {
+      "path": "build/windows/x64/runner/Release/data/app.so",
+      "bytes": 8930184,
+      "sha256": "817cd68428141421bbab8f9ab89b5ebed1cd8ddaabbfa2905f934017a49f0a98"
+    },
+    {
+      "path": "build/windows/x64/runner/Release/libmpv-2.dll",
+      "bytes": 121789952,
+      "sha256": "88504ee5560942a955405e99dfb5971368e4cf851321f36565bf2a667271db1b"
+    },
+    {
+      "path": "build/windows/x64/runner/Release/epa_source_reader.dll",
+      "bytes": 12800,
+      "sha256": "72a8799dfefc177183709ae4f832741c44c50ffa1ebf3abc2d21a03de9ba1792"
+    },
+    {
+      "path": "build/windows/x64/runner/Release/sqlcipher.dll",
+      "bytes": 4998144,
+      "sha256": "f13740c540bc2fd35c52372bf6effcaaf488b09e81c11d1896ac61b6cab06dce"
+    },
+    {
+      "path": "build/windows/x64/runner/Release/libsodium.dll",
+      "bytes": 484864,
+      "sha256": "030780347fcf77eb24a6c6a3d283808dce37817a3e907fc103b421473baad118"
+    },
+    {
+      "path": "build/windows/x64/runner/Release/metadata/exiftool.exe",
+      "bytes": 58368,
+      "sha256": "222576d3176ee2f75337f2e9f8ad1089923e2316d1a3a03d757c2d4c0627d7a7"
+    },
+    {
+      "path": "build/windows/x64/runner/Release/licenses/libmpv-full-GPL.txt",
+      "bytes": 17984,
+      "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6"
+    }
+  ],
+  "sources": [
+    {
+      "path": "assets/licenses/libmpv-full-GPL.txt",
+      "bytes": 17984,
+      "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6"
+    },
+    {
+      "path": "lib/app/vault_controller.dart",
+      "bytes": 27968,
+      "sha256": "0fb7857ee2ff4464061ab784c942103b3f73949160dd0e1d485928671a1a5162"
+    },
+    {
+      "path": "lib/app/vault_location_store.dart",
+      "bytes": 4093,
+      "sha256": "74a49b93b3c2a1d3902ab1cbe69f487c81eb4daac0c3265d9aa751a9594fbad8"
+    },
+    {
+      "path": "lib/main.dart",
+      "bytes": 6658,
+      "sha256": "54e0647ac6b054731996d0972a2b6919b6f1417e594626096bf680ea47110923"
+    },
+    {
+      "path": "lib/model/album.dart",
+      "bytes": 264,
+      "sha256": "77f1a362b930d143a36c88e7644c039d2550af18a9bfe0c27ccdfe80de018163"
+    },
+    {
+      "path": "lib/model/album_source_binding.dart",
+      "bytes": 1193,
+      "sha256": "9c194497d776f94986eb1725bc5968636a4bd1e8475a3dc228234924297ba3a0"
+    },
+    {
+      "path": "lib/model/demo_store.dart",
+      "bytes": 14292,
+      "sha256": "31cc9dffd6834174e8fd02c53e3e9b0a36d3d9f1ece524b2bade98cfdd401513"
+    },
+    {
+      "path": "lib/model/library_query.dart",
+      "bytes": 1844,
+      "sha256": "63df166fdced970b8c17e5be23a380ecdcd7d8f208aa6eb8babb548517b7901c"
+    },
+    {
+      "path": "lib/model/library_store.dart",
+      "bytes": 2414,
+      "sha256": "c52522d0049eed71ff31c6d668f6df52e623b14561cc82b51966969e6c8eab3f"
+    },
+    {
+      "path": "lib/model/local_preview_library.dart",
+      "bytes": 3547,
+      "sha256": "8730886edb0b3ba8faa4fc96389a88cbf62a621e411d544949515c7434561d71"
+    },
+    {
+      "path": "lib/model/media_item.dart",
+      "bytes": 3238,
+      "sha256": "0fc051f6c30e94add8ce368f48084bb6e9beb57996caf854623d6d0c2665232f"
+    },
+    {
+      "path": "lib/model/selection_state.dart",
+      "bytes": 927,
+      "sha256": "faf2808b94adcbeefe38e3246706afcfbb4e99b501b25745be5a2fe22a961a4b"
+    },
+    {
+      "path": "lib/repositories/github_api.dart",
+      "bytes": 20231,
+      "sha256": "aa05e2af875d6dc2918ab137eedf300081652681d9bcb87f39bf2fce0ae1207a"
+    },
+    {
+      "path": "lib/repositories/github_connection.dart",
+      "bytes": 23288,
+      "sha256": "e476add475c9a941cb37e724a0e5481916e7c5a51910f84370f96e8c8e727350"
+    },
+    {
+      "path": "lib/repositories/github_git_access.dart",
+      "bytes": 11347,
+      "sha256": "a05b71efe0eba2ceb74d519a19c6a5207e909291e113ea645e201fd2a0916bdf"
+    },
+    {
+      "path": "lib/repositories/network_proxy.dart",
+      "bytes": 9054,
+      "sha256": "aebbf54004edaa173382550a53e5794928da219d4ed3d66a18d4518977e0765e"
+    },
+    {
+      "path": "lib/security/photo_password.dart",
+      "bytes": 2346,
+      "sha256": "3e86c414474eb4c71640c86bfe6da0b68f57a54a3338ca1bbaebafd9a2b46b17"
+    },
+    {
+      "path": "lib/security/pin_gate.dart",
+      "bytes": 7086,
+      "sha256": "4eb5708a72dccedf0a3758d54378f661b87fcc70b6729824cfe5a433e0edb3a0"
+    },
+    {
+      "path": "lib/security/protected_record_store.dart",
+      "bytes": 321,
+      "sha256": "ae2e00229456383f4d4af393dba09aa7b4d394a75c1c9c71eb3be3f6534de864"
+    },
+    {
+      "path": "lib/security/reverification_gate.dart",
+      "bytes": 15438,
+      "sha256": "58bf6e8212f1ab3db2ba77c17d20ab3847b75d8ed72a5b1c1830832b654f447b"
+    },
+    {
+      "path": "lib/security/security_failure.dart",
+      "bytes": 644,
+      "sha256": "82950908d50a521e42c676e5c681c9aeb426cc76cb6b29afbaa20535f8cfe2e7"
+    },
+    {
+      "path": "lib/security/vault_bootstrap_record.dart",
+      "bytes": 5489,
+      "sha256": "b1a36114fc69fa1cbd3d29782cc54ac964a6fe00b0a18c0a4316ffdb62107709"
+    },
+    {
+      "path": "lib/security/vault_bootstrap_store.dart",
+      "bytes": 5543,
+      "sha256": "dbc92bc5bf904d1f58da30bc33373f82fac73addb4524dd9b7533a3d3a8d985e"
+    },
+    {
+      "path": "lib/security/vault_credentials.dart",
+      "bytes": 15802,
+      "sha256": "0461bcdf74747ab6285a5c3bd49ad6a798c6c61b4f08914ba02acf57eef0613f"
+    },
+    {
+      "path": "lib/security/vault_crypto.dart",
+      "bytes": 6808,
+      "sha256": "079703b1e0efa14cc5f9824117ec0adfce9f8fa87dbbe67eb469f318deba62c2"
+    },
+    {
+      "path": "lib/security/vault_media_crypto.dart",
+      "bytes": 2934,
+      "sha256": "43510b683ee7464ed4116a30743e8ac5f1b855a36302d92e78f69de98e2eab62"
+    },
+    {
+      "path": "lib/security/vault_recovery_record.dart",
+      "bytes": 2411,
+      "sha256": "a3e7fba2bd47d3ef40a115b0e1eb67b23474e3d5fb42d722b4617c2d5f262d82"
+    },
+    {
+      "path": "lib/security/vault_remote_recovery.dart",
+      "bytes": 6771,
+      "sha256": "c9bf98318628f487784934dada834d1ec93d66c09b1ad11f33c728f779261304"
+    },
+    {
+      "path": "lib/security/windows_data_protection.dart",
+      "bytes": 17343,
+      "sha256": "062be6f5b46f6a18becfd80a027ad11667a4ace349098e0838b61fc5bdd59b31"
+    },
+    {
+      "path": "lib/security/windows_protected_store.dart",
+      "bytes": 3568,
+      "sha256": "6ec3302056e267d6b4536c6d64d991cc2ee2f8d4965736222c30b4308e98abfd"
+    },
+    {
+      "path": "lib/security/windows_security_clock.dart",
+      "bytes": 381,
+      "sha256": "045acf83692924dcb216538ce0b67697e94717a9c68dcf32ba8135be0bd06281"
+    },
+    {
+      "path": "lib/services/album_import_tracker.dart",
+      "bytes": 4111,
+      "sha256": "1b10b14fc1d3c1a3894d2992c1dd0ed56e34abb5e692a64b9946077c3ce8ad9e"
+    },
+    {
+      "path": "lib/services/library_organization_service.dart",
+      "bytes": 4437,
+      "sha256": "571aac2bb66fd08866b7ff6c6bdc9f5b8954fda332b953c6da749912a73781b6"
+    },
+    {
+      "path": "lib/services/loopback_media_source.dart",
+      "bytes": 8597,
+      "sha256": "4b481ab8513e461d8d079c332c218205ea7fae9dbecc1ce792c032c0be9952f5"
+    },
+    {
+      "path": "lib/services/media_playback.dart",
+      "bytes": 3496,
+      "sha256": "274cb78adbc23a9a4bb3b543bf827cbd85b77886e02134fcfacadcc511a70119"
+    },
+    {
+      "path": "lib/services/media_sync_service.dart",
+      "bytes": 1522,
+      "sha256": "7012463b1860ce5ce1818ed086d2ba1d37e52bf4d9ab34e32167751aa42ae714"
+    },
+    {
+      "path": "lib/services/playback_session.dart",
+      "bytes": 1816,
+      "sha256": "01bb64e886c2d45e29d03fe4db82038cebbdf541d550d0b78b74d54b9340f66d"
+    },
+    {
+      "path": "lib/services/windows_folder_importer.dart",
+      "bytes": 3668,
+      "sha256": "d5cd845bc162fc3f050860f479403591f1ae707cbb4aecad761e61a4101a2774"
+    },
+    {
+      "path": "lib/services/windows_import_service.dart",
+      "bytes": 41524,
+      "sha256": "60e0c464334f23dc4f92988f3e69c320506883d1fed03da1812f20a0953cd0a3"
+    },
+    {
+      "path": "lib/services/windows_media_deletion.dart",
+      "bytes": 4358,
+      "sha256": "f1370c65317fd9f11aaa7c3551b1a9ceed68721f7f50336b9e35560d34dcb278"
+    },
+    {
+      "path": "lib/services/windows_media_export.dart",
+      "bytes": 10150,
+      "sha256": "c8ad50554a931690f1120af2543e8b398a0c66e02ae91cfc5c8cdc4aa3c02343"
+    },
+    {
+      "path": "lib/services/windows_media_metadata.dart",
+      "bytes": 4306,
+      "sha256": "b78c76cba3e755541d1e68119baa098f6555d1c5018c17fd4f841c7b9b085f5c"
+    },
+    {
+      "path": "lib/services/windows_media_thumbnailer.dart",
+      "bytes": 4897,
+      "sha256": "e861155735ba4ef762efc9b9fd8d6088fc895ee06bdfdb43cc79b61e8d4bbd5d"
+    },
+    {
+      "path": "lib/services/windows_source_reader.dart",
+      "bytes": 19125,
+      "sha256": "72fdc1286d49e088412bc9aabbdb9827b5e4320a361c91d31aff4511214726c1"
+    },
+    {
+      "path": "lib/storage/library_catalog.dart",
+      "bytes": 31890,
+      "sha256": "2c9f4de374b3aa34124ac696488d77e79a14a476d017faf2551a20b6ca10a4be"
+    },
+    {
+      "path": "lib/sync/github_sync_repository.dart",
+      "bytes": 58450,
+      "sha256": "489b1dd5eb2ffe3c0a3afff2d74ae45e04ffa20d8a73fae7f8f6cc2aa056e9c1"
+    },
+    {
+      "path": "lib/sync/repository_vault_recovery.dart",
+      "bytes": 5890,
+      "sha256": "5f2b34d69f119829efd55c8bab3b3f293f5e7fab897971b0377a565ed8538d6f"
+    },
+    {
+      "path": "lib/sync/sync_cipher_cache.dart",
+      "bytes": 4746,
+      "sha256": "1d265b1d7efdd42c89e6904d5e20a2601228da1e8f9b925ac002d0c9a1bc9bc5"
+    },
+    {
+      "path": "lib/sync/sync_format.dart",
+      "bytes": 11183,
+      "sha256": "ee005fbac4f617126ae30b5579d0b98bc03c20158f3485fecb613dd618c7bbce"
+    },
+    {
+      "path": "lib/sync/sync_object_store.dart",
+      "bytes": 5004,
+      "sha256": "0d313bd88ab670a696ba3bae9918496990be67b97e1d56be5d29ac3df726c0bd"
+    },
+    {
+      "path": "lib/sync/sync_resource_preparer.dart",
+      "bytes": 4639,
+      "sha256": "077d6f086a3bdf3c7fda30766dd0fb5d5ed8e3b3cf9dee4c5bcc63c050e5b186"
+    },
+    {
+      "path": "lib/sync/windows_sync_service.dart",
+      "bytes": 44029,
+      "sha256": "66a1e6501ea4b9775c0796c2f4055af4a37bc53061d6936e706ccf6da188c86c"
+    },
+    {
+      "path": "lib/ui/access_screen.dart",
+      "bytes": 16473,
+      "sha256": "f1beffd1739a448f935846c0f021c48987239f0126915e0f6cfd4893c91ef159"
+    },
+    {
+      "path": "lib/ui/batch_dialogs.dart",
+      "bytes": 6900,
+      "sha256": "6aebc31619f204d126e4ed2b41f4cb50868ada92fbbc5cb0f7916e0e736dad4e"
+    },
+    {
+      "path": "lib/ui/components.dart",
+      "bytes": 4399,
+      "sha256": "0c43e7afe90a0e1bf3dab52476773efb3da5e5bb0e7ce9d45406add9c8a748e2"
+    },
+    {
+      "path": "lib/ui/dialogs.dart",
+      "bytes": 31797,
+      "sha256": "ef68183f519324622e23fc7246eaf9d5b55eda46b24e7ebfc0ac9544a99b568d"
+    },
+    {
+      "path": "lib/ui/github_connection_panel.dart",
+      "bytes": 12592,
+      "sha256": "676e5c1d4f8261dd59be5906d9cded6fd87cc10d33a4a0def2632da6f0c003ad"
+    },
+    {
+      "path": "lib/ui/home_shell.dart",
+      "bytes": 24286,
+      "sha256": "37b352fc6d94929eb9a0b204e6aea7e78948ac4b217f3cf882299f37eabce6f3"
+    },
+    {
+      "path": "lib/ui/library_screen.dart",
+      "bytes": 18965,
+      "sha256": "0e3a450b0aab3d2c0dc45ab9c4bacfa0d7ef8e4c9cc8b955c9b5b775d9339c62"
+    },
+    {
+      "path": "lib/ui/media_thumbnail.dart",
+      "bytes": 1765,
+      "sha256": "7e8be6847b2bfd811e268692dc072a2226027ac4a64468855363f12eb62bb7a3"
+    },
+    {
+      "path": "lib/ui/media_viewer.dart",
+      "bytes": 10983,
+      "sha256": "eb921199e77d4a2607eb6dbcf85c8e3c50d7d86af3e507843260c86d29310b6a"
+    },
+    {
+      "path": "lib/ui/production_album_panel.dart",
+      "bytes": 6477,
+      "sha256": "38420dd1a303d4931e3a830a7ed1c2ed2d6065647c714f25e5d0681532d91a2a"
+    },
+    {
+      "path": "lib/ui/production_library_panel.dart",
+      "bytes": 43091,
+      "sha256": "8b5e2056926b0882de5d56e339e4ad4afcb1f9f6f99cea0027a0d941d194d71c"
+    },
+    {
+      "path": "lib/ui/production_media_viewer.dart",
+      "bytes": 21568,
+      "sha256": "54acfa698f6dda29b4a7bd778eae5e6ddb5a6ebc2c02f086afad71b2006e1952"
+    },
+    {
+      "path": "lib/ui/production_screens.dart",
+      "bytes": 27425,
+      "sha256": "fd54b3bfc27507199465fff22355b17a7bf3378ab98144695174dd5711a03c46"
+    },
+    {
+      "path": "lib/ui/selection_toolbar.dart",
+      "bytes": 2702,
+      "sha256": "50b1855babca93ebc53379e2200a0918bccb8bba6beef2a7c98df30e72a00c96"
+    },
+    {
+      "path": "lib/ui/settings_screen.dart",
+      "bytes": 11595,
+      "sha256": "82e66812db28ce1d86ec1f8ce3d1d9d690563f0f7155e3b173e60d136bf5ff42"
+    },
+    {
+      "path": "lib/ui/sync_screen.dart",
+      "bytes": 11362,
+      "sha256": "511c17330576b2c3d065ce58f8efc247f9733947393deaabda23d1ff4fe20c3c"
+    },
+    {
+      "path": "lib/ui/theme.dart",
+      "bytes": 3463,
+      "sha256": "c78f2e726b466d002244447147a85155617df7a3d13b52edb3918b010b0f3dca"
+    },
+    {
+      "path": "pubspec.lock",
+      "bytes": 20231,
+      "sha256": "326ce4c5ebf762295dabcbf4c370d92102af4af4ddfa90dd433f618cd6a6ac91"
+    },
+    {
+      "path": "pubspec.yaml",
+      "bytes": 563,
+      "sha256": "4b3b05b4da4ff427280831144087a7939d0aed048a535606742ec5ec0b53f2ae"
+    },
+    {
+      "path": "windows/CMakeLists.txt",
+      "bytes": 4457,
+      "sha256": "7e6e6045a95172f6009b45f94bf48d7d73b5e136a0dd186c91eaf9d24f3e8da9"
+    },
+    {
+      "path": "windows/flutter/CMakeLists.txt",
+      "bytes": 3851,
+      "sha256": "bd05e3268b2f246bcbafdb778165fe67a7bafdba04eb73599502563a67b8ae7e"
+    },
+    {
+      "path": "windows/flutter/generated_plugin_registrant.h",
+      "bytes": 302,
+      "sha256": "dbc11635d7b1ba1887adf40df5b83d634e9c3ab0bee34510c71528bb4d73602a"
+    },
+    {
+      "path": "windows/flutter/generated_plugins.cmake",
+      "bytes": 816,
+      "sha256": "bad16c46f424154136832903c48a70ac042e94a3b2c6ced66fab8066ccd70b0c"
+    },
+    {
+      "path": "windows/media_dependencies.cmake",
+      "bytes": 2448,
+      "sha256": "77ebe2394710a6f30228a4a7c7a9fc03436a1bee7fcd9dcdd31db1fd69aa5823"
+    },
+    {
+      "path": "windows/runner/CMakeLists.txt",
+      "bytes": 1959,
+      "sha256": "68be3ecd0fdec8be2a9c80849b627e93d4e9e36637fd6781f2f37c0b2b58217b"
+    },
+    {
+      "path": "windows/runner/flutter_window.cpp",
+      "bytes": 9217,
+      "sha256": "f22ecf22ce3877a45119d21271698409d563f1b12b8ae02fcf572182d80e53f8"
+    },
+    {
+      "path": "windows/runner/flutter_window.h",
+      "bytes": 1709,
+      "sha256": "dc63e58fc2b7b2472b502f6e7d0172e671dd5e731b82209e2371af3881ec4f61"
+    },
+    {
+      "path": "windows/runner/main.cpp",
+      "bytes": 1322,
+      "sha256": "bf19af746074abac6e03029919642245fd6811bc10615fa5a98407a549516722"
+    },
+    {
+      "path": "windows/runner/resource.h",
+      "bytes": 448,
+      "sha256": "d0e8bf7835468b4b6b1f8f0747f2e8f25c19841f2df2ac60aaa584ddae3aa7c6"
+    },
+    {
+      "path": "windows/runner/Runner.rc",
+      "bytes": 3188,
+      "sha256": "cd2fdada454a1c37bb2def452ace8f3920291f3e018f757c741b9da7228b4073"
+    },
+    {
+      "path": "windows/runner/utils.cpp",
+      "bytes": 2237,
+      "sha256": "a128b67b9f3c2579e2ecef5b0dde2c33f222a097cdfe5da2a3067c73d1485b39"
+    },
+    {
+      "path": "windows/runner/utils.h",
+      "bytes": 691,
+      "sha256": "832e246b6758253f89016fb0374b30791242e97ad950d27fc678b3d9feacfdc4"
+    },
+    {
+      "path": "windows/runner/win32_window.cpp",
+      "bytes": 8822,
+      "sha256": "4e4f4dcf8e86ea6e097562cb3476039e693449bd8045367538afee579c017511"
+    },
+    {
+      "path": "windows/runner/win32_window.h",
+      "bytes": 3624,
+      "sha256": "d154cf89ba85f820631a9b5bedacbe64fc5815e428fe6bc5da579ce649f69841"
+    },
+    {
+      "path": "windows/source_reader/CMakeLists.txt",
+      "bytes": 254,
+      "sha256": "80e4e180fbcd9a316e6cc1c1e37660481c7c6e3562b1dee17ab42d120365b7a9"
+    },
+    {
+      "path": "windows/source_reader/source_reader.cpp",
+      "bytes": 1907,
+      "sha256": "d569bf774c2908e069170ab8d1b77f3d4e9560cfd43b955f10432a8e40cdf982"
+    }
+  ]
+}

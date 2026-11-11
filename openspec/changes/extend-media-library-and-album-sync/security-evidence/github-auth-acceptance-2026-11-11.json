@@ -1,0 +1,160 @@
+{
+  "atUtc": "2026-11-11T06:01:15.7518985Z",
+  "scope": "Task 3.2 isolated real authorization acceptance preparation; user platform steps pending",
+  "productionBusinessCodeChangedThisSession": false,
+  "cleanup": {
+    "rebuiltForCurrentAcceptance": true,
+    "previousEvidence": "build-cleanup-2026-11-11.json",
+    "userExecuted": true
+  },
+  "tests": {
+    "initialImportMismatchFixed": true,
+    "passed": true,
+    "openspecStrict": "passed",
+    "protocolSubstitutesAreNotPlatformAcceptance": true,
+    "count": 22,
+    "analyze": "No issues found"
+  },
+  "build": {
+    "warning": "media_kit CMake CMP0175 developer warning",
+    "bothSucceeded": true,
+    "normal": "lib/main.dart",
+    "version": "0.6.2+8",
+    "acceptance": "scripts/windows-github-auth-acceptance.dart",
+    "normalStarted": false,
+    "entrypoints": {
+      "differentAot": true,
+      "normalContainsTestPasswordMarker": false,
+      "testContainsTestPasswordMarker": true,
+      "normalAotSHA256": "1AE3400568C853667426FFA2E3562C25C4F56CF69A0FF1DC8523F4D79E2E1093",
+      "acceptanceAotSHA256": "37F61134172E58DD25B5292BA2034B059692D9331F6EB8F6E4307D3A3C436CE8"
+    }
+  },
+  "observedWindow": {
+    "userAuthenticationAutomated": false,
+    "currentSanitizedReport": {
+      "atUtc": "2026-11-11T06:01:15.293811Z",
+      "pid": 26444,
+      "productionRoot": "PhotoVaultApp",
+      "isolatedArtificialVault": true,
+      "repositoryWritesAllowed": false,
+      "blockedRequests": 0,
+      "current": {
+        "screen": "pin",
+        "busy": false,
+        "waitingForAuthorization": false,
+        "accountPresent": false,
+        "verified": false,
+        "selectedTargetPresent": false,
+        "eligibleRepositoryCount": 0,
+        "denialShown": false,
+        "cancellationShown": false
+      },
+      "states": [
+        {
+          "atUtc": "2026-11-11T05:58:39.786219Z",
+          "screen": "pin",
+          "busy": false,
+          "waitingForAuthorization": false,
+          "accountPresent": false,
+          "verified": false,
+          "selectedTargetPresent": false,
+          "eligibleRepositoryCount": 0,
+          "denialShown": false,
+          "cancellationShown": false
+        },
+        {
+          "atUtc": "2026-11-11T06:01:06.287254Z",
+          "screen": "library",
+          "busy": false,
+          "waitingForAuthorization": false,
+          "accountPresent": false,
+          "verified": false,
+          "selectedTargetPresent": false,
+          "eligibleRepositoryCount": 0,
+          "denialShown": false,
+          "cancellationShown": false,
+          "savedConnectionState": null,
+          "mediaCount": 0
+        },
+        {
+          "atUtc": "2026-11-11T06:01:08.851712Z",
+          "screen": "pin",
+          "busy": false,
+          "waitingForAuthorization": false,
+          "accountPresent": false,
+          "verified": false,
+          "selectedTargetPresent": false,
+          "eligibleRepositoryCount": 0,
+          "denialShown": false,
+          "cancellationShown": false
+        }
+      ],
+      "requests": []
+    },
+    "accessibilityAndScreenshotAgreeAfterActivation": true,
+    "displayedPinPage": true
+  },
+  "pending": [
+    "User refusal on GitHub and production denial display",
+    "User retry and successful account/repository query",
+    "In-app cancellation and remaining GAR-2 platform matrix",
+    "Real sync upload/readback and lock-time transfer"
+  ],
+  "progress": {
+    "total": 73,
+    "complete": 26,
+    "remaining": 47
+  },
+  "task32Complete": false,
+  "hashes": [
+    {
+      "path": "scripts/windows-github-auth-acceptance.dart",
+      "sha256": "4FE67D8B0E4570DBD7A40795C41A04F8D70296B1B9EE2EB9CCB62A94B6B76B23"
+    },
+    {
+      "path": "scripts/support/github_auth_observer.dart",
+      "sha256": "CE01634B59F768CB33FA97E01E2246C9C29C3A54CB90E3626A53884B46CF8FC1"
+    },
+    {
+      "path": "test/repositories/github_auth_observer_test.dart",
+      "sha256": "DFAC1076E6D33AC2D1C29701573758E088053AC9F325AA787F6DD5D061CEAD0D"
+    },
+    {
+      "path": "lib/repositories/github_api.dart",
+      "sha256": "AA05E2AF875D6DC2918AB137EEDF300081652681D9BCB87F39BF2FCE0AE1207A"
+    },
+    {
+      "path": "lib/repositories/github_connection.dart",
+      "sha256": "E476ADD475C9A941CB37E724A0E5481916E7C5A51910F84370F96E8C8E727350"
+    },
+    {
+      "path": "openspec/changes/extend-media-library-and-album-sync/github-authorization-followup.md",
+      "sha256": "D4DE237FE0EC9B5FDFA0908E50630475F9C97BCD8570D857527A7950F4A0C5C8"
+    },
+    {
+      "path": "build/auth-acceptance-tests.log",
+      "sha256": "061334FDCAEBB893F4BF7E8D7F515CEDA753EF56A09D4B5A7727CA9575E7BC20"
+    },
+    {
+      "path": "build/auth-acceptance-analyze.log",
+      "sha256": "8C02506F79547368F14E81D1D7D12305A25BD3E200A0C8D119EF2CE7017C8DC4"
+    },
+    {
+      "path": "build/auth-acceptance-build.log",
+      "sha256": "2027960A333C5B4823F53F7CE2B41D8AEBF166D854F3F26EF2AB3B8FC14582D7"
+    },
+    {
+      "path": "build/auth-acceptance-normal-build.log",
+      "sha256": "D67B6C48387E9C3603F778AD28BEF7884307F99D019F3E50A97A0EAB567CB702"
+    },
+    {
+      "path": "build/auth-acceptance-openspec.log",
+      "sha256": "3BA7D3A399BE588F6471CAB88AB95B0757E950E4DA287250A0E07F5ECD64CBA7"
+    },
+    {
+      "path": "build/auth-acceptance-entrypoints.json",
+      "sha256": "761B239CE992763E7450ECC2927D36B29A1B5345D47266AC29B887C48F4ABED1"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "recorded_at_utc": "2026-11-09T10:49:07.7111025Z",
+  "task": "1.3",
+  "platform": "Windows x64",
+  "status": "Windows security-service acceptance passed; iOS deferred",
+  "source_files": [
+    {
+      "path": "lib/security/vault_crypto.dart",
+      "sha256": "15f5cadfcd06c08659deac0b5eea6de9c9270d3f4927415c87b4f078a53a1918"
+    },
+    {
+      "path": "lib/security/vault_credentials.dart",
+      "sha256": "75330035a9e7a2e92c4d1f56fbd45bd08fe4b747f82b6ce84539fde5ea0aceb8"
+    },
+    {
+      "path": "lib/security/vault_media_crypto.dart",
+      "sha256": "43510b683ee7464ed4116a30743e8ac5f1b855a36302d92e78f69de98e2eab62"
+    },
+    {
+      "path": "test/security/vault_media_crypto_test.dart",
+      "sha256": "580704155e91bcbee0d28bc6413d34a24eb4f667fc4d1d74bab31c0b9a4d49d9"
+    },
+    {
+      "path": "scripts/security-reference-vectors.py",
+      "sha256": "d5f82d813a7fba3f435d119c8107de175f20669b77b722a9d19bc25021828bb1"
+    },
+    {
+      "path": "test/fixtures/security/bootstrap-v1.json",
+      "sha256": "6def66d2a2edebad5714df347953b970636c3f484c5d1a03bb0ff255a039d0d1"
+    }
+  ],
+  "suite": {
+    "passed": 25,
+    "log": "build/security-probe/media-security-windows.log",
+    "sha256": "c8d566c0b1051549074737f0a84cbad9e9113f237039d4ab81dd918e1f536efe"
+  },
+  "final_targeted_recheck": {
+    "passed": 8,
+    "log": "build/security-probe/media-security-final.log",
+    "sha256": "9e92145ffa6ed903195795aaf9fdb94fb999883c965c9a73cc6f8da840b8905b"
+  },
+  "native_dll_sha256": "b25af177a6a2b32102b7d480dce7c8bfbf88b0919e857a8adc218b229af8ad99",
+  "scope": "Real authenticated units, key separation, file round-trip and revoked session; no repository format or App integration claimed"
+}

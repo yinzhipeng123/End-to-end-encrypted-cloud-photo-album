@@ -1,0 +1,16 @@
+name: encrypted_photo_app_ios
+description: iOS host for the private encrypted photo library; native features are pending.
+publish_to: none
+version: 0.7.1+10
+
+environment:
+  sdk: '>=3.13.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  encrypted_photo_shared:
+    path: ../shared
+
+flutter:
+  uses-material-design: true

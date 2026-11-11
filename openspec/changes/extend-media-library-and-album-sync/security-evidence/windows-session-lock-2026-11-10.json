@@ -1,0 +1,24 @@
+{
+  "recorded_at_utc": "2026-11-10T01:17:50.061497Z",
+  "platform": "\"Windows 10 Pro\" 10.0 (Build 26300)",
+  "isolated_fixture": true,
+  "scratch_directory": "C:\\Users\\pc\\AppData\\Local\\Temp\\epa-lifecycle-ab6ee886",
+  "production_root": "lib/main.dart PhotoVaultApp",
+  "restart_preserved_pin_and_deadline": true,
+  "phase": "ready_for_suspend",
+  "events": [
+    {
+      "observed_at_utc": "2026-11-10T01:18:23.377105Z",
+      "resumeEvents": 0,
+      "sessionLockEvents": 1,
+      "sessionLocked": true,
+      "suspendEvents": 0,
+      "suspended": false,
+      "screen": "pin",
+      "old_catalog_handle_revoked": true,
+      "access_blocked": true,
+      "deadline_unchanged": true
+    }
+  ],
+  "wrong_pin_blocked_correct_pin_reopened": true
+}

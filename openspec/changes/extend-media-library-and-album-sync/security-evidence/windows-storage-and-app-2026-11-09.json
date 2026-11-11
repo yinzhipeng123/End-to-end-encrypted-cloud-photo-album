@@ -1,0 +1,432 @@
+{
+  "recorded_at_utc": "2026-11-09T12:10:38.8980346Z",
+  "platform": "Windows x64",
+  "os_version": "10.0.26300.0",
+  "git_head": "0a4ddadd8707c49fe704afd7aded1a23c71d7d3f",
+  "working_tree": "uncommitted; exact source hashes recorded",
+  "flutter": "3.47.9",
+  "dart": "3.13.7",
+  "package_version": "0.2.0+2",
+  "normal_entrypoint": "lib/main.dart",
+  "sources": [
+    {
+      "path": "assets/licenses/openssl-LICENSE.txt",
+      "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a",
+      "bytes": 10175
+    },
+    {
+      "path": "assets/licenses/sqlcipher-LICENSE.md",
+      "sha256": "2a2826f6acf46fa650730cf42cbb22a642be33a7ef119c9c4f4bf6daf3bef48e",
+      "bytes": 1463
+    },
+    {
+      "path": "assets/licenses/sqlite3-LICENSE.txt",
+      "sha256": "67e5d73a3a0c6e41f33d688a672b1161bf7f16e04da9ae48a7a14f1ba7436a4d",
+      "bytes": 1068
+    },
+    {
+      "path": "lib/app/vault_controller.dart",
+      "sha256": "791ff2b38d2c9915c28b69a7c6c0850f55c5099f8db506a08d28c86e6b488ea6",
+      "bytes": 12812
+    },
+    {
+      "path": "lib/main.dart",
+      "sha256": "a3f5a86b32f52062ef895ab4201f65c1f538aff12b1a5512e527bff3e5d4d8eb",
+      "bytes": 4092
+    },
+    {
+      "path": "lib/security/photo_password.dart",
+      "sha256": "3e86c414474eb4c71640c86bfe6da0b68f57a54a3338ca1bbaebafd9a2b46b17",
+      "bytes": 2346
+    },
+    {
+      "path": "lib/security/pin_gate.dart",
+      "sha256": "0fbc5d5315d7fbdfc46c6bdf4897fbcb1dac911f376fab977c0d0f4ef0c5b3ba",
+      "bytes": 5754
+    },
+    {
+      "path": "lib/security/protected_record_store.dart",
+      "sha256": "ae2e00229456383f4d4af393dba09aa7b4d394a75c1c9c71eb3be3f6534de864",
+      "bytes": 321
+    },
+    {
+      "path": "lib/security/reverification_gate.dart",
+      "sha256": "a56709f4f0dd77062525d6286bb257f527fcdf99edfed1e2fe2c7e26f5886d41",
+      "bytes": 13387
+    },
+    {
+      "path": "lib/security/security_failure.dart",
+      "sha256": "397a6b6f34c49d5a40dbf073f0a0899420d4480a26a2649d6b29c48c62b2464f",
+      "bytes": 624
+    },
+    {
+      "path": "lib/security/vault_bootstrap_record.dart",
+      "sha256": "0a1f8c981d1e8c555d6eaaae24559be99d9d5f4dc44cff9475e37a9e895784ae",
+      "bytes": 4829
+    },
+    {
+      "path": "lib/security/vault_bootstrap_store.dart",
+      "sha256": "dbc92bc5bf904d1f58da30bc33373f82fac73addb4524dd9b7533a3d3a8d985e",
+      "bytes": 5543
+    },
+    {
+      "path": "lib/security/vault_credentials.dart",
+      "sha256": "a1e8442259cb72173c15c511d53244058917ec5b0e3cbc21e58c45bac2f1e9a9",
+      "bytes": 15607
+    },
+    {
+      "path": "lib/security/vault_crypto.dart",
+      "sha256": "7b3c5e0d3d70b12bbe1ce73861b636fdd6dcf3fcb3eda680463867f8c2b3b41b",
+      "bytes": 6625
+    },
+    {
+      "path": "lib/security/vault_media_crypto.dart",
+      "sha256": "43510b683ee7464ed4116a30743e8ac5f1b855a36302d92e78f69de98e2eab62",
+      "bytes": 2934
+    },
+    {
+      "path": "lib/security/windows_data_protection.dart",
+      "sha256": "e65e3aacfbf1e4752e4965522a34ccdf12e6e8b05f78532c825dc65762d95010",
+      "bytes": 14864
+    },
+    {
+      "path": "lib/security/windows_protected_store.dart",
+      "sha256": "6ec3302056e267d6b4536c6d64d991cc2ee2f8d4965736222c30b4308e98abfd",
+      "bytes": 3568
+    },
+    {
+      "path": "lib/security/windows_security_clock.dart",
+      "sha256": "045acf83692924dcb216538ce0b67697e94717a9c68dcf32ba8135be0bd06281",
+      "bytes": 381
+    },
+    {
+      "path": "lib/storage/library_catalog.dart",
+      "sha256": "4a811886dbac02b08694baefd7934c024a4065c889243ecf949f5471e65974ce",
+      "bytes": 13320
+    },
+    {
+      "path": "lib/ui/production_screens.dart",
+      "sha256": "41f949c0d1bf8af9ce400da20085060704ad5b74d2dcb77631e018e72895c2f1",
+      "bytes": 17866
+    },
+    {
+      "path": "pubspec.lock",
+      "sha256": "326ce4c5ebf762295dabcbf4c370d92102af4af4ddfa90dd433f618cd6a6ac91",
+      "bytes": 20231
+    },
+    {
+      "path": "pubspec.yaml",
+      "sha256": "8b150dc8a26f1a9220a4085673fc6fa47faa5d067272794fcc9e95cbdd9a9353",
+      "bytes": 563
+    },
+    {
+      "path": "scripts/catalog-recovery-probe.dart",
+      "sha256": "d7dd7c8853efeaae483e30cde1c64187cf47f281d097107cd3526cc9111dccd7",
+      "bytes": 7435
+    },
+    {
+      "path": "scripts/windows-access-probe.dart",
+      "sha256": "3a882cc148291e6f9ceab839d3c628989c3a1111e657180ca2abd69036bede8c",
+      "bytes": 3501
+    },
+    {
+      "path": "test/library_catalog_test.dart",
+      "sha256": "c170bd4d7511b24fef490a7b9ce2e08be7bd2e3f41b94430df583e164a554cdb",
+      "bytes": 10773
+    },
+    {
+      "path": "test/production_app_test.dart",
+      "sha256": "894d5a5bcdc0f7af8590f7fc266408f0c2aa95d778a598277c825188985cec79",
+      "bytes": 5561
+    },
+    {
+      "path": "test/security/password_change_test.dart",
+      "sha256": "e627d417fa69a4598a91d48fe867bab8eaf0cdd0f83e7b13f9490f76f4ff08ee",
+      "bytes": 6358
+    },
+    {
+      "path": "test/security/photo_password_test.dart",
+      "sha256": "b05bdf8e8c57a865c5ee3afc219267723c86dd328a339a831dd49009ec1b2cba",
+      "bytes": 2160
+    },
+    {
+      "path": "test/security/pin_gate_test.dart",
+      "sha256": "483ab5452a2bb45e363d2802b9062cfd1750b2237c7916a3a76aa28f92a569ca",
+      "bytes": 6120
+    },
+    {
+      "path": "test/security/reverification_gate_test.dart",
+      "sha256": "d5cf371e34c93ef5944024657356780f48fcf64344e2f15bb02445bd52e3404a",
+      "bytes": 9390
+    },
+    {
+      "path": "test/security/vault_credentials_test.dart",
+      "sha256": "27c916b0c795302d6f7f5f80e01454b292669bb9392e2e4bd90835a19969ee48",
+      "bytes": 10324
+    },
+    {
+      "path": "test/security/vault_media_crypto_test.dart",
+      "sha256": "580704155e91bcbee0d28bc6413d34a24eb4f667fc4d1d74bab31c0b9a4d49d9",
+      "bytes": 10591
+    },
+    {
+      "path": "test/security/windows_data_protection_test.dart",
+      "sha256": "9fa4bdf62938c3b78bcc2eeba85bd1327f3c84cb6802d19a2936ff5b7bc3286e",
+      "bytes": 6918
+    },
+    {
+      "path": "test/vault_controller_test.dart",
+      "sha256": "13d763df89704e343e64fbbf6ca249223ef83e1add6d513557416a027fbf0c7e",
+      "bytes": 8421
+    },
+    {
+      "path": "windows/runner/CMakeLists.txt",
+      "sha256": "3a15592f820c5533005df45fb9aada47e24a511a1b38583882b9d8799113c5a4",
+      "bytes": 1898
+    },
+    {
+      "path": "windows/runner/flutter_window.cpp",
+      "sha256": "b30b2add0fc5913ecbfbd36315e65fc0026bb34dab8ae36dbcea45ef8d889861",
+      "bytes": 4329
+    },
+    {
+      "path": "windows/runner/flutter_window.h",
+      "sha256": "ea07f16ed68a29fb1b0054490cbf848eb2bc839df80cc8b422ae3c69cf859b99",
+      "bytes": 1250
+    },
+    {
+      "path": "windows/runner/main.cpp",
+      "sha256": "bf19af746074abac6e03029919642245fd6811bc10615fa5a98407a549516722",
+      "bytes": 1322
+    }
+  ],
+  "verification": {
+    "full_flutter_suite": {
+      "passed": 143,
+      "scope": "Includes historical UI/rule/mock tests. Run before final native-unavailable error display adjustment; not 143 production acceptance scenarios."
+    },
+    "final_targeted_suite": {
+      "passed": 11,
+      "scope": "Production UI plus controller after final adjustment and formatting; real credentials, DPAPI and SQLCipher; widget native-event channel is a test double. Injected clocks/faults are not physical events."
+    },
+    "catalog_tests_passed": 10,
+    "catalog_process_kill_recovery_passed": 5,
+    "runner": "Isolated test-entry executable verified actual minimization and revoked catalog handle. Evidence predates final error-message adjustment; does not verify system lock or suspend.",
+    "analyze": "passed",
+    "format": "29 files, 0 changed",
+    "openspec": "9 items passed; documentation validation only",
+    "normal_launch": {
+      "observed": true,
+      "view": "First-run password and four-digit PIN setup form",
+      "artificial_credentials_used": false,
+      "user_password_entered_by_agent": false,
+      "window_title": "密屿 - MIYU Photos"
+    },
+    "production_sample_files_count": 0,
+    "empty_historical_sample_directory_present": true,
+    "sqlcipher_sha256_matches_td07": true,
+    "license_files_present": true
+  },
+  "task_progress": {
+    "complete": 13,
+    "total": 68,
+    "pending": 55
+  },
+  "logs": [
+    {
+      "path": "build/security-probe/windows-all-tests.log",
+      "sha256": "b1b4e859e5784c40a56c68290b221db386ee917751b8619ee83aa97f25b03fca",
+      "bytes": 18398
+    },
+    {
+      "path": "build/security-probe/production-final-tests.log",
+      "sha256": "60a76f2e9a03edfa1483d95c8388a1d081ea7ebc3b3d0c8d739dee98e34854ee",
+      "bytes": 1844
+    },
+    {
+      "path": "build/security-probe/catalog-final-tests.log",
+      "sha256": "522cb5339054f0a5575bebc3da230b631ee0d9752854ce9749dd784836c5438a",
+      "bytes": 947
+    },
+    {
+      "path": "build/security-probe/windows-runner-evidence.json",
+      "sha256": "e82bad40b7156e82b1a16a93a8ff2581ac5c24b5449508d33e4afc7661560bc4",
+      "bytes": 2089
+    },
+    {
+      "path": "build/catalog-recovery-results/run-ed6c7ce2/report.json",
+      "sha256": "7fc1775b9c10c59f7b5a5609413f24fdfcca9e8cdba1a0b6b509f278da5ee136",
+      "bytes": 1111
+    },
+    {
+      "path": "build/security-probe/windows-final-analyze.log",
+      "sha256": "f04d12fa2846bf7811ca4be06b5755de5fab2b6fa159caab94a026d337de192e",
+      "bytes": 99
+    },
+    {
+      "path": "build/security-probe/windows-final-format.log",
+      "sha256": "fad4b2117cda0fb219aadbda8c55b54e0a483da8346c54dba38e34d3173e7858",
+      "bytes": 49
+    },
+    {
+      "path": "build/security-probe/windows-production-build.log",
+      "sha256": "9c8f9f09b35f0b263596d9f192fda0c2639ab9acabd95428fcccae104d1cfc8b",
+      "bytes": 142
+    },
+    {
+      "path": "build/security-probe/openspec-final-validation.log",
+      "sha256": "88aab78edc2b10d9d7caaa3052580ef2be70644b8820237c5cdabaf7f980e780",
+      "bytes": 326
+    }
+  ],
+  "build_artifacts": [
+    {
+      "path": "build/windows/x64/runner/Release/d3dcompiler_47.dll",
+      "sha256": "5653bc7b0e2701561464ef36602ff6171c96bffe96e4c3597359cd7addcba88a",
+      "bytes": 4891080
+    },
+    {
+      "path": "build/windows/x64/runner/Release/data/app.so",
+      "sha256": "5b63801c4db39fa70091f8e07c26362322f6173ee9ed5ca3220013fa31e17223",
+      "bytes": 6226824
+    },
+    {
+      "path": "build/windows/x64/runner/Release/data/flutter_assets/AssetManifest.bin",
+      "sha256": "031da3392dc0212b2095b1a67fdd57341fa8469e34bc728c327fe636f2c036c9",
+      "bytes": 358
+    },
+    {
+      "path": "build/windows/x64/runner/Release/data/flutter_assets/assets/licenses/openssl-LICENSE.txt",
+      "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a",
+      "bytes": 10175
+    },
+    {
+      "path": "build/windows/x64/runner/Release/data/flutter_assets/assets/licenses/sqlcipher-LICENSE.md",
+      "sha256": "2a2826f6acf46fa650730cf42cbb22a642be33a7ef119c9c4f4bf6daf3bef48e",
+      "bytes": 1463
+    },
+    {
+      "path": "build/windows/x64/runner/Release/data/flutter_assets/assets/licenses/sqlite3-LICENSE.txt",
+      "sha256": "67e5d73a3a0c6e41f33d688a672b1161bf7f16e04da9ae48a7a14f1ba7436a4d",
+      "bytes": 1068
+    },
+    {
+      "path": "build/windows/x64/runner/Release/data/flutter_assets/FontManifest.json",
+      "sha256": "28b1eb2b3d2e1ad60b8c8b0f9100b1ccbf492f7fa97f5bebb51ea97e73926e7d",
+      "bytes": 82
+    },
+    {
+      "path": "build/windows/x64/runner/Release/data/flutter_assets/fonts/MaterialIcons-Regular.otf",
+      "sha256": "98507790b2a053831bb5fb18f21cb9b148118b808f4020c11696c5b3030148c8",
+      "bytes": 2700
+    },
+    {
+      "path": "build/windows/x64/runner/Release/data/flutter_assets/NativeAssetsManifest.json",
+      "sha256": "2c4abbe5ff4fde4292fdd6a4b23f0c6d14297fc09eb955075fdc8cf0fdf6507a",
+      "bytes": 189
+    },
+    {
+      "path": "build/windows/x64/runner/Release/data/flutter_assets/NOTICES.Z",
+      "sha256": "de3d498bad47d1ac442d4cbd2c23d3fe82b31ffffb1267095f47f51074dbf5fc",
+      "bytes": 107082
+    },
+    {
+      "path": "build/windows/x64/runner/Release/data/flutter_assets/packages/media_kit/assets/web/hls1.4.10.js",
+      "sha256": "30b278794fd3f269a47e6dc7b76ae9a04f08acffdd72f9b8cc26d49d3ba09c38",
+      "bytes": 374690
+    },
+    {
+      "path": "build/windows/x64/runner/Release/data/flutter_assets/shaders/ink_sparkle.frag",
+      "sha256": "1fe8436a743884cb65078fe8c7b38e18f5365f2a2961270916f426fd13c604af",
+      "bytes": 21856
+    },
+    {
+      "path": "build/windows/x64/runner/Release/data/flutter_assets/shaders/stretch_effect.frag",
+      "sha256": "bc7599dbbbaab310efe41520574138d21fb18a88c8fe4495ed79315309336f6f",
+      "bytes": 17616
+    },
+    {
+      "path": "build/windows/x64/runner/Release/data/icudtl.dat",
+      "sha256": "325a86063d26334c2eabe1743cea073b612540fbf3d8fc2ef0b5708e3763a8c7",
+      "bytes": 864880
+    },
+    {
+      "path": "build/windows/x64/runner/Release/encrypted_photo_app.exe",
+      "sha256": "e5c360ed2ea4ceddc2a5bbd2f51d0ed2905d15a8b8dd1e5630108a0dd1ae8264",
+      "bytes": 132096
+    },
+    {
+      "path": "build/windows/x64/runner/Release/file_selector_windows_plugin.dll",
+      "sha256": "8cb1a1c8f3b215b01759242a0032d116eeaa807fc2320ba421903525619ab944",
+      "bytes": 111616
+    },
+    {
+      "path": "build/windows/x64/runner/Release/flutter_windows.dll",
+      "sha256": "30494fb08f9f101a8fbe42568110aaa160efbd7341f3cfe877dc14214be3a233",
+      "bytes": 21289472
+    },
+    {
+      "path": "build/windows/x64/runner/Release/libEGL.dll",
+      "sha256": "b2590bd0692f0381fc45c20bf1c7f7f713c9ea19c7ea6bab62efdd1fadc4eaac",
+      "bytes": 472904
+    },
+    {
+      "path": "build/windows/x64/runner/Release/libGLESv2.dll",
+      "sha256": "620bb6e38d7ed6c760a0cf4a8eb6a8f64b259b96ff286551cd32cefc6c35ca39",
+      "bytes": 7414088
+    },
+    {
+      "path": "build/windows/x64/runner/Release/libmpv-2.dll",
+      "sha256": "d5f0694b08c124e785d858d00082f3e3b158dd9138bfc48c0382bf1eb443a5fc",
+      "bytes": 29764622
+    },
+    {
+      "path": "build/windows/x64/runner/Release/libsodium.dll",
+      "sha256": "b25af177a6a2b32102b7d480dce7c8bfbf88b0919e857a8adc218b229af8ad99",
+      "bytes": 484864
+    },
+    {
+      "path": "build/windows/x64/runner/Release/media_kit_libs_windows_video_plugin.dll",
+      "sha256": "3f7bdea3f79a353dfba46da9bbfb27b462721ee051200b57360ef234f542fc0d",
+      "bytes": 12800
+    },
+    {
+      "path": "build/windows/x64/runner/Release/media_kit_video_plugin.dll",
+      "sha256": "f2db4c29f7250488dcd6071e4c0309c79dbc7738a1979b8f98ad21beeacf5c17",
+      "bytes": 151040
+    },
+    {
+      "path": "build/windows/x64/runner/Release/native_assets.json",
+      "sha256": "372bd6512cc2f8c8a8a305fac4e68a3234c2081511ac6c1c3f54794d46043ef2",
+      "bytes": 301
+    },
+    {
+      "path": "build/windows/x64/runner/Release/sqlcipher.dll",
+      "sha256": "f13740c540bc2fd35c52372bf6effcaaf488b09e81c11d1896ac61b6cab06dce",
+      "bytes": 4998144
+    },
+    {
+      "path": "build/windows/x64/runner/Release/vk_swiftshader.dll",
+      "sha256": "4f33eea716491972cb1ad123a78acef485f852581130d3f3a98a1981009004f2",
+      "bytes": 4808008
+    },
+    {
+      "path": "build/windows/x64/runner/Release/vulkan-1.dll",
+      "sha256": "3be9a95dd9019aa1aca47ade26f5c1c7c0047f3cf6f633d586c9ec0d3b459566",
+      "bytes": 872776
+    },
+    {
+      "path": "build/windows/x64/runner/Release/zlib.dll",
+      "sha256": "82d5bf175cf882ac9afc1558b416e674606d055966bc09529076b28a498fc0e4",
+      "bytes": 203264
+    }
+  ],
+  "remaining": [
+    "2.5: actual system lock/suspend validation",
+    "2.6: full App multifile interruption/residue and disk-full matrix",
+    "GitHub/Gitee authorization not implemented; GAR-2 GitHub scheme approved, registration and platform verification absent; Gitee public-client capability unresolved under no-self-hosted-service constraint",
+    "Repository protocol, transmission, source import, organization, playback, export and deletion not complete",
+    "iOS retained and deferred"
+  ],
+  "delivery": "Partial real implementation, not a completed photo product. No commit, push or archive."
+}

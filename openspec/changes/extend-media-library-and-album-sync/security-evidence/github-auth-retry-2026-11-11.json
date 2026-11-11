@@ -1,0 +1,403 @@
+{
+  "capturedAtUtc": "2026-11-11T06:10:10.3597103Z",
+  "scenario": "Successful GitHub device authorization retry following real browser refusal",
+  "result": "passed",
+  "tokenResponse": {
+    "atUtc": "2026-11-11T06:08:28.92706Z",
+    "kind": "token",
+    "status": 200,
+    "tokenResponseReceived": true
+  },
+  "accountQueries": [
+    {
+      "atUtc": "2026-11-11T06:08:32.205063Z",
+      "kind": "account",
+      "status": 200
+    }
+  ],
+  "repositoryQueries": [
+    {
+      "atUtc": "2026-11-11T06:08:33.364401Z",
+      "kind": "repository_query",
+      "status": 200
+    },
+    {
+      "atUtc": "2026-11-11T06:08:35.763401Z",
+      "kind": "repository_query",
+      "status": 200
+    }
+  ],
+  "savedState": {
+    "atUtc": "2026-11-11T06:08:35.982333Z",
+    "screen": "library",
+    "busy": false,
+    "waitingForAuthorization": false,
+    "accountPresent": true,
+    "verified": true,
+    "selectedTargetPresent": false,
+    "eligibleRepositoryCount": 1,
+    "denialShown": false,
+    "cancellationShown": false,
+    "savedConnectionState": "active",
+    "mediaCount": 0
+  },
+  "report": {
+    "atUtc": "2026-11-11T06:10:09.976971Z",
+    "pid": 26496,
+    "productionRoot": "PhotoVaultApp",
+    "isolatedArtificialVault": true,
+    "repositoryWritesAllowed": false,
+    "blockedRequests": 0,
+    "current": {
+      "screen": "pin",
+      "busy": false,
+      "waitingForAuthorization": false,
+      "accountPresent": true,
+      "verified": true,
+      "selectedTargetPresent": false,
+      "eligibleRepositoryCount": 1,
+      "denialShown": false,
+      "cancellationShown": false
+    },
+    "states": [
+      {
+        "atUtc": "2026-11-11T06:04:13.472818Z",
+        "screen": "pin",
+        "busy": false,
+        "waitingForAuthorization": false,
+        "accountPresent": false,
+        "verified": false,
+        "selectedTargetPresent": false,
+        "eligibleRepositoryCount": 0,
+        "denialShown": false,
+        "cancellationShown": false
+      },
+      {
+        "atUtc": "2026-11-11T06:04:20.475336Z",
+        "screen": "library",
+        "busy": false,
+        "waitingForAuthorization": false,
+        "accountPresent": false,
+        "verified": false,
+        "selectedTargetPresent": false,
+        "eligibleRepositoryCount": 0,
+        "denialShown": false,
+        "cancellationShown": false,
+        "savedConnectionState": null,
+        "mediaCount": 0
+      },
+      {
+        "atUtc": "2026-11-11T06:04:23.473264Z",
+        "screen": "library",
+        "busy": true,
+        "waitingForAuthorization": false,
+        "accountPresent": false,
+        "verified": false,
+        "selectedTargetPresent": false,
+        "eligibleRepositoryCount": 0,
+        "denialShown": false,
+        "cancellationShown": false,
+        "savedConnectionState": null,
+        "mediaCount": 0
+      },
+      {
+        "atUtc": "2026-11-11T06:04:24.472792Z",
+        "screen": "library",
+        "busy": true,
+        "waitingForAuthorization": true,
+        "accountPresent": false,
+        "verified": false,
+        "selectedTargetPresent": false,
+        "eligibleRepositoryCount": 0,
+        "denialShown": false,
+        "cancellationShown": false,
+        "savedConnectionState": null,
+        "mediaCount": 0
+      },
+      {
+        "atUtc": "2026-11-11T06:05:17.499157Z",
+        "screen": "pin",
+        "busy": false,
+        "waitingForAuthorization": false,
+        "accountPresent": false,
+        "verified": false,
+        "selectedTargetPresent": false,
+        "eligibleRepositoryCount": 0,
+        "denialShown": false,
+        "cancellationShown": true
+      },
+      {
+        "atUtc": "2026-11-11T06:05:25.973317Z",
+        "screen": "library",
+        "busy": false,
+        "waitingForAuthorization": false,
+        "accountPresent": false,
+        "verified": false,
+        "selectedTargetPresent": false,
+        "eligibleRepositoryCount": 0,
+        "denialShown": false,
+        "cancellationShown": true,
+        "savedConnectionState": null,
+        "mediaCount": 0
+      },
+      {
+        "atUtc": "2026-11-11T06:05:47.473082Z",
+        "screen": "library",
+        "busy": true,
+        "waitingForAuthorization": false,
+        "accountPresent": false,
+        "verified": false,
+        "selectedTargetPresent": false,
+        "eligibleRepositoryCount": 0,
+        "denialShown": false,
+        "cancellationShown": false,
+        "savedConnectionState": null,
+        "mediaCount": 0
+      },
+      {
+        "atUtc": "2026-11-11T06:05:48.472912Z",
+        "screen": "library",
+        "busy": true,
+        "waitingForAuthorization": true,
+        "accountPresent": false,
+        "verified": false,
+        "selectedTargetPresent": false,
+        "eligibleRepositoryCount": 0,
+        "denialShown": false,
+        "cancellationShown": false,
+        "savedConnectionState": null,
+        "mediaCount": 0
+      },
+      {
+        "atUtc": "2026-11-11T06:06:21.977803Z",
+        "screen": "library",
+        "busy": false,
+        "waitingForAuthorization": false,
+        "accountPresent": false,
+        "verified": false,
+        "selectedTargetPresent": false,
+        "eligibleRepositoryCount": 0,
+        "denialShown": true,
+        "cancellationShown": false,
+        "savedConnectionState": null,
+        "mediaCount": 0
+      },
+      {
+        "atUtc": "2026-11-11T06:07:45.972797Z",
+        "screen": "library",
+        "busy": true,
+        "waitingForAuthorization": false,
+        "accountPresent": false,
+        "verified": false,
+        "selectedTargetPresent": false,
+        "eligibleRepositoryCount": 0,
+        "denialShown": false,
+        "cancellationShown": false,
+        "savedConnectionState": null,
+        "mediaCount": 0
+      },
+      {
+        "atUtc": "2026-11-11T06:07:46.974527Z",
+        "screen": "library",
+        "busy": true,
+        "waitingForAuthorization": true,
+        "accountPresent": false,
+        "verified": false,
+        "selectedTargetPresent": false,
+        "eligibleRepositoryCount": 0,
+        "denialShown": false,
+        "cancellationShown": false,
+        "savedConnectionState": null,
+        "mediaCount": 0
+      },
+      {
+        "atUtc": "2026-11-11T06:08:28.978448Z",
+        "screen": "library",
+        "busy": true,
+        "waitingForAuthorization": false,
+        "accountPresent": false,
+        "verified": false,
+        "selectedTargetPresent": false,
+        "eligibleRepositoryCount": 0,
+        "denialShown": false,
+        "cancellationShown": false,
+        "savedConnectionState": null,
+        "mediaCount": 0
+      },
+      {
+        "atUtc": "2026-11-11T06:08:35.982333Z",
+        "screen": "library",
+        "busy": false,
+        "waitingForAuthorization": false,
+        "accountPresent": true,
+        "verified": true,
+        "selectedTargetPresent": false,
+        "eligibleRepositoryCount": 1,
+        "denialShown": false,
+        "cancellationShown": false,
+        "savedConnectionState": "active",
+        "mediaCount": 0
+      },
+      {
+        "atUtc": "2026-11-11T06:08:48.472734Z",
+        "screen": "pin",
+        "busy": false,
+        "waitingForAuthorization": false,
+        "accountPresent": true,
+        "verified": true,
+        "selectedTargetPresent": false,
+        "eligibleRepositoryCount": 1,
+        "denialShown": false,
+        "cancellationShown": false
+      }
+    ],
+    "requests": [
+      {
+        "atUtc": "2026-11-11T06:04:24.176767Z",
+        "kind": "device",
+        "status": 200
+      },
+      {
+        "atUtc": "2026-11-11T06:04:30.614182Z",
+        "kind": "token",
+        "status": 200,
+        "error": "authorization_pending"
+      },
+      {
+        "atUtc": "2026-11-11T06:04:37.079702Z",
+        "kind": "token",
+        "status": 200,
+        "error": "authorization_pending"
+      },
+      {
+        "atUtc": "2026-11-11T06:04:47.082161Z",
+        "kind": "token",
+        "status": 200,
+        "error": "authorization_pending"
+      },
+      {
+        "atUtc": "2026-11-11T06:04:53.213255Z",
+        "kind": "token",
+        "status": 200,
+        "error": "authorization_pending"
+      },
+      {
+        "atUtc": "2026-11-11T06:05:00.63921Z",
+        "kind": "token",
+        "status": 200,
+        "error": "authorization_pending"
+      },
+      {
+        "atUtc": "2026-11-11T06:05:06.772162Z",
+        "kind": "token",
+        "status": 200,
+        "error": "authorization_pending"
+      },
+      {
+        "atUtc": "2026-11-11T06:05:12.833312Z",
+        "kind": "token",
+        "status": 200,
+        "error": "authorization_pending"
+      },
+      {
+        "atUtc": "2026-11-11T06:05:48.208601Z",
+        "kind": "device",
+        "status": 200
+      },
+      {
+        "atUtc": "2026-11-11T06:05:54.521398Z",
+        "kind": "token",
+        "status": 200,
+        "error": "authorization_pending"
+      },
+      {
+        "atUtc": "2026-11-11T06:06:00.937311Z",
+        "kind": "token",
+        "status": 200,
+        "error": "authorization_pending"
+      },
+      {
+        "atUtc": "2026-11-11T06:06:08.149225Z",
+        "kind": "token",
+        "status": 200,
+        "error": "authorization_pending"
+      },
+      {
+        "atUtc": "2026-11-11T06:06:14.401172Z",
+        "kind": "token",
+        "status": 200,
+        "error": "authorization_pending"
+      },
+      {
+        "atUtc": "2026-11-11T06:06:21.703774Z",
+        "kind": "token",
+        "status": 200,
+        "error": "access_denied"
+      },
+      {
+        "atUtc": "2026-11-11T06:07:46.765611Z",
+        "kind": "device",
+        "status": 200
+      },
+      {
+        "atUtc": "2026-11-11T06:07:52.969066Z",
+        "kind": "token",
+        "status": 200,
+        "error": "authorization_pending"
+      },
+      {
+        "atUtc": "2026-11-11T06:07:59.336793Z",
+        "kind": "token",
+        "status": 200,
+        "error": "authorization_pending"
+      },
+      {
+        "atUtc": "2026-11-11T06:08:08.652438Z",
+        "kind": "token",
+        "status": 200,
+        "error": "authorization_pending"
+      },
+      {
+        "atUtc": "2026-11-11T06:08:14.7732Z",
+        "kind": "token",
+        "status": 200,
+        "error": "authorization_pending"
+      },
+      {
+        "atUtc": "2026-11-11T06:08:21.055721Z",
+        "kind": "token",
+        "status": 200,
+        "error": "authorization_pending"
+      },
+      {
+        "atUtc": "2026-11-11T06:08:28.92706Z",
+        "kind": "token",
+        "status": 200,
+        "tokenResponseReceived": true
+      },
+      {
+        "atUtc": "2026-11-11T06:08:32.205063Z",
+        "kind": "account",
+        "status": 200
+      },
+      {
+        "atUtc": "2026-11-11T06:08:33.364401Z",
+        "kind": "repository_query",
+        "status": 200
+      },
+      {
+        "atUtc": "2026-11-11T06:08:35.763401Z",
+        "kind": "repository_query",
+        "status": 200
+      }
+    ]
+  },
+  "userScreenshotsConfirmConnectedAndEligibleRepository": true,
+  "credentialsReadForEvidence": false,
+  "limits": [
+    "Saved active state observed through production catalog; cross-process restore not tested in this scenario",
+    "No repository target selected or initialized",
+    "No repository writes or media transfer",
+    "Explicit in-app cancellation and remaining platform matrix pending; task 3.2 unchecked"
+  ]
+}

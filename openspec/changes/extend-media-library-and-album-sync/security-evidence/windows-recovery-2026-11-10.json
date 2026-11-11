@@ -1,0 +1,83 @@
+{
+  "recorded_at_utc": "2026-11-10T01:52:04.5614415Z",
+  "platform": "Microsoft Windows NT 10.0.26300.0",
+  "baseline_git_head": "0a4ddadd8707c49fe704afd7aded1a23c71d7d3f",
+  "workspace_has_preexisting_uncommitted_changes": true,
+  "app_version": "0.2.0+2",
+  "completed_tasks": [
+    "2.5 Windows",
+    "2.6 Windows"
+  ],
+  "progress": {
+    "complete": 17,
+    "total": 70
+  },
+  "implementation_changes": [
+    "Require an intact protected PIN verifier before resetting failures after photo authentication; missing/corrupt PIN requires explicit existing reset flow, without publishing a new deadline",
+    "Expose memory-only native event counters for observed lifecycle verification"
+  ],
+  "validation": {
+    "regression_tests": 43,
+    "running_pid": 26328,
+    "normal_release_build": "passed",
+    "native_session_lock": "passed, user performed Win+L",
+    "build_target": "lib/main.dart",
+    "native_suspend_resume": "passed, user performed actual S3 sleep and wake",
+    "focused_recovery_recheck": 9,
+    "isolated_virtual_disk": "detached and drive E no longer mounted",
+    "actual_process_termination_scenarios": 12,
+    "observed_normal_window": "PIN lock screen, no credentials supplied",
+    "disk_full_detail": "Initialization and catalog transaction failed safely; small credential changes actually succeeded and new-password persistence verified. Do not label those two as failed IO.",
+    "flutter_analyze": "passed",
+    "openspec_strict": {
+      "failed": 0,
+      "passed": 9
+    },
+    "actual_bounded_ntfs_exhaustion_scenarios": 4
+  },
+  "evidence": [
+    "windows-session-lock-2026-11-10.json",
+    "windows-suspend-2026-11-10.json",
+    "windows-app-process-recovery-2026-11-10.json",
+    "windows-app-disk-full-2026-11-10.json"
+  ],
+  "source_sha256": {
+    "windows/runner/flutter_window.cpp": "6fe14c75cf9fd3226fba1f1582d4b76781871dda4fcef7da25df2afb965dd89e",
+    "scripts/windows-app-recovery-probe.dart": "d9980d04e0561b146436c36f362545659b8b41c051c94044d558680bd317ba79",
+    "scripts/verify-windows-disk-full.ps1": "3071d89aa0bdb23356ccc618776fbc46b6ad178826b25f0a9d1f9eed06c57a6c",
+    "lib/app/vault_controller.dart": "e6372dc855e2573852c5cf8962e40280e6b9b1d10e507139e758d70b25649780",
+    "lib/security/security_failure.dart": "82950908d50a521e42c676e5c681c9aeb426cc76cb6b29afbaa20535f8cfe2e7",
+    "test/vault_recovery_test.dart": "06874a8ae20e9abd28e9970cadfca8ec38c10e4c843db67fd469002bc99ef722",
+    "scripts/app-recovery-file-observer.dart": "020ef46b14902306802a95c71c3bfffde67777152a20eaef531c33b2aa7d3d97",
+    "lib/main.dart": "a3f5a86b32f52062ef895ab4201f65c1f538aff12b1a5512e527bff3e5d4d8eb",
+    "scripts/windows-lifecycle-probe.dart": "27b4d731246fd89b90fe0ad59613de8a5149f62a60663f7e075b895c13fe09a7",
+    "scripts/verify-windows-app-recovery.ps1": "a1d684f8ae3901c9908d3fd46edddde1cfa9e9a9b7de058935c36be4ddf241e7",
+    "scripts/mount-storage-test-volume.ps1": "239e0e8787958a94fafce32b33d2994d52092ab574ddfa17ce19bc234447b30d",
+    "lib/security/pin_gate.dart": "e4ac935dbad99f621eb1fca0670363db94c83d670e402fe9a0203c7e556a8582",
+    "windows/runner/flutter_window.h": "ee7b636ea33c2aa243a5f2ef6f5f577c08a6582e1bb49aa3415f9a4b0f404602"
+  },
+  "artifacts_sha256": {
+    "build/windows/x64/runner/Release/encrypted_photo_app.exe": "5ccc527d117569d34d465abc0dfcfb34968e48921d8bfc6f445ad24fa31c3cf1",
+    "build/windows/x64/runner/Release/libsodium.dll": "b25af177a6a2b32102b7d480dce7c8bfbf88b0919e857a8adc218b229af8ad99",
+    "build/windows/x64/runner/Release/data/app.so": "e4e56e616235f4ddeacacd674da906e4969afd4ef4b05a20a400cf9ddfb3d294",
+    "pubspec.lock": "326ce4c5ebf762295dabcbf4c370d92102af4af4ddfa90dd433f618cd6a6ac91",
+    "build/windows/x64/runner/Release/sqlcipher.dll": "f13740c540bc2fd35c52372bf6effcaaf488b09e81c11d1896ac61b6cab06dce"
+  },
+  "log_sha256": {
+    "recovery-final-tests-2026-11-10.log": "0d7c61f4ebadd917a33c7613b8e1231978b37f0f538e2fbc4cd1c2a041426889",
+    "app-recovery-after-2026-11-10.log": "87f5bda5c660ce31bd240bb56ffa5cac4322e04fdfcc42d6d97413ba8e2ca5fe",
+    "app-recovery-process-2026-11-10.log": "e219b1977d48da0695bbb352563b5fd75c388c6521da73dc55b007b5142c3ca2",
+    "disk-full-final-process-2026-11-10.log": "0df042f94a0b350b3c04f4fc503754b23b6a4fa8f232c9057aaf5e78dca19d32",
+    "app-recovery-before-2026-11-10.log": "133429d21172b7f8ca43c28e680dcd3f7eb8da7484205ceae4b7c74dcf434fd6",
+    "recovery-final-spec-2026-11-10.log": "88aab78edc2b10d9d7caaa3052580ef2be70644b8820237c5cdabaf7f980e780",
+    "recovery-final-analyze-2026-11-10.log": "6e08c6378cabdcb0402d4b6b92680730ac77a1c0dc787c59d063f922b478891d",
+    "recovery-production-build-2026-11-10.log": "537fbd52f2e7a6a00aab0d5613a7e352cbce1eb3414cec83db840d490c37cf4a"
+  },
+  "limitations": [
+    "No physical power-loss, full hardware-failure or zero system-residue guarantee",
+    "Artificial credentials and data only, production cryptography and IO; observer pauses actual file calls for process termination",
+    "Media import/playback/album business workflows, authorization, transfer, export and deletion remain unimplemented",
+    "iOS remains deferred",
+    "Task 3.1 needs GitHub App registration/Client ID, Gitee public-client evidence and approved TD09; no remote writes, commit, push or archive"
+  ]
+}

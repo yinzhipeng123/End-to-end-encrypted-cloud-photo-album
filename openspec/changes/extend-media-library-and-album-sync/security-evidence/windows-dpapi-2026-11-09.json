@@ -1,0 +1,24 @@
+{
+  "recorded_at_utc": "2026-11-09T10:53:34.9810653Z",
+  "task": "1.4",
+  "platform": "Windows x64",
+  "passed": 9,
+  "log": "build/security-probe/dpapi-windows.log",
+  "log_sha256": "2c81cc1bdea977a2620e5557a1154737a20fbd4f806c9cff1af4b728742c4751",
+  "source_files": [
+    {
+      "path": "lib/security/windows_data_protection.dart",
+      "sha256": "b5d6d4f4f8137876eb8258b357d30688498dd497412610ec2c851271ddec916f"
+    },
+    {
+      "path": "lib/security/windows_protected_store.dart",
+      "sha256": "ac0a550297e9a30ce5b0388c152bcacb714bdbdf5849b997a80f86e562900309"
+    },
+    {
+      "path": "test/security/windows_data_protection_test.dart",
+      "sha256": "9fa4bdf62938c3b78bcc2eeba85bd1327f3c84cb6802d19a2936ff5b7bc3286e"
+    }
+  ],
+  "scope": "Real user-scope DPAPI; authenticated binding; actual sealed file replacement and re-open; ACL validation; anonymous-token impersonation rejects decryption then restores original token. No second named user account created; no claim that DPAPI prevents all profile roaming.",
+  "ios": "deferred"
+}

@@ -1,0 +1,63 @@
+{
+  "recordedAt": "2026-11-09T21:17:57.1549156+08:00",
+  "platform": "Windows",
+  "version": "0.2.0+2",
+  "task": "2.8",
+  "scope": "设置页显示当前真实数据目录",
+  "test": {
+    "passed": 1,
+    "file": "test/production_app_test.dart",
+    "coverage": [
+      "真实自定义库初始化并进入设置后显示当前目录",
+      "不显示旧默认目录",
+      "原生锁定测试消息撤销界面后目录不可见"
+    ],
+    "substitutions": [
+      "原有测试替代原生窗口事件与文件夹选择结果；凭据、DPAPI、SQLCipher 与文件操作真实"
+    ]
+  },
+  "analyze": "passed",
+  "openspec": "9 passed",
+  "build": "passed; lib/main.dart Release",
+  "launched": true,
+  "limits": [
+    "未重新执行此前 31 项或 143 项全套测试",
+    "未代用户解锁原生设置页",
+    "不新增迁移、更改目录或改变存储保护",
+    "2.5／2.6 及 iOS 缺项保持未完成"
+  ],
+  "files": [
+    {
+      "path": "lib/ui/production_screens.dart",
+      "sha256": "120049b28acdbda9b3187cd593bd743e65887cc57b640fb3e3d9884f1b3d0f9d"
+    },
+    {
+      "path": "test/production_app_test.dart",
+      "sha256": "d45e618c94a6679b12af460018b3d701318ecebb4e8154a8f0a1f965a6cf7bbb"
+    },
+    {
+      "path": "build/windows/x64/runner/Release/encrypted_photo_app.exe",
+      "sha256": "e5c360ed2ea4ceddc2a5bbd2f51d0ed2905d15a8b8dd1e5630108a0dd1ae8264"
+    },
+    {
+      "path": "build/windows/x64/runner/Release/data/app.so",
+      "sha256": "235a56a1bfb10e5ef4f3312ab2162930e54a256c6c5532d853a5bf230b6a6973"
+    },
+    {
+      "path": "build/security-probe/settings-data-location-test.log",
+      "sha256": "bd58f0efb198cd781585101b11339c37e4cdd90d538f26a19dba2815dd204dc4"
+    },
+    {
+      "path": "build/security-probe/settings-data-location-analyze.log",
+      "sha256": "0247271a3571ece55c652933d757347091aed603679355e8a27b9080c2d6234a"
+    },
+    {
+      "path": "build/security-probe/settings-data-location-build.log",
+      "sha256": "e0a9de7ab0b84bb60b4fc06a1015e2659a726f868fab252fc482c0f2b575d57e"
+    },
+    {
+      "path": "build/security-probe/settings-data-location-spec-validation.log",
+      "sha256": "88aab78edc2b10d9d7caaa3052580ef2be70644b8820237c5cdabaf7f980e780"
+    }
+  ]
+}

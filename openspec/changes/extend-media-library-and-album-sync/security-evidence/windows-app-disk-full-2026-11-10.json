@@ -1,0 +1,107 @@
+{
+  "recorded_at_utc": "2026-11-10T01:44:41.1119170Z",
+  "scenarios": [
+    {
+      "failure": {
+        "state": "passed",
+        "mode": "disk-full-initialize",
+        "stage": "catalog-created",
+        "platform": "\"Windows 10 Pro\" 10.0 (Build 26300)",
+        "actual_windows_disk_error": 112,
+        "filler_bytes": 238612480,
+        "capacity_files": 4,
+        "app_disk_full_errors": 1,
+        "committed_generation": null,
+        "reported_success": false
+      },
+      "passed": true,
+      "scenario": "disk-initialize",
+      "recovery": {
+        "state": "passed",
+        "mode": "verify",
+        "stage": "disk-initialize",
+        "platform": "\"Windows 10 Pro\" 10.0 (Build 26300)"
+      }
+    },
+    {
+      "failure": {
+        "state": "passed",
+        "mode": "disk-full-change",
+        "stage": "before-change",
+        "platform": "\"Windows 10 Pro\" 10.0 (Build 26300)",
+        "actual_windows_disk_error": 112,
+        "filler_bytes": 238546944,
+        "capacity_files": 4,
+        "app_disk_full_errors": 0,
+        "committed_generation": 2,
+        "reported_success": true
+      },
+      "passed": true,
+      "scenario": "disk-before-change",
+      "recovery": {
+        "state": "passed",
+        "mode": "verify",
+        "stage": "disk-after-change",
+        "platform": "\"Windows 10 Pro\" 10.0 (Build 26300)"
+      }
+    },
+    {
+      "failure": {
+        "state": "passed",
+        "mode": "disk-full-change",
+        "stage": "password-committed",
+        "platform": "\"Windows 10 Pro\" 10.0 (Build 26300)",
+        "actual_windows_disk_error": 112,
+        "filler_bytes": 238485504,
+        "capacity_files": 4,
+        "app_disk_full_errors": 0,
+        "committed_generation": 2,
+        "reported_success": true
+      },
+      "passed": true,
+      "scenario": "disk-after-change",
+      "recovery": {
+        "state": "passed",
+        "mode": "verify",
+        "stage": "disk-after-change",
+        "platform": "\"Windows 10 Pro\" 10.0 (Build 26300)"
+      }
+    },
+    {
+      "failure": {
+        "state": "passed",
+        "mode": "disk-full-transaction",
+        "stage": "before-transaction",
+        "platform": "\"Windows 10 Pro\" 10.0 (Build 26300)",
+        "actual_windows_disk_error": 112,
+        "filler_bytes": 238424064,
+        "capacity_files": 4,
+        "app_disk_full_errors": 0,
+        "committed_generation": null,
+        "reported_success": false
+      },
+      "passed": true,
+      "scenario": "disk-transaction",
+      "recovery": {
+        "state": "passed",
+        "mode": "verify",
+        "stage": "disk-transaction",
+        "platform": "\"Windows 10 Pro\" 10.0 (Build 26300)"
+      }
+    }
+  ],
+  "scope": "Actual bounded NTFS volume exhaustion, real Windows IO errors, production controller/SQLCipher/DPAPI, fresh process recovery. Mounting alone was elevated; app runner uses the original ordinary Windows user process.",
+  "app_so_sha256": "2E61F16F3FE9F24EE6402242D195D3D8A65E3E397FA6A47A0C1CB4112F00F6B0",
+  "mounted_volume": {
+    "state": "mounted",
+    "drive_letter": "E",
+    "unique_id": "\\\\?\\Volume{50714808-9fef-4ca5-8464-8d7a7e050a73}\\",
+    "fixture_label": "EPA-7d64a7f3",
+    "virtual_disk": "D:\\encrypted-photo-app\\build\\storage-volume-7d64a7f3\\bounded-test-volume.vhdx",
+    "disk_number": 1,
+    "bytes": 268435456,
+    "created_at_utc": "2026-11-10T01:39:10.1929415Z"
+  },
+  "runner_sha256": "5CCC527D117569D34D465ABC0DFCFB34968E48921D8BFC6F445AD24FA31C3CF1",
+  "passed": 4
+}

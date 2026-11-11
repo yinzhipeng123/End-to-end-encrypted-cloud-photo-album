@@ -1,0 +1,449 @@
+{
+  "recordedAtUtc": "2026-11-11T03:52:43.3663822Z",
+  "version": "0.6.2+8",
+  "scope": "Windows WBL-1",
+  "authorization": "User approved interface-only ordinary lock and retained background session on 2026-11-11",
+  "regressions": {
+    "beforeNativeShield": {
+      "passed": 121,
+      "log": "build/background-lock-regression-final.log"
+    },
+    "afterEpochChange": {
+      "productionFormPassed": 1,
+      "analyze": "No issues found",
+      "probeBuild": "passed",
+      "productionBuild": "passed"
+    }
+  },
+  "validationBoundary": [
+    "Real local files, SQLCipher, libsodium and DPAPI; controlled clocks for expiry tests",
+    "HTTP fixture encryption/upload/readback is not actual GitHub platform validation",
+    "No real system lock/sleep cycle repeated this round"
+  ],
+  "nativeBeforeShield": {
+    "recordedAtUtc": "2026-11-11T03:38:38.089679Z",
+    "platform": "\"Windows 10 Pro\" 10.0 (Build 26300)",
+    "artificialOnly": true,
+    "networkUsed": false,
+    "productionRoot": "PhotoVaultApp",
+    "pid": 25124,
+    "phase": "passed",
+    "nativeState": {
+      "minimizeEvents": 1,
+      "minimized": true,
+      "resumeEvents": 0,
+      "sessionLockEvents": 0,
+      "sessionLocked": false,
+      "suspendEvents": 0,
+      "suspended": false
+    },
+    "screen": "pin",
+    "oldViewRevoked": true,
+    "sameImportService": true,
+    "sameSyncService": true,
+    "lockedNewFileImported": true,
+    "deadlineUnchanged": true,
+    "encryptedDatabase": true
+  },
+  "nativeFinal": {
+    "recordedAtUtc": "2026-11-11T05:28:00.108845Z",
+    "platform": "\"Windows 10 Pro\" 10.0 (Build 26300)",
+    "artificialOnly": true,
+    "networkUsed": false,
+    "productionRoot": "PhotoVaultApp",
+    "pid": 23380,
+    "phase": "passed",
+    "nativeState": {
+      "minimizeEvents": 1,
+      "minimized": true,
+      "privacyShieldVisible": true,
+      "resumeEvents": 0,
+      "sessionLockEvents": 0,
+      "sessionLocked": false,
+      "suspendEvents": 0,
+      "suspended": false
+    },
+    "screen": "pin",
+    "oldViewRevoked": true,
+    "sameImportService": true,
+    "sameSyncService": true,
+    "lockedNewFileImported": true,
+    "deadlineUnchanged": true,
+    "encryptedDatabase": true
+  },
+  "nativeFinalStatus": "PASSED: actual minimize retained background, imported new nested PNG, revoked old view, retained deadline; native privacy cover visible while minimized",
+  "visualObservationBeforeFix": "First restored capture showed previous library although accessibility described PIN; second capture showed PIN. Added native neutral shield and epoch checks; final visual verification pending.",
+  "artifacts": {
+    "production": {
+      "path": "build/windows/x64/runner/Release/encrypted_photo_app.exe",
+      "entry": "lib/main.dart",
+      "exeSha256": "EB7E3E6072609DF4D6DE572D266E03025157B357446BA9DB9828DA281B2E7A5A",
+      "aotSha256": "9B2E0F668E9EA26F9EA0D7060DE2C21C58CF4350969E0859713934B016445B80"
+    },
+    "isolated": {
+      "path": "build/background-lock-platform/runner/encrypted_photo_app.exe",
+      "entry": "scripts/windows-background-lock-probe.dart",
+      "exeSha256": "EB7E3E6072609DF4D6DE572D266E03025157B357446BA9DB9828DA281B2E7A5A",
+      "aotSha256": "44C86A7911724C432E630366C8EF3BD2023395811D8CD8B5FF086E26F45D2DF2"
+    },
+    "aotDifferent": true,
+    "artificialMarkersAbsentFromProduction": true,
+    "markerScanIsNotSecurityProof": true
+  },
+  "normalAppLaunched": true,
+  "githubPlatformVerified": false,
+  "task29": "completed; actual native minimize/restore and normal PIN launch observed",
+  "task49": "pending actual GitHub",
+  "sourceHashes": [
+    {
+      "path": "lib\\main.dart",
+      "sha256": "BF8E10A0E6B4D177C143471EE96768D2553DF0793764E4C52EAA84F3CA9960C6"
+    },
+    {
+      "path": "lib\\app\\vault_controller.dart",
+      "sha256": "0FB7857EE2FF4464061AB784C942103B3F73949160DD0E1D485928671A1A5162"
+    },
+    {
+      "path": "lib\\app\\vault_location_store.dart",
+      "sha256": "74A49B93B3C2A1D3902AB1CBE69F487C81EB4DAAC0C3265D9AA751A9594FBAD8"
+    },
+    {
+      "path": "lib\\model\\album_source_binding.dart",
+      "sha256": "9C194497D776F94986EB1725BC5968636A4BD1E8475A3DC228234924297BA3A0"
+    },
+    {
+      "path": "lib\\model\\album.dart",
+      "sha256": "77F1A362B930D143A36C88E7644C039D2550AF18A9BFE0C27CCDFE80DE018163"
+    },
+    {
+      "path": "lib\\model\\demo_store.dart",
+      "sha256": "31CC9DFFD6834174E8FD02C53E3E9B0A36D3D9F1ECE524B2BADE98CFDD401513"
+    },
+    {
+      "path": "lib\\model\\library_query.dart",
+      "sha256": "63DF166FDCED970B8C17E5BE23A380ECDCD7D8F208AA6EB8BABB548517B7901C"
+    },
+    {
+      "path": "lib\\model\\library_store.dart",
+      "sha256": "C52522D0049EED71FF31C6D668F6DF52E623B14561CC82B51966969E6C8EAB3F"
+    },
+    {
+      "path": "lib\\model\\local_preview_library.dart",
+      "sha256": "8730886EDB0B3BA8FAA4FC96389A88CBF62A621E411D544949515C7434561D71"
+    },
+    {
+      "path": "lib\\model\\media_item.dart",
+      "sha256": "0FC051F6C30E94ADD8CE368F48084BB6E9BEB57996CAF854623D6D0C2665232F"
+    },
+    {
+      "path": "lib\\model\\selection_state.dart",
+      "sha256": "FAF2808B94ADCBEEFE38E3246706AFCFBB4E99B501B25745BE5A2FE22A961A4B"
+    },
+    {
+      "path": "lib\\repositories\\github_api.dart",
+      "sha256": "B2846C53C1E417BD27C2EC46EB6789B3B17D6FBF0269D91E36DD7CD17999BD6C"
+    },
+    {
+      "path": "lib\\repositories\\github_connection.dart",
+      "sha256": "28743CDE7757A0FCE1F035FFC4448D7848CC919A26D380C28B4B851923A39150"
+    },
+    {
+      "path": "lib\\repositories\\github_git_access.dart",
+      "sha256": "5EBAA60EFB18EB077F81D8B772B925BE7EADF339E12E23D21A69AD7FC0929976"
+    },
+    {
+      "path": "lib\\repositories\\network_proxy.dart",
+      "sha256": "AEBBF54004EDAA173382550A53E5794928DA219D4ED3D66A18D4518977E0765E"
+    },
+    {
+      "path": "lib\\security\\photo_password.dart",
+      "sha256": "3E86C414474EB4C71640C86BFE6DA0B68F57A54A3338CA1BBAEBAFD9A2B46B17"
+    },
+    {
+      "path": "lib\\security\\pin_gate.dart",
+      "sha256": "4EB5708A72DCCEDF0A3758D54378F661B87FCC70B6729824CFE5A433E0EDB3A0"
+    },
+    {
+      "path": "lib\\security\\protected_record_store.dart",
+      "sha256": "AE2E00229456383F4D4AF393DBA09AA7B4D394A75C1C9C71EB3BE3F6534DE864"
+    },
+    {
+      "path": "lib\\security\\reverification_gate.dart",
+      "sha256": "58BF6E8212F1AB3DB2BA77C17D20AB3847B75D8ED72A5B1C1830832B654F447B"
+    },
+    {
+      "path": "lib\\security\\security_failure.dart",
+      "sha256": "82950908D50A521E42C676E5C681C9AEB426CC76CB6B29AFBAA20535F8CFE2E7"
+    },
+    {
+      "path": "lib\\security\\vault_bootstrap_record.dart",
+      "sha256": "B1A36114FC69FA1CBD3D29782CC54AC964A6FE00B0A18C0A4316FFDB62107709"
+    },
+    {
+      "path": "lib\\security\\vault_bootstrap_store.dart",
+      "sha256": "DBC92BC5BF904D1F58DA30BC33373F82FAC73ADDB4524DD9B7533A3D3A8D985E"
+    },
+    {
+      "path": "lib\\security\\vault_credentials.dart",
+      "sha256": "0461BCDF74747AB6285A5C3BD49AD6A798C6C61B4F08914BA02ACF57EEF0613F"
+    },
+    {
+      "path": "lib\\security\\vault_crypto.dart",
+      "sha256": "079703B1E0EFA14CC5F9824117EC0ADFCE9F8FA87DBBE67EB469F318DEBA62C2"
+    },
+    {
+      "path": "lib\\security\\vault_media_crypto.dart",
+      "sha256": "43510B683EE7464ED4116A30743E8AC5F1B855A36302D92E78F69DE98E2EAB62"
+    },
+    {
+      "path": "lib\\security\\vault_recovery_record.dart",
+      "sha256": "A3E7FBA2BD47D3EF40A115B0E1EB67B23474E3D5FB42D722B4617C2D5F262D82"
+    },
+    {
+      "path": "lib\\security\\vault_remote_recovery.dart",
+      "sha256": "C9BF98318628F487784934DADA834D1EC93D66C09B1AD11F33C728F779261304"
+    },
+    {
+      "path": "lib\\security\\windows_data_protection.dart",
+      "sha256": "062BE6F5B46F6A18BECFD80A027AD11667A4ACE349098E0838B61FC5BDD59B31"
+    },
+    {
+      "path": "lib\\security\\windows_protected_store.dart",
+      "sha256": "6EC3302056E267D6B4536C6D64D991CC2EE2F8D4965736222C30B4308E98ABFD"
+    },
+    {
+      "path": "lib\\security\\windows_security_clock.dart",
+      "sha256": "045ACF83692924DCB216538CE0B67697E94717A9C68DCF32BA8135BE0BD06281"
+    },
+    {
+      "path": "lib\\services\\album_import_tracker.dart",
+      "sha256": "1B10B14FC1D3C1A3894D2992C1DD0ED56E34ABB5E692A64B9946077C3CE8AD9E"
+    },
+    {
+      "path": "lib\\services\\library_organization_service.dart",
+      "sha256": "10E12818B76597BD1D4333528D94EABB7FBD251F05444CA45866C444DC7B0B3B"
+    },
+    {
+      "path": "lib\\services\\media_playback.dart",
+      "sha256": "6AA52ED9495D47D5D975DADB71590CFEC7AA8584AFC7B23BC5C555D465E43315"
+    },
+    {
+      "path": "lib\\services\\media_sync_service.dart",
+      "sha256": "7012463B1860CE5CE1818ED086D2BA1D37E52BF4D9AB34E32167751AA42AE714"
+    },
+    {
+      "path": "lib\\services\\playback_session.dart",
+      "sha256": "CA46FD773F25CE1B62E61DED4E751F40023E505AC100A66867B28F622336E0D3"
+    },
+    {
+      "path": "lib\\services\\windows_folder_importer.dart",
+      "sha256": "84D1C068453BA48D6B299A85EE852E8E5DA80925DFEEF59F6B2A0C9157B54228"
+    },
+    {
+      "path": "lib\\services\\windows_import_service.dart",
+      "sha256": "5F6D36DBB3FAC42A344498E632D372FA36106FC0C615361F8B5DFE068298FCD4"
+    },
+    {
+      "path": "lib\\services\\windows_source_reader.dart",
+      "sha256": "F61B9E7B7885454216F906DBEB488E8B2F37C9905E3EB4A56CA2D0D8BD256700"
+    },
+    {
+      "path": "lib\\storage\\library_catalog.dart",
+      "sha256": "D0C35C0C98ED9BF3FD806F80206172AA06CF9EA408E0AFA738525B1144588620"
+    },
+    {
+      "path": "lib\\sync\\github_sync_repository.dart",
+      "sha256": "F7D83B4C1D7A7D6AB30CF383830C4A93C01053AF142CF4231136AED3554C1DFB"
+    },
+    {
+      "path": "lib\\sync\\repository_vault_recovery.dart",
+      "sha256": "5F2B34D69F119829EFD55C8BAB3B3F293F5E7FAB897971B0377A565ED8538D6F"
+    },
+    {
+      "path": "lib\\sync\\sync_cipher_cache.dart",
+      "sha256": "1D265B1D7EFDD42C89E6904D5E20A2601228DA1E8F9B925AC002D0C9A1BC9BC5"
+    },
+    {
+      "path": "lib\\sync\\sync_format.dart",
+      "sha256": "EE005FBAC4F617126AE30B5579D0B98BC03C20158F3485FECB613DD618C7BBCE"
+    },
+    {
+      "path": "lib\\sync\\sync_object_store.dart",
+      "sha256": "0D313BD88AB670A696BA3BAE9918496990BE67B97E1D56BE5D29AC3DF726C0BD"
+    },
+    {
+      "path": "lib\\sync\\sync_resource_preparer.dart",
+      "sha256": "42CE98DBAC4C2CC016A82AF083E126EA016B0D0BE8ECEF9F848450A036257791"
+    },
+    {
+      "path": "lib\\sync\\windows_sync_service.dart",
+      "sha256": "AB2AB40EF57A880851D8D7D374D1BDA937B8DE1540E3B2D6EA62657D1608326F"
+    },
+    {
+      "path": "lib\\ui\\access_screen.dart",
+      "sha256": "F1BEFFD1739A448F935846C0F021C48987239F0126915E0F6CFD4893C91EF159"
+    },
+    {
+      "path": "lib\\ui\\batch_dialogs.dart",
+      "sha256": "6AEBC31619F204D126E4ED2B41F4CB50868ADA92FBBC5CB0F7916E0E736DAD4E"
+    },
+    {
+      "path": "lib\\ui\\components.dart",
+      "sha256": "0C43E7AFE90A0E1BF3DAB52476773EFB3DA5E5BB0E7CE9D45406ADD9C8A748E2"
+    },
+    {
+      "path": "lib\\ui\\dialogs.dart",
+      "sha256": "EF68183F519324622E23FC7246EAF9D5B55EDA46B24E7EBFC0AC9544A99B568D"
+    },
+    {
+      "path": "lib\\ui\\github_connection_panel.dart",
+      "sha256": "8E403AFD45DAD4D9AAAA8920EA5511CA113EC1F4CD6E8A5D360A4ECDB2FD1EB1"
+    },
+    {
+      "path": "lib\\ui\\home_shell.dart",
+      "sha256": "37B352FC6D94929EB9A0B204E6AEA7E78948AC4B217F3CF882299F37EABCE6F3"
+    },
+    {
+      "path": "lib\\ui\\library_screen.dart",
+      "sha256": "0E3A450B0AAB3D2C0DC45AB9C4BACFA0D7EF8E4C9CC8B955C9B5B775D9339C62"
+    },
+    {
+      "path": "lib\\ui\\media_thumbnail.dart",
+      "sha256": "7E8BE6847B2BFD811E268692DC072A2226027AC4A64468855363F12EB62BB7A3"
+    },
+    {
+      "path": "lib\\ui\\media_viewer.dart",
+      "sha256": "EB921199E77D4A2607EB6DBCF85C8E3C50D7D86AF3E507843260C86D29310B6A"
+    },
+    {
+      "path": "lib\\ui\\production_album_panel.dart",
+      "sha256": "38420DD1A303D4931E3A830A7ED1C2ED2D6065647C714F25E5D0681532D91A2A"
+    },
+    {
+      "path": "lib\\ui\\production_library_panel.dart",
+      "sha256": "F52D20D6591B4853D6F0F515F4E39C2CCC85D1915C55B803723D078C639992E6"
+    },
+    {
+      "path": "lib\\ui\\production_screens.dart",
+      "sha256": "FD54B3BFC27507199465FFF22355B17A7BF3378AB98144695174DD5711A03C46"
+    },
+    {
+      "path": "lib\\ui\\selection_toolbar.dart",
+      "sha256": "50B1855BABCA93EBC53379E2200A0918BCCB8BBA6BEEF2A7C98DF30E72A00C96"
+    },
+    {
+      "path": "lib\\ui\\settings_screen.dart",
+      "sha256": "82E66812DB28CE1D86EC1F8CE3D1D9D690563F0F7155E3B173E60D136BF5FF42"
+    },
+    {
+      "path": "lib\\ui\\sync_screen.dart",
+      "sha256": "511C17330576B2C3D065CE58F8EFC247F9733947393DEAABDA23D1FF4FE20C3C"
+    },
+    {
+      "path": "lib\\ui\\theme.dart",
+      "sha256": "C78F2E726B466D002244447147A85155617DF7A3D13B52EDB3918B010B0F3DCA"
+    },
+    {
+      "path": "windows\\runner\\CMakeLists.txt",
+      "sha256": "68BE3ECD0FDEC8BE2A9C80849B627E93D4E9E36637FD6781F2F37C0B2B58217B"
+    },
+    {
+      "path": "windows\\runner\\flutter_window.cpp",
+      "sha256": "F22ECF22CE3877A45119D21271698409D563F1B12B8AE02FCF572182D80E53F8"
+    },
+    {
+      "path": "windows\\runner\\flutter_window.h",
+      "sha256": "DC63E58FC2B7B2472B502F6E7D0172E671DD5E731B82209E2371AF3881EC4F61"
+    },
+    {
+      "path": "windows\\runner\\main.cpp",
+      "sha256": "BF19AF746074ABAC6E03029919642245FD6811BC10615FA5A98407A549516722"
+    },
+    {
+      "path": "windows\\runner\\resource.h",
+      "sha256": "D0E8BF7835468B4B6B1F8F0747F2E8F25C19841F2DF2AC60AAA584DDAE3AA7C6"
+    },
+    {
+      "path": "windows\\runner\\Runner.rc",
+      "sha256": "CD2FDADA454A1C37BB2DEF452ACE8F3920291F3E018F757C741B9DA7228B4073"
+    },
+    {
+      "path": "windows\\runner\\utils.cpp",
+      "sha256": "A128B67B9F3C2579E2ECEF5B0DDE2C33F222A097CDFE5DA2A3067C73D1485B39"
+    },
+    {
+      "path": "windows\\runner\\utils.h",
+      "sha256": "832E246B6758253F89016FB0374B30791242E97AD950D27FC678B3D9FEACFDC4"
+    },
+    {
+      "path": "windows\\runner\\win32_window.cpp",
+      "sha256": "4E4F4DCF8E86EA6E097562CB3476039E693449BD8045367538AFEE579C017511"
+    },
+    {
+      "path": "windows\\runner\\win32_window.h",
+      "sha256": "D154CF89BA85F820631A9B5BEDACBE64FC5815E428FE6BC5DA579CE649F69841"
+    },
+    {
+      "path": "pubspec.yaml",
+      "sha256": "BA11C9D6425A5C474ECDC13F3C506FF55DDE10B1D0725F708C2C85224C2F7A10"
+    },
+    {
+      "path": "test\\background_lock_test.dart",
+      "sha256": "C39B7935F4293579E3E46A6856606220BCCA4E2E72D6716946730ECC327E2CAB"
+    },
+    {
+      "path": "test\\production_app_test.dart",
+      "sha256": "BEE03F370E7539A325057A5D762C9F148E042392FC4AFEFFCEFA69C4BBF273F4"
+    },
+    {
+      "path": "test\\repositories\\github_connection_test.dart",
+      "sha256": "E9E9937F7BFDDB323DB9572D513B68ED49106C6864BE6AFB953F3FC9BDCE98C1"
+    },
+    {
+      "path": "scripts\\windows-background-lock-probe.dart",
+      "sha256": "31FAF5BE7859D5968523B2CEB840CD9C164B3986D2D238F8FCDC89C2235E557A"
+    }
+  ],
+  "logHashes": [
+    {
+      "path": "build/background-lock-regression-final.log",
+      "sha256": "3AB3F5D52572086DD57C13DB4254483FD25E29C069B1C4406F783EAA76DAD9DB"
+    },
+    {
+      "path": "build/background-lock-epoch-test.log",
+      "sha256": "76BB0AD24E8F5C89C68916B21FFF72E6E50AE97E1E152CB2AB9E77EB4180E347"
+    },
+    {
+      "path": "build/background-lock-epoch-analyze.log",
+      "sha256": "62348C6181C905918CAC0B9FE7AAFBA22768DEA3BBE7BB46C6AE6C1B131C1443"
+    },
+    {
+      "path": "build/background-lock-epoch-probe-build.log",
+      "sha256": "CB9E29DEDB9BAB669E46180C5F6CEB4CEC8B27FEC874D08564E37BADFBC7408D"
+    },
+    {
+      "path": "build/background-lock-epoch-production-build.log",
+      "sha256": "267FD4C82A1C713B23619FDEF873DD6E73739C79BAEBFE57A3C239785A670CAC"
+    }
+  ],
+  "openspecStrict": {
+    "result": "passed",
+    "log": "build/background-lock-openspec-final.log",
+    "sha256": "3BA7D3A399BE588F6471CAB88AB95B0757E950E4DA287250A0E07F5ECD64CBA7",
+    "complete": 26,
+    "total": 73
+  },
+  "finalFollowUp": {
+    "atUtc": "2026-11-11T05:30:35.5454223Z",
+    "userUnlocked": true,
+    "userClosedPriorProbe": true,
+    "probeRestarted": true,
+    "restoredScreenshots": "Both first and subsequent capture showed PIN page, no previous library",
+    "accessibility": "First restored tree lagged with library nodes; second tree matched PIN page",
+    "visualLimits": "Discrete captures, not frame-by-frame video proof",
+    "probeClosed": true,
+    "normalWindow": "Production Release PIN page observed in screenshot and accessibility",
+    "businessCodeChanged": false,
+    "resultSha256": "E61776D5A1D74CAB6FFAA283D03F49F981CDC2DADFCEDC8266F1F3CE6B862DCC"
+  }
+}

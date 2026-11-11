@@ -1,0 +1,104 @@
+{
+  "recorded_at_utc": "2026-11-09T11:23:01.1854929Z",
+  "platform": "Windows x64",
+  "git_head": "0a4ddadd8707c49fe704afd7aded1a23c71d7d3f",
+  "working_tree": "uncommitted; source hashes below",
+  "security_tests_passed": 59,
+  "catalog_tests_passed": 8,
+  "total_passed": 67,
+  "log": "build/security-probe/windows-security-and-catalog.log",
+  "log_sha256": "ecacdb5025d400d2657320f17bfcbf394385bb54eaae97ef1518a365983bfb5b",
+  "analyze": "No issues found",
+  "source_files": [
+    {
+      "sha256": "9fa4bdf62938c3b78bcc2eeba85bd1327f3c84cb6802d19a2936ff5b7bc3286e",
+      "path": "test/security\\windows_data_protection_test.dart"
+    },
+    {
+      "sha256": "580704155e91bcbee0d28bc6413d34a24eb4f667fc4d1d74bab31c0b9a4d49d9",
+      "path": "test/security\\vault_media_crypto_test.dart"
+    },
+    {
+      "sha256": "27c916b0c795302d6f7f5f80e01454b292669bb9392e2e4bd90835a19969ee48",
+      "path": "test/security\\vault_credentials_test.dart"
+    },
+    {
+      "sha256": "d5cf371e34c93ef5944024657356780f48fcf64344e2f15bb02445bd52e3404a",
+      "path": "test/security\\reverification_gate_test.dart"
+    },
+    {
+      "sha256": "483ab5452a2bb45e363d2802b9062cfd1750b2237c7916a3a76aa28f92a569ca",
+      "path": "test/security\\pin_gate_test.dart"
+    },
+    {
+      "sha256": "b05bdf8e8c57a865c5ee3afc219267723c86dd328a339a831dd49009ec1b2cba",
+      "path": "test/security\\photo_password_test.dart"
+    },
+    {
+      "sha256": "e627d417fa69a4598a91d48fe867bab8eaf0cdd0f83e7b13f9490f76f4ff08ee",
+      "path": "test/security\\password_change_test.dart"
+    },
+    {
+      "sha256": "045acf83692924dcb216538ce0b67697e94717a9c68dcf32ba8135be0bd06281",
+      "path": "lib/security\\windows_security_clock.dart"
+    },
+    {
+      "sha256": "6ec3302056e267d6b4536c6d64d991cc2ee2f8d4965736222c30b4308e98abfd",
+      "path": "lib/security\\windows_protected_store.dart"
+    },
+    {
+      "sha256": "b5d6d4f4f8137876eb8258b357d30688498dd497412610ec2c851271ddec916f",
+      "path": "lib/security\\windows_data_protection.dart"
+    },
+    {
+      "sha256": "43510b683ee7464ed4116a30743e8ac5f1b855a36302d92e78f69de98e2eab62",
+      "path": "lib/security\\vault_media_crypto.dart"
+    },
+    {
+      "sha256": "7b3c5e0d3d70b12bbe1ce73861b636fdd6dcf3fcb3eda680463867f8c2b3b41b",
+      "path": "lib/security\\vault_crypto.dart"
+    },
+    {
+      "sha256": "a1e8442259cb72173c15c511d53244058917ec5b0e3cbc21e58c45bac2f1e9a9",
+      "path": "lib/security\\vault_credentials.dart"
+    },
+    {
+      "sha256": "dbc92bc5bf904d1f58da30bc33373f82fac73addb4524dd9b7533a3d3a8d985e",
+      "path": "lib/security\\vault_bootstrap_store.dart"
+    },
+    {
+      "sha256": "0a1f8c981d1e8c555d6eaaae24559be99d9d5f4dc44cff9475e37a9e895784ae",
+      "path": "lib/security\\vault_bootstrap_record.dart"
+    },
+    {
+      "sha256": "397a6b6f34c49d5a40dbf073f0a0899420d4480a26a2649d6b29c48c62b2464f",
+      "path": "lib/security\\security_failure.dart"
+    },
+    {
+      "sha256": "7ce249604fbefffcae38cb93e50cb698a0630dd1a03ec49c1cdf5a3f8853fc46",
+      "path": "lib/security\\reverification_gate.dart"
+    },
+    {
+      "sha256": "ae2e00229456383f4d4af393dba09aa7b4d394a75c1c9c71eb3be3f6534de864",
+      "path": "lib/security\\protected_record_store.dart"
+    },
+    {
+      "sha256": "0fbc5d5315d7fbdfc46c6bdf4897fbcb1dac911f376fab977c0d0f4ef0c5b3ba",
+      "path": "lib/security\\pin_gate.dart"
+    },
+    {
+      "sha256": "3e86c414474eb4c71640c86bfe6da0b68f57a54a3338ca1bbaebafd9a2b46b17",
+      "path": "lib/security\\photo_password.dart"
+    },
+    {
+      "sha256": "68c69108f2b134f766b057b7f2c664581f438371d192a74de85dcd7cdace4600",
+      "path": "lib/storage/library_catalog.dart"
+    },
+    {
+      "sha256": "05c0485540fc138e4567fbc68d235a5696dcab6bc631c7d31d7d2697986c0e3d",
+      "path": "test/library_catalog_test.dart"
+    }
+  ],
+  "scope": "Real native cryptography, DPAPI and SQLCipher. Deterministic clock and labelled fault injection only in tests. App lifecycle and UI integration pending.",
+  "ios": "deferred"
+}

@@ -1,0 +1,96 @@
+{
+  "recordedAt": "2026-11-09T20:58:09.005821+08:00",
+  "platform": "Windows",
+  "version": "0.2.0+2",
+  "scope": "任务 2.7：首次数据保存目的地选择，沿用已有密码学与 SQLCipher",
+  "tests": {
+    "passed": 31,
+    "location": 11,
+    "controller": 10,
+    "productionForms": 1,
+    "dpapi": 9,
+    "substitutions": [
+      "controller 部分时间边界使用受控时钟",
+      "表单测试替代 Windows 窗口事件和文件夹选择结果；凭据、DPAPI、SQLCipher 和文件读写真实"
+    ]
+  },
+  "analyze": "passed",
+  "openspec": "9 passed",
+  "releaseBuild": "passed; lib/main.dart",
+  "nativeUi": {
+    "isolatedLocalAppData": "build/data-location-ui-79d72c71/startup",
+    "openedNativeDirectoryPicker": true,
+    "cancelRetainedSelection": true,
+    "selectedPathDisplayed": true,
+    "restoredDefault": true,
+    "unsubmittedCustomDirectoryCreated": false,
+    "unsubmittedLocatorCommitted": false,
+    "userPasswordsEntered": false,
+    "normalClientStarted": true,
+    "normalClientShowsExistingPinLock": true
+  },
+  "limits": [
+    "未迁移或重建用户现有库",
+    "重开数据验证来自真实后端控制器关闭与重建；原生窗口检查未代用户设置密码",
+    "系统锁屏／挂起及完整 App 多文件中断、磁盘满矩阵仍不属于已完成范围",
+    "未重新运行历史全套 143 项；iOS 延后"
+  ],
+  "files": [
+    {
+      "path": "lib/app/vault_location_store.dart",
+      "sha256": "74a49b93b3c2a1d3902ab1cbe69f487c81eb4daac0c3265d9aa751a9594fbad8"
+    },
+    {
+      "path": "lib/app/vault_controller.dart",
+      "sha256": "79477f023b64c756cfa7247d355cdbba9d7e6ab27a68cb8f100be6f4995d6095"
+    },
+    {
+      "path": "lib/security/windows_data_protection.dart",
+      "sha256": "d6d04a48f0d540223abf535eba950aac2162e8849aca03471a8a8a612cdfd237"
+    },
+    {
+      "path": "lib/ui/production_screens.dart",
+      "sha256": "ec40c0464d5ce9a1c3187a44133719157609ac269b0248c064d9f18239620e18"
+    },
+    {
+      "path": "test/vault_location_test.dart",
+      "sha256": "83304c60302ef34816335305e74c445fa3b384f5906b8b0dabb5f931ecff1e08"
+    },
+    {
+      "path": "test/vault_controller_test.dart",
+      "sha256": "13d763df89704e343e64fbbf6ca249223ef83e1add6d513557416a027fbf0c7e"
+    },
+    {
+      "path": "test/production_app_test.dart",
+      "sha256": "0833416a34f6bbefda9451a3d9014968d331735543336741b619ea51470b3bbd"
+    },
+    {
+      "path": "test/security/windows_data_protection_test.dart",
+      "sha256": "9fa4bdf62938c3b78bcc2eeba85bd1327f3c84cb6802d19a2936ff5b7bc3286e"
+    },
+    {
+      "path": "build/windows/x64/runner/Release/encrypted_photo_app.exe",
+      "sha256": "e5c360ed2ea4ceddc2a5bbd2f51d0ed2905d15a8b8dd1e5630108a0dd1ae8264"
+    },
+    {
+      "path": "build/windows/x64/runner/Release/data/app.so",
+      "sha256": "f9a124d499efc599917384408f2326573358edae8edf1d6aeb5b70bf0a3315e9"
+    },
+    {
+      "path": "build/security-probe/data-location-final-tests.log",
+      "sha256": "412970a45990a9c2902869fec6350f7ab6577ceea242b91358744748ebc2a3b0"
+    },
+    {
+      "path": "build/security-probe/data-location-analyze.log",
+      "sha256": "8c75dfd697ad5d21740a4b10408a73fecefc8becddd890bd6fda4ffcbf070c47"
+    },
+    {
+      "path": "build/security-probe/data-location-build.log",
+      "sha256": "9cc89bb545c874d063e0dba0861e48c0b60c1fa2e73e42710f41ba041cc52c09"
+    },
+    {
+      "path": "build/security-probe/data-location-spec-validation.log",
+      "sha256": "88aab78edc2b10d9d7caaa3052580ef2be70644b8820237c5cdabaf7f980e780"
+    }
+  ]
+}

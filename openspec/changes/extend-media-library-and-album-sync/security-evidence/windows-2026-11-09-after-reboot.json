@@ -1,0 +1,144 @@
+{
+  "recorded_at_utc": "2026-11-09T10:30:10.6019150Z",
+  "task": "1.2",
+  "status": "Windows standard Flutter native tests passed; iPhone and cross-platform acceptance pending",
+  "head": "0a4ddadd8707c49fe704afd7aded1a23c71d7d3f",
+  "working_tree_uncommitted": true,
+  "earlier_evidence": {
+    "path": "openspec/changes/extend-media-library-and-album-sync/security-evidence/windows-2026-11-09.json",
+    "sha256": "e8e02aee7c0b5ee1777bbfd54226eae6e2b8b190ec00b194bb20f6eeeb4eb3ec",
+    "preserved": true
+  },
+  "source_files": [
+    {
+      "path": "lib/security/photo_password.dart",
+      "sha256": "3e86c414474eb4c71640c86bfe6da0b68f57a54a3338ca1bbaebafd9a2b46b17"
+    },
+    {
+      "path": "lib/security/security_failure.dart",
+      "sha256": "0d560b4afcc8bb26f92bac4bc49d27a052dcb4c995f0746bf1d4c77ea6c22df1"
+    },
+    {
+      "path": "lib/security/vault_bootstrap_record.dart",
+      "sha256": "7f7856d768a5a33ffe086fa1fefc1bc1b0526c116b273cca7955bff6bcae2b57"
+    },
+    {
+      "path": "lib/security/vault_bootstrap_store.dart",
+      "sha256": "2e32646654dcd57f6a515bafd21ad28926409a08b4d7f9e9a1e508962dd56bc2"
+    },
+    {
+      "path": "lib/security/vault_credentials.dart",
+      "sha256": "44c9be0850ce930c801df2c4184607c963b82b485e4fcfc918d1eb1d7ff33a8c"
+    },
+    {
+      "path": "lib/security/vault_crypto.dart",
+      "sha256": "8d56b124989669f25fa6df5caa42024b4d3c63adad372185608e49e1d651a811"
+    },
+    {
+      "path": "pubspec.lock",
+      "sha256": "30438f3f09f4c46fbeff5da3cd9831fa105b53c711f290d079d2eb7f69974d50"
+    },
+    {
+      "path": "pubspec.yaml",
+      "sha256": "830ac3e7deae911d16e381442265d292d5d052e32883dea829c1d4b305e3ff1d"
+    },
+    {
+      "path": "scripts/build-security-probe-windows.ps1",
+      "sha256": "27225b4f70cfe2a42f4bb654328a3ac21139ad585d26d5d7520dfd5ce8817538"
+    },
+    {
+      "path": "scripts/security_probe.dart",
+      "sha256": "3ff3608e87950f742735a21b079692048a3e4eef8003759a36bcccdbd8ec65fd"
+    },
+    {
+      "path": "scripts/security-reference-vectors.py",
+      "sha256": "88eeff09ac271317253821dac0738bd3fb1c9c9938f2c2c7783b87807808920d"
+    },
+    {
+      "path": "scripts/test-security-low-memory.ps1",
+      "sha256": "8ea1272af94d740fbc1e99e95258b301d113a9bbd939c0324200c0513a1f3397"
+    },
+    {
+      "path": "test/fixtures/security/bootstrap-v1.json",
+      "sha256": "d638eab38c84c9abe2b410a16b9689c5c801f62f558c2b4ff731493cb60e507d"
+    },
+    {
+      "path": "test/security/photo_password_test.dart",
+      "sha256": "b05bdf8e8c57a865c5ee3afc219267723c86dd328a339a831dd49009ec1b2cba"
+    },
+    {
+      "path": "test/security/vault_credentials_test.dart",
+      "sha256": "27c916b0c795302d6f7f5f80e01454b292669bb9392e2e4bd90835a19969ee48"
+    }
+  ],
+  "source_files_unchanged_from_earlier_evidence": true,
+  "toolchain": {
+    "flutter": "3.47.9",
+    "dart": "3.13.7",
+    "windows_sdk": "10.0.26100.0",
+    "visual_studio": {
+      "installation_path": "D:\\tools\\VSBuildTools",
+      "installation_version": "17.14.37827.9",
+      "display_version": "17.14.44",
+      "is_complete": true,
+      "is_launchable": true,
+      "is_reboot_required": false
+    }
+  },
+  "ordinary_flutter_native_test": {
+    "command": "D:\\tools\\flutter\\bin\\flutter.bat test test\\security --no-pub --reporter expanded",
+    "working_directory": "D:\\encrypted-photo-app",
+    "exit_code": 0,
+    "passed": 17,
+    "password_policy_tests": 4,
+    "native_credential_tests": 13,
+    "native_build_hooks_skipped": false,
+    "hook_skip_environment_value_at_verification": null,
+    "runtime_native_version_asserted": "1.0.22",
+    "log_path": "build/security-probe/flutter-security-after-reboot.log",
+    "log_sha256": "b34721c4c2fd3324dd662d1ec1179e1759cdc6d988abb7616f5f854eb10d201b",
+    "log_last_write_time_utc": "2026-11-09T10:26:06.3264043Z",
+    "output": "00:00 +0: loading D:/encrypted-photo-app/test/security/photo_password_test.dart\r\n00:00 +0: D:/encrypted-photo-app/test/security/photo_password_test.dart: strict UTF-8 preserves spaces, case and Unicode normalization form\r\n00:00 +1: D:/encrypted-photo-app/test/security/photo_password_test.dart: counts Unicode scalars and accepts the 12/128 boundaries\r\n00:00 +2: D:/encrypted-photo-app/test/security/photo_password_test.dart: rejects weak, malformed, overlong and control inputs\r\n00:00 +3: D:/encrypted-photo-app/test/security/photo_password_test.dart: confirmation must be exact; errors never include the input\r\n00:00 +4: D:/encrypted-photo-app/test/security/vault_credentials_test.dart: (setUpAll)\r\n00:00 +4: D:/encrypted-photo-app/test/security/vault_credentials_test.dart: uses the approved actual native backend\r\n00:00 +5: D:/encrypted-photo-app/test/security/vault_credentials_test.dart: persists authenticated material; a new service reopens it\r\n00:01 +6: D:/encrypted-photo-app/test/security/vault_credentials_test.dart: invalid or mismatched input creates no file\r\n00:01 +7: D:/encrypted-photo-app/test/security/vault_credentials_test.dart: wrong password fails real authentication and closes old session\r\n00:01 +8: D:/encrypted-photo-app/test/security/vault_credentials_test.dart: rejects another expected vault identity\r\n00:01 +9: D:/encrypted-photo-app/test/security/vault_credentials_test.dart: new vaults use different identities, salts, nonces and wraps\r\n00:01 +10: D:/encrypted-photo-app/test/security/vault_credentials_test.dart: never overwrites existing valid, empty or truncated material\r\n00:02 +11: D:/encrypted-photo-app/test/security/vault_credentials_test.dart: malicious sizes and KDF parameters are rejected before derivation\r\n00:02 +12: D:/encrypted-photo-app/test/security/vault_credentials_test.dart: authenticates generation, identity, salt, both nonces and both tags\r\n00:03 +13: D:/encrypted-photo-app/test/security/vault_credentials_test.dart: file errors have no secret/path and do not return success\r\n00:03 +14: D:/encrypted-photo-app/test/security/vault_credentials_test.dart: revocation while KDF runs prevents late initialization success\r\n00:04 +15: D:/encrypted-photo-app/test/security/vault_credentials_test.dart: one service rejects overlapping operations\r\n00:04 +16: D:/encrypted-photo-app/test/security/vault_credentials_test.dart: concurrent OS-level creators cannot overwrite one another\r\n00:04 +17: D:/encrypted-photo-app/test/security/vault_credentials_test.dart: (tearDownAll)\r\n00:04 +17: All tests passed!\r\n"
+  },
+  "standard_native_asset": {
+    "sodium_package": "4.1.2+1",
+    "dll_path": "D:\\encrypted-photo-app\\build\\native_assets\\windows\\libsodium.dll",
+    "dll_sha256": "b25af177a6a2b32102b7d480dce7c8bfbf88b0919e857a8adc218b229af8ad99",
+    "build_manifest_path": "build/native_assets/windows/native_assets.json",
+    "test_manifest_path": "build/unit_test_assets/NativeAssetsManifest.json",
+    "manifests_equal": true,
+    "manifest": {
+      "format-version": [
+        1,
+        0,
+        0
+      ],
+      "native-assets": {
+        "windows_x64": {
+          "package:sodium/libsodium": [
+            "absolute",
+            "D:\\encrypted-photo-app\\build\\native_assets\\windows\\libsodium.dll"
+          ]
+        }
+      }
+    }
+  },
+  "earlier_probes": {
+    "rerun_after_reboot": false,
+    "scope": "The earlier 79 checks, performance and low-memory results remain historical evidence; this record adds the standard Flutter native tests only."
+  },
+  "ios": {
+    "status": "not executed",
+    "user_confirmed_environment": "Windows and iPhone only",
+    "pending": "Actual iOS build/install environment; iPhone runtime, performance, memory, low-resource and cross-platform evidence"
+  },
+  "application_business_code_modified_after_reboot": false,
+  "app_entrypoint_modified_after_reboot": false,
+  "new_app_delivery_build": false,
+  "task_progress": {
+    "total": 60,
+    "complete": 1,
+    "remaining": 59,
+    "first_incomplete": "1.2"
+  }
+}

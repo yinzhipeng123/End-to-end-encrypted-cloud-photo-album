@@ -1,0 +1,257 @@
+{
+  "recorded_at_utc": "2026-11-09T09:31:00.9934524Z",
+  "task": "1.2",
+  "status": "Windows partial validation; not complete",
+  "head": "0a4ddadd8707c49fe704afd7aded1a23c71d7d3f",
+  "source_files": [
+    {
+      "path": "lib/security/photo_password.dart",
+      "sha256": "3e86c414474eb4c71640c86bfe6da0b68f57a54a3338ca1bbaebafd9a2b46b17"
+    },
+    {
+      "path": "lib/security/security_failure.dart",
+      "sha256": "0d560b4afcc8bb26f92bac4bc49d27a052dcb4c995f0746bf1d4c77ea6c22df1"
+    },
+    {
+      "path": "lib/security/vault_bootstrap_record.dart",
+      "sha256": "7f7856d768a5a33ffe086fa1fefc1bc1b0526c116b273cca7955bff6bcae2b57"
+    },
+    {
+      "path": "lib/security/vault_bootstrap_store.dart",
+      "sha256": "2e32646654dcd57f6a515bafd21ad28926409a08b4d7f9e9a1e508962dd56bc2"
+    },
+    {
+      "path": "lib/security/vault_credentials.dart",
+      "sha256": "44c9be0850ce930c801df2c4184607c963b82b485e4fcfc918d1eb1d7ff33a8c"
+    },
+    {
+      "path": "lib/security/vault_crypto.dart",
+      "sha256": "8d56b124989669f25fa6df5caa42024b4d3c63adad372185608e49e1d651a811"
+    },
+    {
+      "path": "pubspec.lock",
+      "sha256": "30438f3f09f4c46fbeff5da3cd9831fa105b53c711f290d079d2eb7f69974d50"
+    },
+    {
+      "path": "pubspec.yaml",
+      "sha256": "830ac3e7deae911d16e381442265d292d5d052e32883dea829c1d4b305e3ff1d"
+    },
+    {
+      "path": "scripts/build-security-probe-windows.ps1",
+      "sha256": "27225b4f70cfe2a42f4bb654328a3ac21139ad585d26d5d7520dfd5ce8817538"
+    },
+    {
+      "path": "scripts/security_probe.dart",
+      "sha256": "3ff3608e87950f742735a21b079692048a3e4eef8003759a36bcccdbd8ec65fd"
+    },
+    {
+      "path": "scripts/security-reference-vectors.py",
+      "sha256": "88eeff09ac271317253821dac0738bd3fb1c9c9938f2c2c7783b87807808920d"
+    },
+    {
+      "path": "scripts/test-security-low-memory.ps1",
+      "sha256": "8ea1272af94d740fbc1e99e95258b301d113a9bbd939c0324200c0513a1f3397"
+    },
+    {
+      "path": "test/fixtures/security/bootstrap-v1.json",
+      "sha256": "d638eab38c84c9abe2b410a16b9689c5c801f62f558c2b4ff731493cb60e507d"
+    },
+    {
+      "path": "test/security/photo_password_test.dart",
+      "sha256": "b05bdf8e8c57a865c5ee3afc219267723c86dd328a339a831dd49009ec1b2cba"
+    },
+    {
+      "path": "test/security/vault_credentials_test.dart",
+      "sha256": "27c916b0c795302d6f7f5f80e01454b292669bb9392e2e4bd90835a19969ee48"
+    }
+  ],
+  "build": {
+    "sodium": "4.1.2+1",
+    "dll": "d:\\encrypted-photo-app\\build\\security-probe\\native\\bd7e1e6a2f\\libsodium-stable\\bin\\x64\\release\\v143\\dynamic\\libsodium.dll",
+    "dll_sha256": "A891D498FAF7A857FE72D873411A7C14692A0191173A7EB9691F58B64999AA28",
+    "validation_build_only": true,
+    "compiler": "14.44.35207",
+    "source_sha256": "5D829F95EA7BE72EEDF373B197F01DF765171DA80619B1291692D3F854E10E46"
+  },
+  "kernel_sha256": "ccc87e44296f39bc85f40a91679ee84095140a3f7e8ec7b6802ba81590eeecf1",
+  "integration": {
+    "process_interruption": [
+      {
+        "delay_ms": 0,
+        "persisted_bytes": null,
+        "child_reported_commit": false
+      },
+      {
+        "delay_ms": 10,
+        "persisted_bytes": null,
+        "child_reported_commit": false
+      },
+      {
+        "delay_ms": 80,
+        "persisted_bytes": null,
+        "child_reported_commit": false
+      },
+      {
+        "delay_ms": 200,
+        "persisted_bytes": 228,
+        "child_reported_commit": true
+      },
+      {
+        "delay_ms": 600,
+        "persisted_bytes": 228,
+        "child_reported_commit": true
+      }
+    ],
+    "kdf": {
+      "count": 20,
+      "milliseconds": [
+        113.79,
+        117.545,
+        120.549,
+        128.425,
+        112.286,
+        111.788,
+        107.875,
+        110.199,
+        112.786,
+        107.755,
+        114.306,
+        115.995,
+        112.035,
+        112.836,
+        113.357,
+        111.388,
+        107.254,
+        116.871,
+        119.933,
+        113.554
+      ],
+      "p95_ms": 120.549,
+      "rss_before_bytes": 75337728,
+      "process_peak_rss_bytes": 143417344,
+      "event_loop_ticks": 147
+    },
+    "status": "passed",
+    "scope": "Windows isolated real credential service only",
+    "native_version": "1.0.22",
+    "os": "\"Windows 11 专业版\" 10.0 (Build 26300)",
+    "dart": "3.13.7 (stable) (Thu Oct 22 14:28:57 2026 -0700) on \"windows_x64\"",
+    "passed_count": 79,
+    "passed": [
+      "actual libsodium version",
+      "independent Argon2id vector",
+      "independent XChaCha master unwrap",
+      "independent BLAKE2b KDF vector",
+      "independent XChaCha catalog unwrap",
+      "independent XChaCha encryption result",
+      "invalid password rejected",
+      "invalid password rejected",
+      "invalid password rejected",
+      "invalid password rejected",
+      "invalid password rejected",
+      "invalid password rejected",
+      "confirmation rejected",
+      "invalid input leaves no file",
+      "real fixed-size persisted bootstrap",
+      "no plaintext artificial password in persisted bytes",
+      "session revoked",
+      "independent fixture opens through credential service",
+      "whitespace remains part of the password",
+      "fresh vaults randomize IDs, salt, nonces and wraps",
+      "foreign catalog wrap rejected",
+      "wrong password authenticates nothing",
+      "wrong vault identity rejected",
+      "separate process unlock exit",
+      "separate process real unlock",
+      "unlock does not change material",
+      "unsupported header byte 0",
+      "unsupported header byte 8",
+      "unsupported header byte 10",
+      "unsupported header byte 11",
+      "unsupported header byte 12",
+      "unsupported header byte 13",
+      "unsupported header byte 14",
+      "unsupported header byte 16",
+      "unsupported header byte 20",
+      "unsupported header byte 22",
+      "unsupported header byte 128",
+      "authenticated header/ciphertext byte 24",
+      "authenticated header/ciphertext byte 48",
+      "authenticated header/ciphertext byte 64",
+      "authenticated header/ciphertext byte 80",
+      "authenticated header/ciphertext byte 104",
+      "authenticated header/ciphertext byte 132",
+      "authenticated header/ciphertext byte 179",
+      "authenticated header/ciphertext byte 180",
+      "authenticated header/ciphertext byte 227",
+      "truncated file 0",
+      "partial material not overwritten 0",
+      "partial bytes preserved 0",
+      "truncated file 1",
+      "partial material not overwritten 1",
+      "partial bytes preserved 1",
+      "truncated file 131",
+      "partial material not overwritten 131",
+      "partial bytes preserved 131",
+      "truncated file 180",
+      "partial material not overwritten 180",
+      "partial bytes preserved 180",
+      "truncated file 227",
+      "partial material not overwritten 227",
+      "partial bytes preserved 227",
+      "trailing byte rejected",
+      "oversized file rejected without full allocation",
+      "valid existing material not overwritten",
+      "actual filesystem failure has no success",
+      "overlapping credential operation rejected",
+      "client KDF gate rejects concurrent derivation",
+      "late KDF result cannot authorize",
+      "cancelled KDF creates no file",
+      "OS exclusive creation has exactly one winner",
+      "concurrent creation preserves winning bytes",
+      "interrupted material is never replaced 200",
+      "interrupted bytes preserved 200",
+      "committed material survives process termination 200",
+      "interrupted material is never replaced 600",
+      "interrupted bytes preserved 600",
+      "committed material survives process termination 600",
+      "event loop runs during KDF",
+      "Windows 20-sample p95 <= 5 seconds"
+    ],
+    "ios": "not executed",
+    "flutter_app_integration": "not executed"
+  },
+  "low_memory": {
+    "file_exists": false,
+    "status": "passed",
+    "child_exit_code": 0,
+    "additional_budget_bytes": 33554432,
+    "private_commit_before_bytes": 60780544,
+    "scope": "Windows job object on synthetic child only",
+    "process_commit_limit_bytes": 94334976,
+    "code": "backendFailure"
+  },
+  "password_rules": {
+    "passed": 4,
+    "scope": "Pure input policy only; native hook temporarily skipped because no native API is called"
+  },
+  "ordinary_flutter_native_test": {
+    "status": "blocked before tests",
+    "reason": "VS installation isComplete=false, isRebootRequired=true; automatic vswhere discovery excludes it"
+  },
+  "ios": {
+    "status": "not executed"
+  },
+  "analyze": "passed",
+  "openspec_strict": {
+    "passed": 9,
+    "failed": 0
+  },
+  "diff_check": "passed",
+  "app_entrypoint_modified": false,
+  "task_progress": {
+    "total": 60,
+    "complete": 1,
+    "remaining": 59
+  }
+}

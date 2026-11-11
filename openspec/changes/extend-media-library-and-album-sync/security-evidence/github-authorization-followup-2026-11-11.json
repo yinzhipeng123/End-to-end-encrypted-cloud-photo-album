@@ -1,0 +1,97 @@
+{
+  "atUtc": "2026-11-11T05:43:55.8752943Z",
+  "scope": "Existing GAR-2 task 3.2 plus shared HTTP validation",
+  "cleanup": {
+    "executed": false,
+    "reason": "Tool auto-review rejected removal: blocked by policy; no specific reason supplied",
+    "script": "scripts/clean-build-artifacts.ps1",
+    "scriptSyntaxValidated": true,
+    "manualResultExists": false
+  },
+  "tests": {
+    "relatedRegression": 54,
+    "finalApiGroup": 20,
+    "countsOverlap": true,
+    "analyze": "No issues found",
+    "openspecStrict": "passed"
+  },
+  "realPlatform": {
+    "atUtc": "2026-11-11T05:40:28.655191Z",
+    "clientId": "Iv23li0GQwH80cVzX6yX",
+    "authorizationPerformed": false,
+    "repositoryWrites": 0,
+    "requests": [
+      {
+        "path": "/login/device/code",
+        "status": 200
+      },
+      {
+        "path": "/login/oauth/access_token",
+        "status": 200
+      }
+    ],
+    "deviceEndpointValidated": true,
+    "serverLifetimeSeconds": 899,
+    "remainingWithinServerLifetime": true,
+    "cancelResult": "cancelled",
+    "cancelSentNoTokenRequest": true,
+    "invalidCodeResult": "invalidDeviceCode",
+    "passed": true
+  },
+  "limitations": [
+    "No browser/user authentication",
+    "No repository reads or writes",
+    "Mailbox/denial/refresh/revocation matrix incomplete",
+    "HTTP substitutes are not platform acceptance",
+    "No Release rebuild; existing EXE predates code changes"
+  ],
+  "progress": {
+    "complete": 26,
+    "total": 73,
+    "task32Complete": false
+  },
+  "sourceHashes": [
+    {
+      "path": "lib/repositories/github_api.dart",
+      "sha256": "AA05E2AF875D6DC2918AB137EEDF300081652681D9BCB87F39BF2FCE0AE1207A"
+    },
+    {
+      "path": "lib/repositories/github_connection.dart",
+      "sha256": "E476ADD475C9A941CB37E724A0E5481916E7C5A51910F84370F96E8C8E727350"
+    },
+    {
+      "path": "test/repositories/github_api_test.dart",
+      "sha256": "D15DDE61CAC94ED1FE8E0B5A77C97B778F71444AA869B7CC6D1ACE6B46446C96"
+    },
+    {
+      "path": "test/repositories/github_connection_test.dart",
+      "sha256": "36664104C817DAA8C42942F4B48DFA031C6CAC2F0D1644876598BE13D03251BE"
+    },
+    {
+      "path": "scripts/probe-github-auth-boundaries.dart",
+      "sha256": "07EFC32C07C5E94FFB1888E08C0B4CDB7F58A79F37FD0B96C6A1DAAF62FCF932"
+    },
+    {
+      "path": "scripts/clean-build-artifacts.ps1",
+      "sha256": "0049DC62C84D650CA1908C925032CFBE339DE859349A0F81D50770DCBBA6938C"
+    }
+  ],
+  "logHashes": [
+    {
+      "path": "build/github-auth-followup-regression.log",
+      "sha256": "4E7D8BBDBC8F8F41E8A66F9AA7D688D328FD810FECC1904B01B87AF0535C3CD8"
+    },
+    {
+      "path": "build/github-auth-followup-final-api.log",
+      "sha256": "ACD79D1F018B11D945D64C3B9489E7B7637A60A53DD96EACEC7E258F129AB9D6"
+    },
+    {
+      "path": "build/github-auth-followup-analyze.log",
+      "sha256": "336D9AA89BCC5F82DEC377596B49922FC8AE0F21F3F59D68BB7FAA50FFC19CAC"
+    },
+    {
+      "path": "build/github-auth-followup-openspec.log",
+      "sha256": "3BA7D3A399BE588F6471CAB88AB95B0757E950E4DA287250A0E07F5ECD64CBA7"
+    }
+  ]
+}

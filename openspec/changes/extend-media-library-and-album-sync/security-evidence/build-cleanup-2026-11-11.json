@@ -1,0 +1,55 @@
+{
+  "verifiedAtUtc": "2026-11-11T05:46:49.2485376Z",
+  "executedBy": "user",
+  "originalAutomaticAttempt": "blocked by policy; not retried",
+  "report": {
+    "atUtc": "2026-11-11T05:45:02.7224916Z",
+    "removed": [
+      "D:\\encrypted-photo-app\\build\\windows",
+      "D:\\encrypted-photo-app\\build\\app-recovery-verification-2026-11-10",
+      "D:\\encrypted-photo-app\\build\\background-lock-platform\\runner",
+      "D:\\encrypted-photo-app\\build\\catalog-recovery\\bundle",
+      "D:\\encrypted-photo-app\\build\\disk-full-verification-2026-11-10",
+      "D:\\encrypted-photo-app\\build\\disk-full-verification-final-2026-11-10",
+      "D:\\encrypted-photo-app\\build\\lifecycle-verification-2026-11-10",
+      "D:\\encrypted-photo-app\\build\\flutter_assets",
+      "D:\\encrypted-photo-app\\build\\import-ui-runner",
+      "D:\\encrypted-photo-app\\build\\native_assets",
+      "D:\\encrypted-photo-app\\build\\organization-ui-runner",
+      "D:\\encrypted-photo-app\\build\\source-reader",
+      "D:\\encrypted-photo-app\\build\\sync-platform\\runner",
+      "D:\\encrypted-photo-app\\build\\test_cache",
+      "D:\\encrypted-photo-app\\build\\unit_test_assets",
+      "D:\\encrypted-photo-app\\build\\windows-runner-probe",
+      "D:\\encrypted-photo-app\\build\\security-probe\\native",
+      "D:\\encrypted-photo-app\\build\\security-probe\\security-probe.dill",
+      "D:\\encrypted-photo-app\\build\\dependency-probe\\.dart_tool",
+      "D:\\encrypted-photo-app\\build\\sqlcipher-ios-probe-s2r2evuf\\.dart_tool",
+      "D:\\encrypted-photo-app\\scripts\\sqlcipher_probe\\.dart_tool",
+      "D:\\encrypted-photo-app\\scripts\\sqlcipher_probe\\build",
+      "D:\\encrypted-photo-app\\.dart_tool",
+      "D:\\encrypted-photo-app\\windows\\flutter\\ephemeral",
+      "D:\\encrypted-photo-app\\ios\\Flutter\\ephemeral",
+      "D:\\encrypted-photo-app\\.flutter-plugins-dependencies",
+      "D:\\encrypted-photo-app\\ios\\Flutter\\Generated.xcconfig",
+      "D:\\encrypted-photo-app\\ios\\Flutter\\flutter_export_environment.sh",
+      "D:\\encrypted-photo-app\\build\\.last_build_id"
+    ],
+    "preserved": [
+      "source/OpenSpec",
+      "build logs",
+      "sync-platform/sender",
+      "artificial sources",
+      "user vault data"
+    ]
+  },
+  "all29TargetsAbsent": true,
+  "compiledAppCount": 0,
+  "preservedChecks": {
+    "source": true,
+    "openspec": true,
+    "syncAccount": true,
+    "lifecycleReport": true
+  },
+  "reportSha256": "5A8BC09040E5BF8584E56748210C7617CA123803A410D029E041EC8AA37D1A88"
+}

@@ -1,0 +1,7 @@
+analyzer:
+  exclude:
+    - build/**
+linter:
+  rules:
+    - cancel_subscriptions
+    - close_sinks

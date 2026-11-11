@@ -1,0 +1,656 @@
+{
+  "app_so_sha256": "5038704294FA4FB47AB00FDD0D69467A830D2EAAC17E576615F33D5D49E2943D",
+  "scenarios": [
+    {
+      "stage": "bootstrap-created",
+      "residue": [
+        {
+          "name": "installation.sealed",
+          "sha256": "CCE5726D399D3C73B49D99FF99A510D86D0E54B7FC5259BDE1C5847E1E0995F4",
+          "bytes": 262
+        },
+        {
+          "name": "instance.lock",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0
+        },
+        {
+          "name": "location.lock",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0
+        },
+        {
+          "name": "vault.bootstrap",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0
+        }
+      ],
+      "mode": "initialize",
+      "passed": true,
+      "residue_bytes_checked": 262,
+      "actual_process_terminated": true,
+      "fresh_process_recovery": true
+    },
+    {
+      "stage": "bootstrap-flushed",
+      "residue": [
+        {
+          "name": "installation.sealed",
+          "sha256": "E0942E697649F4FB011AF07E942F3498701E973D0D9EE8E3C0BE573F8B8249FA",
+          "bytes": 262
+        },
+        {
+          "name": "instance.lock",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0
+        },
+        {
+          "name": "location.lock",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0
+        },
+        {
+          "name": "vault.bootstrap",
+          "sha256": "E072B50E6017C8B7937272F12C3D3026CC46623B86C1E513AE46487F8F19FD9D",
+          "bytes": 228
+        }
+      ],
+      "mode": "initialize",
+      "passed": true,
+      "residue_bytes_checked": 490,
+      "actual_process_terminated": true,
+      "fresh_process_recovery": true
+    },
+    {
+      "stage": "catalog-created",
+      "residue": [
+        {
+          "name": "catalog.db",
+          "sha256": "ED482057943C2D066D3BBF944069C67A8EF7A8256E875AC59FBE7258270E8DEC",
+          "bytes": 57344
+        },
+        {
+          "name": "installation.sealed",
+          "sha256": "7697C481B7A2870D04B87DFBD94214C2ED745563FCDBC32D52E36E41168D4B70",
+          "bytes": 262
+        },
+        {
+          "name": "instance.lock",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0
+        },
+        {
+          "name": "location.lock",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0
+        },
+        {
+          "name": "vault.bootstrap",
+          "sha256": "382B7763ED31E17CD287FCF32181B45C16D917501BF963B33FEA678EA4B8FEB2",
+          "bytes": 228
+        }
+      ],
+      "mode": "initialize",
+      "passed": true,
+      "residue_bytes_checked": 57834,
+      "actual_process_terminated": true,
+      "fresh_process_recovery": true
+    },
+    {
+      "stage": "pin-committed",
+      "residue": [
+        {
+          "name": "catalog.db",
+          "sha256": "F9FF0FF52C6FFE106B6360BB27A2F1E1D324E59A074EA2F019BDA25393029808",
+          "bytes": 57344
+        },
+        {
+          "name": "installation.sealed",
+          "sha256": "7396CC61078AEBFB7F90AB2A5ED27412CDE1A205BD15D431F2083F6688A95EB7",
+          "bytes": 262
+        },
+        {
+          "name": "instance.lock",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0
+        },
+        {
+          "name": "location.lock",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0
+        },
+        {
+          "name": "photo-retry.sealed",
+          "sha256": "90EF7EBA4FBCB432CE92F08F63324192E0FCA57E9816FF4FAD1D77D6FDD0C923",
+          "bytes": 246
+        },
+        {
+          "name": "pin.sealed",
+          "sha256": "22AB09A8267F38C42C6F8C91E5FD42F2AD18D6F35F25A5C0FF118821E4ED0259",
+          "bytes": 310
+        },
+        {
+          "name": "vault.bootstrap",
+          "sha256": "034AF9E17E7C876AD5B284C7E9B107063E9C6CD578ECE1BD7FD86826D6D650E1",
+          "bytes": 228
+        }
+      ],
+      "mode": "initialize",
+      "passed": true,
+      "residue_bytes_checked": 58390,
+      "actual_process_terminated": true,
+      "fresh_process_recovery": true
+    },
+    {
+      "stage": "auxiliary-committed",
+      "residue": [
+        {
+          "name": "auxiliary.sealed",
+          "sha256": "570EC312E0380A2F337F4DC9F3F931901B45F5633456783F211FD1919D7A6449",
+          "bytes": 486
+        },
+        {
+          "name": "catalog.db",
+          "sha256": "65AE7EA55F243DE2BB323D4385FD0977C92A6EEB3B3A668E7B0ABD5AA16BC039",
+          "bytes": 57344
+        },
+        {
+          "name": "installation.sealed",
+          "sha256": "C1B5B64B6FC66DE9380ADD37E143C6BC61E1FEBD7BC4074BA41C3432756C750E",
+          "bytes": 262
+        },
+        {
+          "name": "instance.lock",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0
+        },
+        {
+          "name": "location.lock",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0
+        },
+        {
+          "name": "photo-retry.sealed",
+          "sha256": "146EEB5914743E1195D9A501D0EFB3B4D3D2809A8607677F4094CC16996A3149",
+          "bytes": 246
+        },
+        {
+          "name": "pin-retry.sealed",
+          "sha256": "348669DD16542AC1469209409619E313C288AF8F883424C1ADDD2CCE787A8A0D",
+          "bytes": 246
+        },
+        {
+          "name": "pin.sealed",
+          "sha256": "5F528EF29E2D9679674FEAE12253408D3DD6F26CAECE5D5E71324747416844C7",
+          "bytes": 310
+        },
+        {
+          "name": "vault.bootstrap",
+          "sha256": "296988CC5F0E8A1FC663A6AF0ADA8502388A5AE57B4FD076482502A90CCEC085",
+          "bytes": 228
+        }
+      ],
+      "mode": "initialize",
+      "passed": true,
+      "residue_bytes_checked": 59122,
+      "actual_process_terminated": true,
+      "fresh_process_recovery": true
+    },
+    {
+      "stage": "initialization-completed",
+      "residue": [
+        {
+          "name": "access-state.sealed",
+          "sha256": "D57CBB311223BD79B5F5162CD263A3EC2DC13195A90A79C908A937BA09E7ED28",
+          "bytes": 262
+        },
+        {
+          "name": "auxiliary.sealed",
+          "sha256": "742D4CF85E1DC4E8E634D73A71DF67AC3D27BE5B2E85A086BED6AA991F58BFD6",
+          "bytes": 486
+        },
+        {
+          "name": "catalog.db",
+          "sha256": "345A8FE0007160A954BEA0F6F7CDF8409A9828FB5E5610633103D9AD538DFDBD",
+          "bytes": 57344
+        },
+        {
+          "name": "installation.sealed",
+          "sha256": "F21BC43381166867B0CE60ADF344B107DF62553DD3C718ED7A965535C7BE8E89",
+          "bytes": 262
+        },
+        {
+          "name": "instance.lock",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0
+        },
+        {
+          "name": "location.lock",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0
+        },
+        {
+          "name": "photo-retry.sealed",
+          "sha256": "C69F3DCF8EF45098DF5214437039F33FB52CEDE701923F7AA27CD568DD0BBABA",
+          "bytes": 246
+        },
+        {
+          "name": "pin-retry.sealed",
+          "sha256": "2367ECBA410CFA4BFC1D3B5028E2E7C0AF4DBDC7F4DDB45A19C800DA8673BA7C",
+          "bytes": 246
+        },
+        {
+          "name": "pin.sealed",
+          "sha256": "BDD229CCC1ECAF06828E90A87A8A2498FF7184213932058D256B7B9C72720B08",
+          "bytes": 310
+        },
+        {
+          "name": "vault.bootstrap",
+          "sha256": "3B553FB3A3D82D3A5B03075CEF80CBAC1A7273B7E1FAD855DC413F30BC15CCD5",
+          "bytes": 228
+        }
+      ],
+      "mode": "initialize",
+      "passed": true,
+      "residue_bytes_checked": 59384,
+      "actual_process_terminated": true,
+      "fresh_process_recovery": true
+    },
+    {
+      "stage": "password-candidate-flushed",
+      "residue": [
+        {
+          "name": "access-state.sealed",
+          "sha256": "1761BE54CA7D2032E570D1F670CD9D1E58F6AA38068DA623B088F60743BB56EB",
+          "bytes": 262
+        },
+        {
+          "name": "auxiliary.sealed",
+          "sha256": "E9654116032AF8ADD1C8C6A37AAE30504E60A4ACD5BC09CFDAC94EE6A94AA095",
+          "bytes": 486
+        },
+        {
+          "name": "catalog.db",
+          "sha256": "8D3615B8F41773A8BA2CEC8A80E2289DE5CE804B0ED18A07C88A9DA0FFD76B83",
+          "bytes": 57344
+        },
+        {
+          "name": "installation.sealed",
+          "sha256": "7A02A52858AD2154B2BEB9289DCE9C0C4A04E03B7E3166C7844FD2A979A9080B",
+          "bytes": 262
+        },
+        {
+          "name": "instance.lock",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0
+        },
+        {
+          "name": "location.lock",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0
+        },
+        {
+          "name": "photo-retry.sealed",
+          "sha256": "95997C7838ABA298677A9877CF34551BA61C9BC12B243A1C99F2D2DEB7DCCBBB",
+          "bytes": 246
+        },
+        {
+          "name": "pin-retry.sealed",
+          "sha256": "272A4D196E2B74876D07CA05C422DEC5C53BCD9750BF9409858FA4E48363D1F4",
+          "bytes": 246
+        },
+        {
+          "name": "pin.sealed",
+          "sha256": "53952E2DD22EB1339C444E0B8B1CA4971B4D3C4E5840EA789001F29F3D8A1573",
+          "bytes": 310
+        },
+        {
+          "name": "vault.bootstrap",
+          "sha256": "E50CE1F2DAF206520534CBC87910AC303003788CBAD2B81B738CE687BF0FB92F",
+          "bytes": 228
+        },
+        {
+          "name": "vault.bootstrap.3a56ffa7b7d843e3d1e478e28c09bd25f4f1f88c257c0dd2.pending",
+          "sha256": "7763C0BDC79410203103D65BCB58B7564703FD193781511AFEDC44996A0BAD13",
+          "bytes": 228
+        },
+        {
+          "name": "vault.bootstrap.update-lock",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0
+        }
+      ],
+      "mode": "change",
+      "passed": true,
+      "residue_bytes_checked": 59612,
+      "actual_process_terminated": true,
+      "fresh_process_recovery": true
+    },
+    {
+      "stage": "password-committed",
+      "residue": [
+        {
+          "name": "access-state.sealed",
+          "sha256": "9CF7D483922FDC490167930B9535D8F58B74A085778A39A1241DC349E890A8AF",
+          "bytes": 262
+        },
+        {
+          "name": "auxiliary.sealed",
+          "sha256": "AEFD02CD2DE08A18B44A8DDE8411494BEC140176271810EC39DFB8A70A70CDD1",
+          "bytes": 486
+        },
+        {
+          "name": "catalog.db",
+          "sha256": "F4AC22F755F437962EBA4C6CFB04AC9D8450E5AA740DEF5D0386C9A97DF71804",
+          "bytes": 57344
+        },
+        {
+          "name": "installation.sealed",
+          "sha256": "654AD661DD88A0B0FDA8FFFE046CBB507986999F04417B79BC64939DEEBDE719",
+          "bytes": 262
+        },
+        {
+          "name": "instance.lock",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0
+        },
+        {
+          "name": "location.lock",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0
+        },
+        {
+          "name": "photo-retry.sealed",
+          "sha256": "BD204F00D6717BFAAFAFDBF699A27962FC45E16154E45FCAE1434C40784B5B6F",
+          "bytes": 246
+        },
+        {
+          "name": "pin-retry.sealed",
+          "sha256": "2A404C583CAC736757D90F3ACCADB340DD0427162A12ED8DB882FEB9EA47B92B",
+          "bytes": 246
+        },
+        {
+          "name": "pin.sealed",
+          "sha256": "DE23D98C4672CF5E1599A2FCFAC60A546D57758E22EE28AFA620BF71E079C6DE",
+          "bytes": 310
+        },
+        {
+          "name": "vault.bootstrap",
+          "sha256": "852135D4F976A21006AB592C5CD37C6181E19D5872FE397CDF6B55A7977B047D",
+          "bytes": 228
+        },
+        {
+          "name": "vault.bootstrap.update-lock",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0
+        }
+      ],
+      "mode": "change",
+      "passed": true,
+      "residue_bytes_checked": 59384,
+      "actual_process_terminated": true,
+      "fresh_process_recovery": true
+    },
+    {
+      "stage": "auxiliary-committed",
+      "residue": [
+        {
+          "name": "access-state.sealed",
+          "sha256": "C2E3FFE7EE07C7E5CCA828A5F1F061ED977ABE33F7F54A98B07E8617D6DABF4C",
+          "bytes": 262
+        },
+        {
+          "name": "auxiliary.sealed",
+          "sha256": "A08BED3065F1460CC53DEED228ADC61263F73EAA01CB9940644CB5BE068436CF",
+          "bytes": 486
+        },
+        {
+          "name": "catalog.db",
+          "sha256": "09E446D8C4AA1A0508F01BAD64C4414543BE60E6B6F35CF59873E6577149C306",
+          "bytes": 57344
+        },
+        {
+          "name": "installation.sealed",
+          "sha256": "BB40C1F253D9C0410AFAF60D23B2A4229E42EFF9357368211A43E1B27AB2FDEB",
+          "bytes": 262
+        },
+        {
+          "name": "instance.lock",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0
+        },
+        {
+          "name": "location.lock",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0
+        },
+        {
+          "name": "photo-retry.sealed",
+          "sha256": "038557DFBFE13FE2B41130B0AD80662CF0EBC703AB7640643D198D166A8187D8",
+          "bytes": 246
+        },
+        {
+          "name": "pin-retry.sealed",
+          "sha256": "E97876F42B9F1027333C174C34AD6CA56376F04E8481384D63D7263D8F7F373F",
+          "bytes": 246
+        },
+        {
+          "name": "pin.sealed",
+          "sha256": "9D08DBC97FB9DF47711B12146C7559B6F95F81DDB3C7FC5E9EFC72DDB452A050",
+          "bytes": 310
+        },
+        {
+          "name": "vault.bootstrap",
+          "sha256": "A3B7D6E6598C193BF0AA65C7B30C80988FCC83257254170334A1BDB6749248C2",
+          "bytes": 228
+        },
+        {
+          "name": "vault.bootstrap.update-lock",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0
+        }
+      ],
+      "mode": "change",
+      "passed": true,
+      "residue_bytes_checked": 59384,
+      "actual_process_terminated": true,
+      "fresh_process_recovery": true
+    },
+    {
+      "stage": "password-change-completed",
+      "residue": [
+        {
+          "name": "access-state.sealed",
+          "sha256": "7F84EDA94E7A33AA123F377E930FA0EF026D3BEBF2B6E784B91A061D27C21C99",
+          "bytes": 262
+        },
+        {
+          "name": "auxiliary.sealed",
+          "sha256": "EA290DB2CA19679AD6D83616C7E1962E6039A44CB47E21F4F7F649A82F777E1F",
+          "bytes": 486
+        },
+        {
+          "name": "catalog.db",
+          "sha256": "8887E277086419376E1E5DB0E39A2F0DDBFF08AF9BB4A4A7360A6AA7BB42A9AF",
+          "bytes": 57344
+        },
+        {
+          "name": "installation.sealed",
+          "sha256": "62B5C6B9107E5D915F9DBDD61EFC4FC127CE325B0AFABE059CE0998F2B98D1DB",
+          "bytes": 262
+        },
+        {
+          "name": "instance.lock",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0
+        },
+        {
+          "name": "location.lock",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0
+        },
+        {
+          "name": "photo-retry.sealed",
+          "sha256": "983BD5DD1C85E0D9B4D6E21C15F161B773F997A36E9D7F97C8F5CFFC3A50B30F",
+          "bytes": 246
+        },
+        {
+          "name": "pin-retry.sealed",
+          "sha256": "D43991D22197298BE68B1241C6F37ABD60FEDE5A866D353A3A03117E3ECDB5DD",
+          "bytes": 246
+        },
+        {
+          "name": "pin.sealed",
+          "sha256": "BAC2676F3FB4DE3AB3A8C9AC0BB6D4D2F6EDF35D9A8011FB2B7D7C7FAD4BC815",
+          "bytes": 310
+        },
+        {
+          "name": "vault.bootstrap",
+          "sha256": "7F1252B41782DC8B24653EFA09486AF75F70087BDE9C1DAAE805114446CB5FA4",
+          "bytes": 228
+        },
+        {
+          "name": "vault.bootstrap.update-lock",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0
+        }
+      ],
+      "mode": "change",
+      "passed": true,
+      "residue_bytes_checked": 59384,
+      "actual_process_terminated": true,
+      "fresh_process_recovery": true
+    },
+    {
+      "stage": "transaction-uncommitted",
+      "residue": [
+        {
+          "name": "access-state.sealed",
+          "sha256": "D4472954EEE221DBB5B9794FB848C80345F05BBD0410AB5252A048BA8B26113F",
+          "bytes": 262
+        },
+        {
+          "name": "auxiliary.sealed",
+          "sha256": "1DA28F95D457AE69C62C1ACDB2CEFA80A8820507AB22727A9A6B12A782729FE8",
+          "bytes": 486
+        },
+        {
+          "name": "catalog.db",
+          "sha256": "48F865B4BD2B4FB31C2084EAFF4C576E95ADC56D83CB3680B29EF19AB57572A9",
+          "bytes": 57344
+        },
+        {
+          "name": "catalog.db-journal",
+          "sha256": "2AAC2AC4E7FBB09CDDF84029501E6AE22ACB832C03E9A1D22E21612E54D3F904",
+          "bytes": 21032
+        },
+        {
+          "name": "installation.sealed",
+          "sha256": "D705C3253B628AEC5550DEBAAC85E7242832588D5DB99BB0920B2030AE68EDC7",
+          "bytes": 262
+        },
+        {
+          "name": "instance.lock",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0
+        },
+        {
+          "name": "location.lock",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0
+        },
+        {
+          "name": "photo-retry.sealed",
+          "sha256": "FDD96D3FC176A838F248D552B810A0347CF3D388BBE6A6AE72025F5339E8A39E",
+          "bytes": 246
+        },
+        {
+          "name": "pin-retry.sealed",
+          "sha256": "2ECAA4FD5E2B25BD983B4E02AD335B18FF07D0FEE764198F829CC3CE542FF7F2",
+          "bytes": 246
+        },
+        {
+          "name": "pin.sealed",
+          "sha256": "07872B3ED4CCEFEA335A51E4CB090CEA1BAD61AB98F538427B86137C4588A5DE",
+          "bytes": 310
+        },
+        {
+          "name": "vault.bootstrap",
+          "sha256": "31D046A4ECEA1B608AB6FD1CC4E11544CD4BAC0D695A5B2B6611454817D1417B",
+          "bytes": 228
+        }
+      ],
+      "mode": "transaction",
+      "passed": true,
+      "residue_bytes_checked": 80416,
+      "actual_process_terminated": true,
+      "fresh_process_recovery": true
+    },
+    {
+      "stage": "transaction-committed",
+      "residue": [
+        {
+          "name": "access-state.sealed",
+          "sha256": "77D3E1B321DE9CD07CF87D23C8AF6F46E5AC2F25D4A8EF85DC8E661BBC8C95CD",
+          "bytes": 262
+        },
+        {
+          "name": "auxiliary.sealed",
+          "sha256": "F253B5680C9557E4E3E4D5B2EFA01DBF754CF1E8E861E8128E5ADF09B8016776",
+          "bytes": 486
+        },
+        {
+          "name": "catalog.db",
+          "sha256": "2BD8C998DA013D2AA345806D1E1373AEEBE1B37A184F7780BAF306387072F7D4",
+          "bytes": 57344
+        },
+        {
+          "name": "installation.sealed",
+          "sha256": "F50FF1D6BF8212527E8E3B59E53EF97DF3496621B0826264AE5072D1BAEA1AE8",
+          "bytes": 262
+        },
+        {
+          "name": "instance.lock",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0
+        },
+        {
+          "name": "location.lock",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0
+        },
+        {
+          "name": "photo-retry.sealed",
+          "sha256": "BBA7541272324D9E1C7990E69525F3D23114BA706A177AB86EFC9C5C1CE556AF",
+          "bytes": 246
+        },
+        {
+          "name": "pin-retry.sealed",
+          "sha256": "F8BB8CF344068B5BC1220A0399B29A1C338EF9B9D33962E81346EE5B9A07C7A6",
+          "bytes": 246
+        },
+        {
+          "name": "pin.sealed",
+          "sha256": "D5FAEF33A6D39A16CDB1CA001D62AE952DC3AD9E88FBBCB15B1361675D9272B5",
+          "bytes": 310
+        },
+        {
+          "name": "vault.bootstrap",
+          "sha256": "9C70CDD7490EDC42FBA970700144CCC78742886BFEF89333748E86DF6C947C27",
+          "bytes": 228
+        }
+      ],
+      "mode": "transaction",
+      "passed": true,
+      "residue_bytes_checked": 59384,
+      "actual_process_terminated": true,
+      "fresh_process_recovery": true
+    }
+  ],
+  "platform": "Microsoft Windows NT 10.0.26300.0",
+  "recorded_at_utc": "2026-11-10T01:34:09.2293591Z",
+  "runner": "D:\\encrypted-photo-app\\build\\app-recovery-verification-2026-11-10\\encrypted_photo_app.exe",
+  "passed": 12,
+  "scope": "Real production PhotoVaultApp/controller, SQLCipher, DPAPI and filesystem; File delegates pause at IO boundaries; actual process termination and fresh runner recovery. Artificial fixtures only. No physical power-loss or volume-exhaustion claim.",
+  "runner_sha256": "5CCC527D117569D34D465ABC0DFCFB34968E48921D8BFC6F445AD24FA31C3CF1"
+}

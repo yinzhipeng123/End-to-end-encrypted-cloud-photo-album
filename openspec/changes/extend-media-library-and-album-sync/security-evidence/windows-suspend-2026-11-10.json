@@ -1,0 +1,48 @@
+{
+  "recorded_at_utc": "2026-11-10T01:22:57.382275Z",
+  "platform": "\"Windows 10 Pro\" 10.0 (Build 26300)",
+  "isolated_fixture": true,
+  "scratch_directory": "C:\\Users\\pc\\AppData\\Local\\Temp\\epa-lifecycle-a816f2ef",
+  "production_root": "lib/main.dart PhotoVaultApp",
+  "restart_preserved_pin_and_deadline": true,
+  "phase": "passed",
+  "events": [
+    {
+      "observed_at_utc": "2026-11-10T01:23:50.131910Z",
+      "resumeEvents": 0,
+      "sessionLockEvents": 1,
+      "sessionLocked": true,
+      "suspendEvents": 0,
+      "suspended": false,
+      "screen": "pin",
+      "old_catalog_handle_revoked": true,
+      "access_blocked": true,
+      "deadline_unchanged": true
+    },
+    {
+      "observed_at_utc": "2026-11-10T01:23:50.214086Z",
+      "resumeEvents": 0,
+      "sessionLockEvents": 1,
+      "sessionLocked": true,
+      "suspendEvents": 1,
+      "suspended": true,
+      "screen": "pin",
+      "old_catalog_handle_revoked": true,
+      "access_blocked": true,
+      "deadline_unchanged": true
+    },
+    {
+      "observed_at_utc": "2026-11-10T01:24:28.041515Z",
+      "resumeEvents": 2,
+      "sessionLockEvents": 1,
+      "sessionLocked": true,
+      "suspendEvents": 1,
+      "suspended": false,
+      "screen": "pin",
+      "old_catalog_handle_revoked": true,
+      "access_blocked": true,
+      "deadline_unchanged": true
+    }
+  ],
+  "wrong_pin_blocked_correct_pin_reopened": true
+}
